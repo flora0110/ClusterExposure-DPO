@@ -1,0 +1,45 @@
+# ========================
+# Python & IDE Cache
+# ========================
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+*.egg-info/
+*.log
+
+# ========================
+# Virtual Environment
+# ========================
+.venv/
+env/
+*.env
+
+# ========================
+# Model files (large)
+# ========================
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+
+# ========================
+# Training outputs
+# ========================
+experiments/**/final_model/
+experiments/**/pytorch_model*
+experiments/**/trainer_state*
+experiments/**/checkpoint*/
+experiments/**/eval_results.json
+
+# ========================
+# Hugging Face & Cache
+# ========================
+.cache/
+huggingface/
+*.arrow
+
+# ========================
+# Local dataset / large data
+# ========================
+data/raw/
+
