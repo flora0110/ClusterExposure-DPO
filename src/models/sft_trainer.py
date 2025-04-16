@@ -103,7 +103,7 @@ def train_sft(config):
     train_data_path = config["train_data_path"]
     valid_data_path = config["valid_data_path"]
     
-    prepare_output_dir(output_path)
+    output_path = prepare_output_dir(output_path)
 
     print("Torch CUDA version: ", torch.version.cuda)
     print("Loading base model...")

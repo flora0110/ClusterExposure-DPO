@@ -9,7 +9,7 @@ from tqdm import tqdm
 import torch
 from transformers import AutoTokenizer, GenerationConfig, AutoModelForCausalLM
 from peft import PeftModel
-from src.utils.io_utils import safe_load_json, prepare_output_dir
+from src.utils.io_utils import safe_load_json, prepare_output_dir, safe_write_json
 
 # Set thread environment for efficiency
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
@@ -149,6 +149,7 @@ def generate_selfplay_negatives(config):
     base_model = config["base_model"]
     lora_weights = config.get("lora_weights", None)
     batch_size = config.get("batch_size", 4)
+    train_sample_size = config.get("train_sample_size", 1024)
     
     output_dir = prepare_output_dir(config["output_path"], None)
     
@@ -208,13 +209,15 @@ def generate_selfplay_negatives(config):
     
     
     # Save DPO data
-    with open(f"{output_dir}/train.json", 'w') as f:
-        for item in dpo_train_data:
-            json.dump(item, f)
-            f.write('\n')
-    with open(f"{output_dir}/valid.json", 'w') as f:
-        for item in dpo_valid_data:
-            json.dump(item, f)
-            f.write('\n')
+    safe_write_json(f"{output_dir}/train.json", dpo_train_data)
+    safe_write_json(f"{output_dir}/valid.json", dpo_valid_data)
+    # with open(f"{output_dir}/train.json", 'w') as f:
+    #     for item in dpo_train_data:
+    #         json.dump(item, f)
+    #         f.write('\n')
+    # with open(f"{output_dir}/valid.json", 'w') as f:
+    #     for item in dpo_valid_data:
+    #         json.dump(item, f)
+    #         f.write('\n')
     print("Self-play negatives generation complete.")
 

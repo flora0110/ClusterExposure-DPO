@@ -1,0 +1,26 @@
+# Evaluation configuration for Goodreads
+
+# Evaluation directory where auxiliary eval files are stored.
+eval_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval"
+
+# Category (subfolder within eval_dir).
+category: "Goodreads"
+
+# Prediction results file (input)
+predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/SPRec_Reproduction/raw_results_1000.json"
+
+# Output file for evaluation results (JSON)
+output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/SPRec_Reproduction/eval_result.json"
+
+# Optional CSV file to update evaluation metrics.
+exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
+
+# Evaluation parameter: top-k for ranking metrics.
+topk: 10
+
+# Model name and sampling method (for record purposes)
+model_name: "SPRec"
+sample_method: "SelfPaly"
+
+# SentenceTransformer model path for encoding predictions.
+sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"

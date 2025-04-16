@@ -1,6 +1,6 @@
 # Model and data settings
 base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
-lora_weights: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/SPRec_Reproduction/sft_model/final_model"  # Set to path if using LoRA, otherwise leave empty
+lora_weights: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"  # Set to path if using LoRA, otherwise leave empty
 # Input data files
 train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/train.json"
 valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/valid.json"
@@ -9,6 +9,8 @@ output_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/sel
 # sample_method: "selfplay"
 # Sampling and batch parameters
 batch_size: 4
+train_sample_size: 1024
+
 # Additional parameters (not used in this version, but can be extended)
 load_8bit: false
 random_neg: false
