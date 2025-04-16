@@ -19,7 +19,7 @@ lora:
 base_model_name: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
 seed: 0
 
-output_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/SPRec_Reproduction/sft_model"
+output_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model"
 
 train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/train.json"
 valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/valid.json"

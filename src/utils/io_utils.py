@@ -66,7 +66,10 @@ def prepare_output_dir(output_path: str, check_subdir: str = "final_model") -> s
         print(f"Created base output dir: {output_path}")
     
     # Check if the specified subdirectory (e.g., "final_model") exists within the output_path.
-    final_model_dir = os.path.join(output_path, check_subdir)
+    if(check_subdir):
+        final_model_dir = os.path.join(output_path, check_subdir)
+    else:
+        final_model_dir = output_path
     counter = 1
     final_output_path = output_path
 
@@ -74,7 +77,11 @@ def prepare_output_dir(output_path: str, check_subdir: str = "final_model") -> s
         print(f"Warning: {final_model_dir} already exists. Generating a new output directory name...")
         # Append a numeric suffix to the base output path.
         final_output_path = f"{output_path}_{counter}"
-        final_model_dir = os.path.join(final_output_path, check_subdir)
+        # final_model_dir = os.path.join(final_output_path, check_subdir)
+        if(check_subdir):
+            final_model_dir = os.path.join(final_output_path, check_subdir)
+        else:
+            final_model_dir = final_output_path
         counter += 1
 
     # Create the new output directory (with suffix if necessary)
