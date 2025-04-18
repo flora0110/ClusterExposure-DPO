@@ -7,12 +7,15 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.evaluation.evaluate import evaluate_metrics
 
 STRATEGIES = {
-    "clusterout_low",
-    "clusterout_high",
-    "clusterin_high",
-    "clusterin_low",
-    "low_exposure",
-    "high_exposure",
+    # "clusterout_low",
+    # "clusterout_high",
+    # "clusterin_high",
+    # "clusterin_low",
+    # "low_exposure",
+    # "high_exposure",
+    # "clusterin_high_clusterout_low",
+    "balanced_popularity",
+    "clusterin_low_clusterout_low",
 }
 
 D = "Div"

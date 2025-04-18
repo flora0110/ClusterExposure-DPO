@@ -1,0 +1,15 @@
+batch_size: 1
+beta: 0.1
+bf16: true
+gradient_accumulation_steps: 8
+learning_rate: 1e-5
+logging_steps: 1
+max_neg: 5
+max_valid: 2000
+model_name: HuggingFaceTB/SmolLM2-1.7B-Instruct
+num_proc: 8
+num_train_epochs: 1
+output_dir: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/Div_10_1.0/clusterin_high_clusterout_low
+resume_from_checkpoint: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model
+train_data_path: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/clusterin_high_clusterout_low/train.json
+valid_data_path: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/clusterin_high_clusterout_low/valid.json

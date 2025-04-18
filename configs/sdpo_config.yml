@@ -1,0 +1,26 @@
+# Softmax DPO training configuration
+
+# Model and checkpoint
+model_name: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+resume_from_checkpoint: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"
+
+# Dataset paths
+train_data_path: ""
+valid_data_path: ""
+
+# Output
+output_dir: ""
+
+# Training hyperparameters
+beta: 0.1
+batch_size: 1
+gradient_accumulation_steps: 8
+num_train_epochs: 1
+learning_rate: 1e-5
+bf16: true
+logging_steps: 1
+max_neg: 5
+
+# Optional settings
+num_proc: 8
+max_valid: 2000

@@ -8,11 +8,14 @@ from src.inference.generate_predict_batch import generate_predictions
 
 STRATEGIES = {
     # "clusterout_low",
-    "clusterout_high",
-    "clusterin_high",
-    "clusterin_low",
-    "low_exposure",
-    "high_exposure",
+    # "clusterout_high",
+    # "clusterin_high",
+    # "clusterin_low",
+    # "low_exposure",
+    # "high_exposure",
+    # "clusterin_high_clusterout_low",
+    "balanced_popularity",
+    "clusterin_low_clusterout_low",
 }
 
 D= "Div"
@@ -37,7 +40,7 @@ if __name__ == "__main__":
         cfg["output_dir"] = os.path.join(BASE_OUTPUT, folder)
 
         cfg["finetuned_path"] = os.path.join(BASE_INPUT, folder)
-        cfg["finetuned_path"] = os.path.join(cfg["finetuned_path"], "final_model")
+        # cfg["finetuned_path"] = os.path.join(cfg["finetuned_path"], "final_model")
 
         # write a temp config
         tmp_cfg_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/tmp/predict_{folder}_config.yml"

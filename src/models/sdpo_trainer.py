@@ -14,12 +14,11 @@ from transformers import (
     TrainingArguments
 )
 from datasets import load_dataset, DatasetDict
-from accelerator import Accelerator
 from trainer.softmax_dpo_trainer import DPOTrainer as SoftmaxDPOTrainer
 from src.utils.io_utils import safe_write_json, safe_load_json, prepare_output_dir
 
 
-def train_sdpo_from_config(config: dict):
+def train_sdpo(config: dict):
     """
     Train using S-DPO (Softmax Direct Preference Optimization) based on given config.
     Args:
@@ -27,11 +26,7 @@ def train_sdpo_from_config(config: dict):
     """
     # Prepare output directory
     base_output = config["output_dir"]
-    final_output_dir = os.path.join(base_output, "final_model")
-    if os.path.exists(final_output_dir):
-        print(f"Warning: output dir '{final_output_dir}' exists, may overwrite.")
-    else:
-        os.makedirs(base_output, exist_ok=True)
+    final_output_dir = prepare_output_dir(base_output, "final_model")
 
     # Data paths
     train_path = config["train_data_path"]
@@ -103,7 +98,7 @@ def train_sdpo_from_config(config: dict):
         per_device_train_batch_size=config.get("batch_size", 1),
         gradient_accumulation_steps=config.get("gradient_accumulation_steps", 8),
         num_train_epochs=config.get("num_train_epochs", 1),
-        learning_rate=config.get("learning_rate", 1e-5),
+        learning_rate=float(config.get("learning_rate", 1e-5)),
         bf16=config.get("bf16", True),
         save_strategy="epoch",
         evaluation_strategy="epoch",
