@@ -160,7 +160,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 | SampleMethod | Predict_NotIn_Ratio ↓ |
 | --- | --- |
-| SPRec(Baseline) | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.022 | | <mark>**0.7010**</mark> |
+| SPRec(Baseline) |  <mark>**0.0623**</mark> | 
 | clusterout_high | 0.8150 |
 | low_exposure | 0.7490 |
 | high_exposure | 0.8250 |
