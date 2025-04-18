@@ -82,7 +82,10 @@ def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
         else:
             best_idx = min(valid, key=lambda x:x[1])[0]
         # bold the cell
-        df.iat[best_idx, df.columns.get_loc(col)] = f"**{df.iat[best_idx, df.columns.get_loc(col)]}**"
+        # df.iat[best_idx, df.columns.get_loc(col)] = f"**{df.iat[best_idx, df.columns.get_loc(col)]}**"
+        # highlight with yellow background
+        cell = df.iat[best_idx, df.columns.get_loc(col)]
+        df.iat[best_idx, df.columns.get_loc(col)] = f"<mark>{cell}</mark>"
     return df
 
 def main():
