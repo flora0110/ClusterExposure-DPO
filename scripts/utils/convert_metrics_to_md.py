@@ -2,6 +2,7 @@
 import pandas as pd
 import sys
 import os
+import numpy as np
 
 def to_markdown(df: pd.DataFrame) -> str:
     """
@@ -23,8 +24,28 @@ def to_markdown(df: pd.DataFrame) -> str:
             rows.append("| " + " | ".join(cells) + " |")
         return "\n".join([header, sep] + rows)
 
+def format_cell(val):
+    """
+    Round floats to 4 decimal places unless they are integer-valued.
+    Leave integers and non-numerics unchanged.
+    """
+    if isinstance(val, float):
+        if np.isclose(val, round(val)):
+            # treat as integer
+            return int(round(val))
+        else:
+            return round(val, 4)
+    else:
+        return val
+
+def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Apply format_cell to every cell in the DataFrame.
+    """
+    return df.applymap(format_cell)
+
 def main():
-    # 你可以通过命令行参数传入 CSV 路径
+    # accept csv path as argument or default
     if len(sys.argv) > 1:
         csv_path = sys.argv[1]
     else:
@@ -37,15 +58,17 @@ def main():
     df = pd.read_csv(csv_path)
 
     # Top-5
-    cols5 = [c for c in ["SampleMethod","NDCG@5","HR@5","Diversity@5","DivRatio@5","DGU@5","MGU@5","ORRatio@5"] if c in df.columns]
+    cols5 = [c for c in ["Model","NDCG@5","HR@5","Diversity@5","DivRatio@5","DGU@5","MGU@5","ORRatio@5"] if c in df.columns]
     df5 = df[cols5]
+    df5 = prepare_df(df5)
     print("### Top-5 Metrics\n")
     print(to_markdown(df5))
     print("\n")
 
     # Top-10
-    cols10 = [c for c in ["SampleMethod","NDCG@10","HR@10","Diversity@10","DivRatio@10","DGU@10","MGU@10","ORRatio@10"] if c in df.columns]
+    cols10 = [c for c in ["Model","NDCG@10","HR@10","Diversity@10","DivRatio@10","DGU@10","MGU@10","ORRatio@10"] if c in df.columns]
     df10 = df[cols10]
+    df10 = prepare_df(df10)
     print("### Top-10 Metrics\n")
     print(to_markdown(df10))
     print("\n")
@@ -53,7 +76,8 @@ def main():
     # Predict Not-In-Ratio
     col_pred = "Predict_NotIn_Ratio"
     if col_pred in df.columns:
-        dfp = df[["SampleMethod", col_pred]]
+        dfp = df[["Model", col_pred]]
+        dfp = prepare_df(dfp)
         print("### Predict Not-In-Ratio\n")
         print(to_markdown(dfp))
     else:
@@ -61,3 +85,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
