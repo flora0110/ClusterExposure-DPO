@@ -8,7 +8,7 @@ This project is primarily inspired by two papers:
 
     ↳ Introduces self-play for negative sampling by using LLM-generated predictions as rejections.
 
-- SDPO: Selective Direct Preference Optimization (not yet been fully reproduced)
+- S-DPO: Selective Direct Preference Optimization (not yet been fully reproduced)
 
     ↳ Proposes the use of multiple negative samples in the DPO framework for better alignment and robustness.
 
