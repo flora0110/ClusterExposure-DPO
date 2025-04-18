@@ -10,7 +10,6 @@ def to_markdown(df: pd.DataFrame) -> str:
     try:
         return df.to_markdown(index=False)
     except ImportError:
-        # Manual fallback
         cols = list(df.columns)
         header = "| " + " | ".join(cols) + " |"
         sep = "| " + " | ".join("---" for _ in cols) + " |"
@@ -46,35 +45,73 @@ def format_hr(x):
 
 def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Apply column-specific formatting:
-      - Columns starting with 'HR@' use 3 decimal places.
-      - Other float columns use 4 decimal places.
-      - Integer values remain as integers.
+    Apply formatting and highlight best results:
+      - Columns ending with '↑': highlight max (bold).
+      - Columns ending with '↓': highlight min (bold).
+      - HR columns use 3 decimals; others use 4 decimals.
     """
+    # Apply formatting
     for col in df.columns:
-        # apply only on numeric columns
         if df[col].dtype.kind in 'f':
             if col.startswith("HR@"):
                 df[col] = df[col].apply(format_hr)
             else:
                 df[col] = df[col].apply(format_default)
+    # Highlight best
+    for col in df.columns:
+        if col == "SampleMethod":
+            continue
+        arrow_up = col.endswith("↑")
+        arrow_down = col.endswith("↓")
+        if not (arrow_up or arrow_down):
+            # default: assume upward is better
+            arrow_up = True
+        # convert values back to float for comparison
+        nums = []
+        for v in df[col]:
+            try:
+                nums.append(float(v))
+            except:
+                nums.append(None)
+        # find best index
+        valid = [(i, n) for i,n in enumerate(nums) if n is not None]
+        if not valid:
+            continue
+        if arrow_up:
+            best_idx = max(valid, key=lambda x:x[1])[0]
+        else:
+            best_idx = min(valid, key=lambda x:x[1])[0]
+        # bold the cell
+        df.iat[best_idx, df.columns.get_loc(col)] = f"**{df.iat[best_idx, df.columns.get_loc(col)]}**"
     return df
 
 def main():
-    # Accept CSV path as argument or use default
-    if len(sys.argv) > 1:
-        csv_path = sys.argv[1]
-    else:
-        csv_path = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
-
+    # Accept CSV path or default
+    csv_path = sys.argv[1] if len(sys.argv)>1 else "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
     if not os.path.exists(csv_path):
         print(f"ERROR: CSV not found at {csv_path}", file=sys.stderr)
         sys.exit(1)
 
     df = pd.read_csv(csv_path)
+    # Ensure headers have arrows
+    def add_arrow(c):
+        if "NDCG@" in c and "↑" not in c: return c+" ↑"
+        if "HR@" in c and "↑" not in c: return c+" ↑"
+        if "Diversity" in c and "↑" not in c: return c+" ↑"
+        if "DivRatio" in c and "↑" not in c: return c+" ↑"
+        if "DGU" in c and "↓" not in c: return c+" ↓"
+        if "MGU" in c and "↓" not in c: return c+" ↓"
+        if "ORRatio" in c and "↓" not in c: return c+" ↓"
+        if "Predict_NotIn_Ratio" in c and "↓" not in c: return c+" ↓"
+        return c
+    df.columns = [add_arrow(c) for c in df.columns]
 
     # Top-5 Metrics
-    cols5 = [c for c in ["SampleMethod","NDCG@5","HR@5","Diversity@5","DivRatio@5","DGU@5","MGU@5","ORRatio@5"] if c in df.columns]
+    cols5 = [
+        c for c in df.columns
+        if (("@5" in c and "PredictNotInRatio" not in c))
+           or c=="SampleMethod"
+    ]
     df5 = df[cols5].copy()
     df5 = prepare_df(df5)
     print("### Top-5 Metrics\n")
@@ -82,7 +119,11 @@ def main():
     print("\n")
 
     # Top-10 Metrics
-    cols10 = [c for c in ["SampleMethod","NDCG@10","HR@10","Diversity@10","DivRatio@10","DGU@10","MGU@10","ORRatio@10"] if c in df.columns]
+    cols10 = [
+        c for c in df.columns
+        if (("@10" in c and "PredictNotInRatio" not in c))
+           or c=="SampleMethod"
+    ]
     df10 = df[cols10].copy()
     df10 = prepare_df(df10)
     print("### Top-10 Metrics\n")
@@ -90,10 +131,9 @@ def main():
     print("\n")
 
     # Predict Not-In-Ratio
-    col_pred = "Predict_NotIn_Ratio"
+    col_pred = "Predict_NotIn_Ratio ↓"
     if col_pred in df.columns:
         dfp = df[["SampleMethod", col_pred]].copy()
-        # treat Predict_NotIn_Ratio as general float (4 decimals)
         dfp = prepare_df(dfp)
         print("### Predict Not-In-Ratio\n")
         print(to_markdown(dfp))
@@ -102,4 +142,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -16,6 +16,7 @@ from transformers import (
 from datasets import load_dataset, DatasetDict
 from accelerator import Accelerator
 from trainer.softmax_dpo_trainer import DPOTrainer as SoftmaxDPOTrainer
+from src.utils.io_utils import safe_write_json, safe_load_json, prepare_output_dir
 
 
 def train_sdpo_from_config(config: dict):
