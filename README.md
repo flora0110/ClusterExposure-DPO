@@ -5,9 +5,11 @@
 This project is primarily inspired by two papers:
 
 - SPRec: Self-Play to Debias LLM-based Recommendation
+
     ↳ Introduces self-play for negative sampling by using LLM-generated predictions as rejections.
 
 - SDPO: Selective Direct Preference Optimization (not yet been fully reproduced)
+
     ↳ Proposes the use of multiple negative samples in the DPO framework for better alignment and robustness.
 
 Building on SPRec's self-play foundation, this work proposes a Cluster-Aware and Exposure-Aware Negative Sampling framework, which selects hard negatives based on both:
