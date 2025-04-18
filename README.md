@@ -77,12 +77,12 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | --- | --- | --- | --- | --- | --- | --- |
 | ClusterExposure-DPO(clusterout_low) | 0.0186| <mark>**0.0644**</mark> | <mark>**0.1366**</mark> | 0.0966 | <mark>**0.0211**</mark> | <mark>**0.0330**</mark> |
 | ClusterExposure-DPO(clusterin_high_clusterout_low) | <mark>**0.0175**</mark> | 0.0650 | 0.1292 | 0.0946 | 0.0200 | 0.030 |
-| SelfPlay | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.0220 |
+| SPRec(Baseline) | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.0220 |
 
 
 - clusterout_low leads on diversity (DivRatio@5 0.1366) and ranking (NDCG@5 0.0211, HR@5 0.0330).
 - clusterin_high_clusterout_low achieves the lowest MGU@5 (0.0175) and reduces ORRatio@5 compared to clusterout_low (0.0946 vs. 0.0966).
-- SelfPlay still holds the best ORRatio@5 (0.0870) but lags in diversity and ranking.
+- SPRec still holds the best ORRatio@5 (0.0870) but lags in diversity and ranking.
 
 
 
@@ -91,14 +91,14 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | --- | --- | --- | --- | --- | --- | --- |
 | ClusterExposure-DPO(clusterout_low) | 0.0129 | 0.0436 | <mark>**0.1026**</mark> | 0.0648 | <mark>**0.0230**</mark> | <mark>**0.039**</mark> |
 | ClusterExposure-DPO(clusterin_high_clusterout_low) | <mark>**0.0113**</mark> | <mark>**0.0404**</mark> | 0.0999 | <mark>**0.0623**</mark> | 0.0216 | 0.035 |
-| SelfPaly | 0.0141 | 0.0450 | 0.0968 | <mark>**0.0623**</mark> | 0.0158 | 0.028 |
+| SPRec(Baseline) | 0.0141 | 0.0450 | 0.0968 | <mark>**0.0623**</mark> | 0.0158 | 0.028 |
 
 
 - clusterout_low again yields the highest diversity (0.1026) and best NDCG/HR.
 
 - clusterin_high_clusterout_low further lowers MGU@10 and DGU@10 (0.0113, 0.0404), matching the best ORRatio@10 (0.0623).
 
-- SelfPlay retains best ORRatio but has the weakest diversity/ranking.
+- SPRec retains best ORRatio but has the weakest diversity/ranking.
 
 ### Key Takeaways
 
@@ -106,7 +106,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 - Maximizing Diversity & Accuracy: clusterout_low consistently leads in diversity (DivRatio) and retrieval quality (NDCG, HR).
 
-- Baseline SelfPlay: Excels only on ORRatio but underperforms on diversity and ranking metrics.
+- Baseline SPRec: Excels only on ORRatio but underperforms on diversity and ranking metrics.
 
 
 ## Experiments
