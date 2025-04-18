@@ -1,0 +1,24 @@
+# Beam CD Candidate Generation Configuration
+
+# Model settings
+base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+use_lora: true
+finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"
+
+# Data paths
+train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/train.json"
+valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/valid.json"
+name2genre_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval/Goodreads/name2genre.json"
+
+# Generation settings
+diverse_beam_search: true
+num_return_sequences: 10
+diversity_penalty: 1.0
+
+# Batch and sampling sizes
+batch_size: 8
+train_size: 1024
+valid_size: 128
+
+# Save output path (results will be saved here)
+save_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates"

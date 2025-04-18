@@ -47,15 +47,24 @@ def safe_load_json(file_path):
     
     return data
 
-def prepare_output_dir(output_path: str, check_subdir: str = "final_model") -> str:
+def prepare_output_dir(output_path: str, check_subdir: str = "final_model", allow_existing: bool = False) -> str:
     """
     Check if a specified subdirectory (default "final_model") exists within the output path.
     If it exists, append a numeric suffix to the output directory to avoid overwriting.
-    Otherwise, create the output directory.
+    
+    If check_subdir is None and the output_path already exists, then:
+      - If the output_path is empty, print a warning and return it as is.
+      - Otherwise, generate a new directory name with a numeric suffix.
+    
+    Additionally, if allow_existing is True:
+      - If check_subdir is None and output_path exists, directly return output_path regardless of contents.
+      - If check_subdir is provided and it exists under output_path, return output_path.
+      - Otherwise, create the missing subdirectory and return output_path.
     
     Args:
         output_path (str): The desired directory path where output will be saved.
-        check_subdir (str): The subdirectory name to check for (default is "final_model").
+        check_subdir (str or None): The subdirectory name to check. If None, the output_path itself is checked.
+        allow_existing (bool): If True, use the existing directory (or create missing subdirectory) without appending a suffix.
         
     Returns:
         str: The final output directory path that can be used safely.
@@ -64,27 +73,54 @@ def prepare_output_dir(output_path: str, check_subdir: str = "final_model") -> s
     if not os.path.exists(output_path):
         os.makedirs(output_path, exist_ok=True)
         print(f"Created base output dir: {output_path}")
-    
-    # Check if the specified subdirectory (e.g., "final_model") exists within the output_path.
-    if(check_subdir):
-        final_model_dir = os.path.join(output_path, check_subdir)
-    else:
-        final_model_dir = output_path
-    counter = 1
-    final_output_path = output_path
 
-    while os.path.exists(final_model_dir):
-        print(f"Warning: {final_model_dir} already exists. Generating a new output directory name...")
-        # Append a numeric suffix to the base output path.
-        final_output_path = f"{output_path}_{counter}"
-        # final_model_dir = os.path.join(final_output_path, check_subdir)
-        if(check_subdir):
-            final_model_dir = os.path.join(final_output_path, check_subdir)
+    # If allow_existing is True, then use the existing directory
+    if allow_existing:
+        if check_subdir is None:
+            print(f"Using existing output directory: {output_path}")
+            return output_path
         else:
-            final_model_dir = final_output_path
-        counter += 1
+            subdir = os.path.join(output_path, check_subdir)
+            if not os.path.exists(subdir):
+                os.makedirs(subdir, exist_ok=True)
+                print(f"Created subdirectory: {subdir}")
+            else:
+                print(f"Using existing subdirectory: {subdir}")
+            return subdir
 
-    # Create the new output directory (with suffix if necessary)
-    os.makedirs(final_output_path, exist_ok=True)
-    print(f"Using output directory: {final_output_path}")
-    return final_output_path
+    # When allow_existing is False, follow the original logic.
+    if check_subdir is None:
+        if len(os.listdir(output_path)) == 0:
+            print(f"Warning: Output directory '{output_path}' exists and is empty. No need to create a new directory.")
+            return output_path
+        else:
+            base_path = output_path
+            counter = 1
+            final_output_path = base_path
+            while os.path.exists(final_output_path) and os.listdir(final_output_path):
+                print(f"Warning: '{final_output_path}' already exists and is not empty. Generating a new output directory name...")
+                final_output_path = f"{base_path}_{counter}"
+                counter += 1
+            os.makedirs(final_output_path, exist_ok=True)
+            print(f"Using output directory: {final_output_path}")
+            return final_output_path
+    else:
+        if check_subdir:
+            final_model_dir = os.path.join(output_path, check_subdir)
+        else:
+            final_model_dir = output_path
+
+        counter = 1
+        final_output_path = output_path
+        while os.path.exists(final_model_dir):
+            print(f"Warning: '{final_model_dir}' already exists. Generating a new output directory name...")
+            final_output_path = f"{output_path}_{counter}"
+            if check_subdir:
+                final_model_dir = os.path.join(final_output_path, check_subdir)
+            else:
+                final_model_dir = final_output_path
+            counter += 1
+
+        os.makedirs(final_output_path, exist_ok=True)
+        print(f"Using output directory: {final_output_path}")
+        return final_output_path

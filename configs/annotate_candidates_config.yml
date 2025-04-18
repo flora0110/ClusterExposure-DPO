@@ -1,0 +1,17 @@
+# Configuration for annotating candidate responses with metadata
+
+# Input candidate JSON files (raw candidate data)
+input_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates"
+
+# Path to name2genre mapping file
+name2genre_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval/Goodreads/name2genre.json"
+
+diverse_beam_search: true
+num_return_sequences: 10
+diversity_penalty: 1.0
+# Directory to save annotated candidate data
+save_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates"
+
+# Filenames for saving annotated training and validation data
+save_train_filename: "annotated_train.json"
+save_valid_filename: "annotated_valid.json"
