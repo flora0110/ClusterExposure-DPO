@@ -113,15 +113,16 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 ### Negative Sampling Strategies
 
-Strategy Name | Description
-balanced_popularity | Randomly select from high/low exposure halves
-clusterin_high | In-cluster candidate with highest exposure
-clusterin_low | In-cluster candidate with lowest exposure
-low_exposure | Globally lowest exposure candidate
-high_exposure | Globally highest exposure candidate
-clusterout_low | Out-of-cluster candidate with lowest exposure
-clusterout_high | Out-of-cluster candidate with highest exposure
-clusterin_high_clusterout_low | One in-cluster high exposure + one out-of-cluster low exposure candidate
+| Strategy Name | Description |
+| --- | --- |
+| balanced_popularity | Randomly select from high/low exposure halves |
+| clusterin_high | In-cluster candidate with highest exposure |
+| clusterin_low | In-cluster candidate with lowest exposure |
+| low_exposure | Globally lowest exposure candidate |
+| high_exposure | Globally highest exposure candidate |
+| clusterout_low | Out-of-cluster candidate with lowest exposure |
+| clusterout_high | Out-of-cluster candidate with highest exposure |
+| clusterin_high_clusterout_low | One in-cluster high exposure + one out-of-cluster low exposure candidate |
 
 ### Top-5 Metrics
 
