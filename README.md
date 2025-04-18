@@ -69,7 +69,7 @@ We report top-5 and top-10 metrics including:
 
 Negative Sampling Strategies
 
-- clusterout_low: Cluster‑aware, sampling negatives outside interest clusters with low exposure.
+- clusterout_low: User-Preference-Clusters‑aware, sampling negatives outside interest clusters with low exposure.
 
 - clusterin_high_clusterout_low: Hybrid—one high‑exposure negative inside the cluster + one low‑exposure negative outside.
 
