@@ -128,7 +128,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 | SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 ↑ | HR@5 ↑ |
 | --- | --- | --- | --- | --- | --- | --- |
-| SelfPaly | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.022 |
+| SPRec(Baseline) | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.022 |
 | clusterout_high | 0.0185 | 0.0652 | 0.1300 | 0.1154 | 0.0151 | 0.023 |
 | low_exposure | 0.0201 | 0.0743 | 0.1284 | 0.0986 | 0.0166 | 0.025 |
 | high_exposure | 0.0187 | 0.0655 | 0.1366 | 0.1200 | 0.0150 | 0.023 |
@@ -144,7 +144,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 | SampleMethod | MGU@10 ↓ | DGU@10 ↓ | DivRatio@10 ↑ | ORRatio@10 ↓ | NDCG@10 ↑ | HR@10 ↑ |
 | --- | --- | --- | --- | --- | --- | --- |
-| SelfPaly | 0.0141 | 0.0450 | 0.0968 | <mark>**0.0623**</mark> | 0.0158 | 0.028 |
+| | SPRec(Baseline) | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.022 | | 0.0141 | 0.0450 | 0.0968 | <mark>**0.0623**</mark> | 0.0158 | 0.028 |
 | clusterout_high | 0.0125 | 0.0418 | 0.0979 | 0.0807 | 0.0167 | 0.028 |
 | low_exposure | 0.0127 | 0.0452 | 0.0983 | 0.0656 | 0.0182 | 0.030 |
 | high_exposure | 0.0129 | 0.0435 | 0.1027 | 0.0849 | 0.0165 | 0.028 |
@@ -160,7 +160,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 | SampleMethod | Predict_NotIn_Ratio ↓ |
 | --- | --- |
-| SelfPaly | <mark>**0.7010**</mark> |
+| SPRec(Baseline) | 0.0228 | 0.0789 | 0.1266 | <mark>**0.0870**</mark> | 0.0140 | 0.022 | | <mark>**0.7010**</mark> |
 | clusterout_high | 0.8150 |
 | low_exposure | 0.7490 |
 | high_exposure | 0.8250 |
