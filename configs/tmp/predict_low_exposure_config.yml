@@ -1,0 +1,7 @@
+base_model: HuggingFaceTB/SmolLM2-1.7B-Instruct
+batch_size: 8
+finetuned_path: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/Div_10_1.0/low_exposure/final_model
+max_new_tokens: 50
+output_dir: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/ClusterExposure_model/Div_10_1.0/low_exposure
+test_data_path: /scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/test.json
+test_sample_size: 1000

@@ -1,0 +1,9 @@
+eval_dir: /scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval
+category: Goodreads
+predictions_file: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/ClusterExposure_model/Div_10_1.0/clusterout_low/raw_results_1000.json
+output_file: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/ClusterExposure_model/Div_10_1.0/clusterout_low/eval_result.json
+exp_csv: /scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv
+topk: 5
+model_name: ClusterExposure_model
+sample_method: clusterout_low
+sbert_model_path: ./models/paraphrase-MiniLM-L3-v2

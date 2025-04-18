@@ -80,6 +80,8 @@ def generate_predictions(config):
     batch_size = config.get("batch_size", 8)
     max_new_tokens = config.get("max_new_tokens", 50)
     test_sample_size = config.get("test_sample_size", 1000)
+
+    predict_dir = prepare_output_dir(output_dir, "predictions")
     
     # Load Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(base_model, padding_side="left", local_files_only=True)
@@ -105,7 +107,6 @@ def generate_predictions(config):
     results = generate_predictions_batch(inference_model, tokenizer, dataset, batch_size=batch_size, max_new_tokens=max_new_tokens)
     
     # Save predictions
-    predict_dir = prepare_output_dir(output_dir, "predictions")
     raw_results_filename = f"raw_results_{test_sample_size}.json"
     raw_results_path = os.path.join(predict_dir, raw_results_filename)
     

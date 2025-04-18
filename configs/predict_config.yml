@@ -1,6 +1,6 @@
 # Model settings
 base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
-finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"
+finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/SPRec_model/final_model"
 
 # Data settings
 test_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/test.json"

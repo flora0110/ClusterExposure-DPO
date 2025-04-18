@@ -1,6 +1,7 @@
 # Model and checkpoint settings
 base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
 resume_from_checkpoint: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"
+# SPRec
 output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/SPRec_model"
 
 # Data files (JSON lines format)

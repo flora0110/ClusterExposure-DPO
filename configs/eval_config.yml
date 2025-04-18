@@ -16,7 +16,7 @@ output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metric
 exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
 
 # Evaluation parameter: top-k for ranking metrics.
-topk: 10
+topk: 5
 
 # Model name and sampling method (for record purposes)
 model_name: "SPRec"

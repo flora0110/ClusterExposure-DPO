@@ -91,41 +91,66 @@ def gh(category: str, test_data, eval_dir: str) -> list:
     print(f"InCount: {in_count}\nNotinCount: {notin_count}")
     return gh_normalize
 
-def update_csv(dataset_name, model_name, metrics_dict, csv_file):
+def update_csv(dataset_name: str,
+               model_name: str,
+               sample_method: str,
+               metrics_dict: dict,
+               csv_file: str):
     """
-    Update or create a CSV file with evaluation metrics.
-    
-    Args:
-        dataset_name (str): Dataset identifier.
-        model_name (str): Model identifier.
-        metrics_dict (dict): Dictionary of metric names and values.
-        csv_file (str): Path to the CSV file.
-    
-    Returns:
-        None.
+    Update (or create) a CSV of evaluation metrics, keyed by Dataset, Model, and SampleMethod.
+    If a row with the same (Dataset, Model, SampleMethod) exists, its metric columns will be overwritten.
+    Otherwise a new row is appended.
     """
+    # Make sure directory exists
+    os.makedirs(os.path.dirname(csv_file), exist_ok=True)
+
+    key_cols = ["Dataset", "Model", "SampleMethod"]
+    metric_cols = list(metrics_dict.keys())
+
     if not os.path.exists(csv_file):
-        df = pd.DataFrame(columns=["Dataset", "Model"] + list(metrics_dict.keys()))
-        new_row = {"Dataset": dataset_name, "Model": model_name}
+        # Build empty DataFrame with all needed columns
+        df = pd.DataFrame(columns=key_cols + metric_cols)
+        # New row
+        new_row = {"Dataset": dataset_name,
+                   "Model": model_name,
+                   "SampleMethod": sample_method}
         new_row.update(metrics_dict)
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
     else:
         df = pd.read_csv(csv_file)
-        condition = (df["Dataset"] == dataset_name) & (df["Model"] == model_name)
-        if not condition.any():
+        # Ensure the SampleMethod column exists
+        if "SampleMethod" not in df.columns:
+            df["SampleMethod"] = None
+
+        # Condition: same dataset, model, and sample_method
+        cond = (
+            (df["Dataset"] == dataset_name) &
+            (df["Model"] == model_name) &
+            (df["SampleMethod"] == sample_method)
+        )
+
+        if not cond.any():
+            # Append new row
             new_row = {col: None for col in df.columns}
-            new_row["Dataset"] = dataset_name
-            new_row["Model"] = model_name
-            for metric, value in metrics_dict.items():
-                if metric not in df.columns:
-                    df[metric] = None
-                new_row[metric] = value
+            new_row.update({
+                "Dataset": dataset_name,
+                "Model": model_name,
+                "SampleMethod": sample_method,
+                **metrics_dict
+            })
+            # Add any missing metric columns
+            for m in metrics_dict:
+                if m not in df.columns:
+                    df[m] = None
             df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
         else:
+            # Update existing row
             for metric, value in metrics_dict.items():
                 if metric not in df.columns:
                     df[metric] = None
-                df.loc[condition, metric] = value
+                df.loc[cond, metric] = value
+
+    # Write back
     df.to_csv(csv_file, index=False)
     print(f"CSV updated: {csv_file}")
 
@@ -274,6 +299,8 @@ def evaluate_metrics(config):
     print(f"ORRatio: {eval_dic['ORRatio']}")
     
     output_file = config["output_file"]
+    output_dir = os.path.dirname(output_file)
+    prepare_output_dir(output_dir, None, allow_existing=True)
     if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
         with open(output_file, 'r', encoding='utf-8') as file:
             try:
@@ -296,9 +323,10 @@ def evaluate_metrics(config):
             f"ORRatio@{topk}": eval_dic["ORRatio"],
             f"PredictNotInRatio@{topk}": eval_dic["Predict_NotIn_Ratio"],
             f"NDCG@{topk}": eval_dic["NDCG"],
-            f"HR@{topk}": eval_dic["HR"]
+            f"HR@{topk}": eval_dic["HR"],
+            "Predict_NotIn_Ratio": eval_dic["Predict_NotIn_Ratio"],
         }
-        update_csv(category, config.get("model_name", "Unknown"), metric_dic, config["exp_csv"])
+        update_csv(category, config.get("model_name", "Unknown"), config.get("sample_method", "Unknown"), metric_dic, config["exp_csv"])
     print("Evaluation complete.")
 
 if __name__ == "__main__":

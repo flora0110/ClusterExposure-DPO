@@ -378,7 +378,7 @@ def cluster_exposure_neg_sampling(config):
 
     # For each strategy, compute output file path and save the results
     for strat, records in results.items():
-        strat_dir = os.path.join(final_output_dir, strat, "data")
+        strat_dir = os.path.join(final_output_dir, strat)
         if not os.path.exists(strat_dir):
             os.makedirs(strat_dir, exist_ok=True)
         out_file = os.path.join(strat_dir, f"{data_type}.json")
@@ -390,10 +390,10 @@ def cluster_exposure_neg_sampling(config):
 
     # Process negative sampling across all strategies
     results = process_negative_sampling(config, data_type)
-    
+
     # For each strategy, compute output file path and save the results
     for strat, records in results.items():
-        strat_dir = os.path.join(final_output_dir, strat, "data")
+        strat_dir = os.path.join(final_output_dir, strat)
         if not os.path.exists(strat_dir):
             os.makedirs(strat_dir, exist_ok=True)
         out_file = os.path.join(strat_dir, f"{data_type}.json")
