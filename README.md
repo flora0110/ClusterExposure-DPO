@@ -138,7 +138,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | clusterin_high_clusterout_low | <mark>**0.0175**</mark> | 0.0650 | 0.1292 | 0.0946 | 0.0200 | 0.030 |
 | balanced_popularity | 0.0183 | 0.0682 | 0.1296 | 0.0950 | 0.0194 | 0.029 |
 | clusterin_low_clusterout_low | 0.0186 | 0.0708 | 0.1256 | 0.0896 | 0.0177 | 0.027 |
-
+| LightGCN(all) | 0.0214 | 0.0749 | 0.1232 | 0.1146 | 0.0117 | 0.0190 |
 
 ### Top-10 Metrics
 
@@ -154,7 +154,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | clusterin_high_clusterout_low | <mark>**0.0113**</mark> | <mark>**0.0404**</mark> | 0.0999 | <mark>**0.0623**</mark> | 0.0216 | 0.035 |
 | balanced_popularity | 0.0119 | 0.0417 | 0.0983 | 0.0649 | 0.0214 | 0.035 |
 | clusterin_low_clusterout_low | 0.0125 | 0.0457 | 0.0951 | 0.0626 | 0.0196 | 0.033 |
-
+| LightGCN(all) | 0.0131 | 0.0413 | 0.0957 | 0.0787 | 0.01355 | 0.0250 |
 
 ### Predict Not-In-Ratio
 

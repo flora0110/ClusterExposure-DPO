@@ -7,20 +7,23 @@ eval_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval"
 category: "Goodreads"
 
 # Prediction results file (input)
-predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/SPRec_Reproduction/raw_results_1000.json"
+# predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/SPRec_Reproduction/raw_results_1000.json"
+predictions_file: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions/raw_results_1000.json"
 
 # Output file for evaluation results (JSON)
-output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/SPRec_Reproduction/eval_result.json"
+# output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/SPRec_Reproduction/eval_result.json"
+output_file: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/eval_result.json"
 
 # Optional CSV file to update evaluation metrics.
-exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
+# exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
+exp_csv: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/metrics_summary.csv"
 
 # Evaluation parameter: top-k for ranking metrics.
-topk: 5
+topk: 10
 
 # Model name and sampling method (for record purposes)
-model_name: "SPRec"
-sample_method: "SelfPaly"
+model_name: "LightGCN"
+sample_method: "LightGCN"
 
 # SentenceTransformer model path for encoding predictions.
 sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"
