@@ -2,11 +2,14 @@
 base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
 resume_from_checkpoint: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"
 # SPRec
-output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/SPRec_model"
+# output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/SPRec_model"
+output_dir: "/scratch/user/chuanhsin0110/test_0321/nlp/models/final"
 
 # Data files (JSON lines format)
-train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/selfplay/train.json"
-valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/selfplay/valid.json"
+# train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/selfplay/train.json"
+# valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/selfplay/valid.json"
+train_data_path: "/scratch/user/chuanhsin0110/test_0321/nlp/dpo_data/train.json"
+valid_data_path: "/scratch/user/chuanhsin0110/test_0321/nlp/dpo_data/valid.json"
 
 # DPO training parameters
 dpo:
