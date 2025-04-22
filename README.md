@@ -188,18 +188,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | in_past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
 | past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
 | in_chosen_farthest | 0.0120 | 0.0435 | 0.1117 | 0.0583 | 0.0260 | 0.041 |
-| out_past_farthest | 0.7760 |
-| in_chosen_nearest | 0.7720 |
-| in_past_farthest | 0.7720 |
-| out_chosen_farthest | 0.7790 |
-| chosen_nearest | 0.7710 |
-| past_farthest | 0.7760 |
-| chosen_farthest | 0.7770 |
-| out_chosen_nearest | 0.7730 |
-| out_past_nearest | 0.7840 |
-| in_past_nearest | 0.7830 |
-| past_nearest | 0.7830 |
-| in_chosen_farthest | 0.7790 |
+
 
 ### Predict Not-In-Ratio
 
@@ -215,6 +204,18 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | clusterin_high_clusterout_low | 0.8000 |
 | balanced_popularity | 0.7870 |
 | clusterin_low_clusterout_low | 0.7700 |
+| out_past_farthest | 0.7760 |
+| in_chosen_nearest | 0.7720 |
+| in_past_farthest | 0.7720 |
+| out_chosen_farthest | 0.7790 |
+| chosen_nearest | 0.7710 |
+| past_farthest | 0.7760 |
+| chosen_farthest | 0.7770 |
+| out_chosen_nearest | 0.7730 |
+| out_past_nearest | 0.7840 |
+| in_past_nearest | 0.7830 |
+| past_nearest | 0.7830 |
+| in_chosen_farthest | 0.7790 |
 
 ## S-DPO(2 epochs) vs Curriculum Learning
 
