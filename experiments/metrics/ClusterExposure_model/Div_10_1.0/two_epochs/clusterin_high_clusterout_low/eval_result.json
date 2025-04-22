@@ -1,0 +1,46 @@
+[
+  {
+    "method_name": "ClusterExposure_model",
+    "sample_method": "two_epochs clusterin_high_clusterout_low",
+    "topK": 5,
+    "Dis_genre": [
+      0.011999346530785548,
+      0.0013069215569013748,
+      0.023208431268214424,
+      0.005235244806573086,
+      0.015913196393991816,
+      0.008812960216002218,
+      0.008037171809111118
+    ],
+    "NDCG": 0.024698498643191607,
+    "HR": 0.036,
+    "diversity": 824,
+    "DivRatio": 0.1648,
+    "DGU": 0.03912162766220624,
+    "MGU": 0.01064475322593994,
+    "Predict_NotIn_Ratio": 0.906,
+    "ORRatio": 0.1182
+  },
+  {
+    "method_name": "ClusterExposure_model",
+    "sample_method": "two_epochs clusterin_high_clusterout_low",
+    "topK": 10,
+    "Dis_genre": [
+      0.006745803871961553,
+      0.0025685197876899046,
+      0.021368579251289488,
+      0.0033980034192614417,
+      0.014429616043718688,
+      0.008481611571618204,
+      0.007845287275656008
+    ],
+    "NDCG": 0.02682851649293839,
+    "HR": 0.043,
+    "diversity": 1208,
+    "DivRatio": 0.1208,
+    "DGU": 0.035798195295008176,
+    "MGU": 0.009262488745885042,
+    "Predict_NotIn_Ratio": 0.906,
+    "ORRatio": 0.0805
+  }
+]

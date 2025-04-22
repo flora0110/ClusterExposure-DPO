@@ -178,6 +178,33 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | balanced_popularity | 0.7870 |
 | clusterin_low_clusterout_low | 0.7700 |
 
+## S-DPO(2 epochs) vs Curriculum Learning
+
+### Top-5 Metrics
+
+| SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 ↑ | HR@5 ↑ |
+| --- | --- | --- | --- | --- | --- | --- |
+| two_stages clusterin_low_clusterout_low | 0.0130 | 0.0543 | 0.1724 | 0.1032 | 0.0244 | <mark>**0.037**</mark> |
+| two_stages clusterin_high_clusterout_low | 0.0111 | 0.0463 | <mark>**0.1730**</mark> | 0.1210 | 0.0236 | 0.035 |
+| two_epochs clusterin_low_clusterout_low | 0.0123 | 0.0539 | 0.1560 | 0.1014 | 0.0218 | 0.034 |
+| two_epochs clusterin_high_clusterout_low | <mark>**0.0106**</mark> | <mark>**0.0391**</mark> | 0.1648 | 0.1182 | <mark>**0.0247**</mark> | 0.036 |
+
+### Top-10 Metrics
+
+| SampleMethod | MGU@10 ↓ | DGU@10 ↓ | DivRatio@10 ↑ | ORRatio@10 ↓ | NDCG@10 ↑ | HR@10 ↑ |
+| --- | --- | --- | --- | --- | --- | --- |
+| two_stages clusterin_low_clusterout_low | 0.0117 | 0.0440 | <mark>**0.1274**</mark> | 0.0752 | <mark>**0.0273**</mark> | <mark>**0.046**</mark> |
+| two_stages clusterin_high_clusterout_low | 0.0103 | 0.0393 | 0.1257 | 0.0879 | 0.0259 | 0.042 |
+| two_epochs clusterin_low_clusterout_low | 0.0109 | 0.0429 | 0.1150 | 0.0692 | 0.0237 | 0.040 |
+| two_epochs clusterin_high_clusterout_low | <mark>**0.0093**</mark> | <mark>**0.0358**</mark> | 0.1208 | 0.0805 | 0.0268 | 0.043 |
+
+### Predict Not-In-Ratio
+| SampleMethod | Predict_NotIn_Ratio ↓ |
+| --- | --- |
+| two_stages clusterin_low_clusterout_low | 0.8730 |
+| two_stages clusterin_high_clusterout_low | 0.9140 |
+| two_epochs clusterin_low_clusterout_low | 0.8870 |
+| two_epochs clusterin_high_clusterout_low | 0.9060 |
 
 ## Quick Start
 ### ClusterExposure

@@ -8,7 +8,7 @@ from src.models.sdpo_trainer import train_sdpo
 
 
 STRATEGIES = {
-    "balanced_popularity",
+    # "balanced_popularity",
     # "clusterin_high_clusterout_low",
     "clusterin_low_clusterout_low",
 }
@@ -16,7 +16,7 @@ STRATEGIES = {
 D= "Div"
 num_return_sequences= "10"
 diversity_penalty= "1.0"
-BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/{D}_{num_return_sequences}_{diversity_penalty}"
+BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/{D}_{num_return_sequences}_{diversity_penalty}/two_epochs"
 BASE_INPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/{D}_{num_return_sequences}_{diversity_penalty}"
 BASE_CONFIG = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/sdpo_config.yml"
 

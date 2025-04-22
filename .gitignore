@@ -21,6 +21,8 @@ env/
 *.pt
 *.ckpt
 *.safetensors
+*.pth
+*.npy
 
 # ========================
 # Training outputs

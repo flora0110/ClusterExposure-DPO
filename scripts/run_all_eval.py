@@ -13,8 +13,8 @@ STRATEGIES = {
     # "clusterin_low",
     # "low_exposure",
     # "high_exposure",
-    # "clusterin_high_clusterout_low",
-    "balanced_popularity",
+    "clusterin_high_clusterout_low",
+    # "balanced_popularity",
     "clusterin_low_clusterout_low",
 }
 
@@ -24,7 +24,7 @@ DIVERSITY = "1.0"
 
 BASE_PRED_DIR = (
     f"/scratch/user/chuanhsin0110/ClusterExposure-DPO"
-    f"/experiments/predictions/ClusterExposure_model/{D}_{NUM_RETURN}_{DIVERSITY}"
+    f"/experiments/predictions/ClusterExposure_model/{D}_{NUM_RETURN}_{DIVERSITY}/"
 )
 BASE_METRICS_DIR = (
     f"/scratch/user/chuanhsin0110/ClusterExposure-DPO"
@@ -45,12 +45,12 @@ def main():
     for strat in STRATEGIES:
         cfg = dict(base_cfg)
 
-        pred_file = os.path.join(BASE_PRED_DIR, strat, "raw_results_1000.json")
-        out_file = os.path.join(BASE_METRICS_DIR, strat, "eval_result.json")
+        pred_file = os.path.join(BASE_PRED_DIR, "two_epochs", strat, "raw_results_1000.json")
+        out_file = os.path.join(BASE_METRICS_DIR, "two_epochs", strat, "eval_result.json")
 
         cfg["predictions_file"] = pred_file
         cfg["output_file"]      = out_file
-        cfg["sample_method"]    = strat
+        cfg["sample_method"]    = "two_epochs "+strat
         cfg["model_name"]    = "ClusterExposure_model"
 
         tmp_path = os.path.join(TMP_CFG_DIR, f"eval_{strat}_config.yml")
