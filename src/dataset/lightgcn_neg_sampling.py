@@ -69,6 +69,8 @@ def process_negative_sampling(config: dict, split: str, item_emb: np.ndarray, bo
         prompt = format_prompt(rec["instruction"], rec["input"])
         past_titles = parse_titles(rec["input"])
         chosen_title = parse_titles(rec["chosen"])[0]
+        if chosen_title not in book2idx:
+            print("Missing chosen title:", chosen_title)
         interest = set(rec.get("interest_clusters", []))
         details = rec.get("rejected_details", [])
 

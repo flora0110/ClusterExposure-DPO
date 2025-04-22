@@ -9,19 +9,20 @@ from src.models.dpo_trainer import train_dpo
 
 
 STRATEGIES = {
-    # "clusterout_low",
-    # "clusterout_high",
-    "clusterin_high",
-    "clusterin_low",
-    "low_exposure",
-    "high_exposure",
+ "past_farthest", "past_nearest",
+        "chosen_farthest", "chosen_nearest",
+        "in_chosen_farthest", "in_chosen_nearest",
+        "out_chosen_farthest", "out_chosen_nearest",
+        "in_past_farthest", "in_past_nearest",
+        # "out_past_farthest", 
+        "out_past_nearest",
 }
 
 D= "Div"
 num_return_sequences= "10"
 diversity_penalty= "1.0"
-BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/{D}_{num_return_sequences}_{diversity_penalty}"
-BASE_INPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/{D}_{num_return_sequences}_{diversity_penalty}"
+BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/{D}_{num_return_sequences}_{diversity_penalty}"
+BASE_INPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/lightgcn/{D}_{num_return_sequences}_{diversity_penalty}"
 BASE_CONFIG = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/dpo_config.yml"
 
 def load_config(config_path):

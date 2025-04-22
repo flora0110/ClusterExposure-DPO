@@ -4,6 +4,7 @@
 input_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates"
 
 # 与 param_tag 一致，用于定位子文件夹 beam_cd_candidates/{param_tag}
+# 这里 D 就是 “Div” ，如果你的文件夹命名是 Div_10_1.0 就写成 "Div"
 D: "Div"
 num_return_sequences: 10
 diversity_penalty: 1.0
@@ -16,15 +17,8 @@ input_valid_filename: "annotated_valid.json"
 # output_dir_base/{param_tag}/{策略}/{split}.json
 output_dir_base: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/lightgcn"
 
-# LightGCN 相关
+# CF embedding 相关
 # book2idx 映射文件（JSON）
-book2idx: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/lightgcn/book2idx.json"
-# 归一化邻接存储目录，下包含 adj_idx.pt/adj_vals.pt
-adj_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/lightgcn/adj"
-# LightGCN 模型 checkpoint（pth）
-lgcn_ckpt: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/lightgcn/models/lightgcn_from_full_data2.pth"
-
-# LightGCN 配置
-num_users: 93000   # 实际用户数，请替换为真实值
-emb_dim: 64
-n_layers: 3
+book2idx: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/book2idx_full_data_with_output.json"
+# 预先导出的 item_embeddings (NumPy .npy)
+item_emb: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data_with_output.npy"

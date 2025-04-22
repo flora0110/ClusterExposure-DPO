@@ -146,6 +146,20 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | balanced_popularity | 0.0183 | 0.0682 | 0.1296 | 0.0950 | 0.0194 | 0.029 |
 | clusterin_low_clusterout_low | 0.0186 | 0.0708 | 0.1256 | 0.0896 | 0.0177 | 0.027 |
 | LightGCN(all) | 0.0214 | 0.0749 | 0.1232 | 0.1146 | 0.0117 | 0.0190 |
+| out_past_farthest | 0.0172 | 0.0634 | 0.1450 | 0.0822 | 0.0234 | 0.035 |
+| in_chosen_nearest | 0.0195 | 0.0672 | 0.1324 | 0.1022 | 0.0177 | 0.027 |
+| in_past_farthest | 0.0170 | 0.0638 | 0.1470 | 0.0808 | 0.0234 | 0.035 |
+| out_chosen_farthest | 0.0177 | 0.0653 | 0.1428 | 0.0862 | 0.0234 | 0.035 |
+| chosen_nearest | 0.0194 | 0.0670 | 0.1320 | 0.1020 | 0.0177 | 0.027 |
+| past_farthest | 0.0170 | 0.0626 | 0.1478 | <mark>**0.0802**</mark> | 0.0234 | 0.035 |
+| chosen_farthest | 0.0176 | 0.0654 | 0.1470 | 0.0842 | 0.0234 | 0.035 |
+| out_chosen_nearest | 0.0194 | 0.0681 | 0.1330 | 0.1020 | 0.0177 | 0.027 |
+| out_past_nearest | 0.0200 | 0.0693 | 0.1318 | 0.1098 | 0.0182 | 0.028 |
+| in_past_nearest | 0.0200 | 0.0685 | 0.1324 | 0.1094 | 0.0160 | 0.025 |
+| past_nearest | 0.0200 | 0.0685 | 0.1324 | 0.1094 | 0.0160 | 0.025 |
+| in_chosen_farthest | 0.0171 | 0.0644 | 0.1486 | 0.0834 | 0.0244 | 0.036 |
+
+
 
 ### Top-10 Metrics
 
@@ -162,6 +176,30 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | balanced_popularity | 0.0119 | 0.0417 | 0.0983 | 0.0649 | 0.0214 | 0.035 |
 | clusterin_low_clusterout_low | 0.0125 | 0.0457 | 0.0951 | 0.0626 | 0.0196 | 0.033 |
 | LightGCN(all) | 0.0131 | 0.0413 | 0.0957 | 0.0787 | 0.01355 | 0.0250 |
+| out_past_farthest | 0.0123 | 0.0433 | 0.1080 | 0.0561 | 0.0256 | 0.042 |
+| in_chosen_nearest | 0.0124 | 0.0411 | 0.0990 | 0.0699 | 0.0190 | 0.031 |
+| in_past_farthest | 0.0119 | 0.0428 | 0.1098 | 0.0557 | 0.0256 | 0.042 |
+| out_chosen_farthest | 0.0122 | 0.0442 | 0.1074 | 0.0606 | 0.0256 | 0.042 |
+| chosen_nearest | 0.0123 | 0.0412 | 0.0988 | 0.0700 | 0.0190 | 0.031 |
+| past_farthest | 0.0119 | 0.0427 | 0.1100 | <mark>**0.0555**</mark> | 0.0256 | 0.042 |
+| chosen_farthest | 0.0123 | 0.0448 | 0.1106 | 0.0588 | 0.0253 | 0.041 |
+| out_chosen_nearest | 0.0126 | 0.0425 | 0.0997 | 0.0696 | 0.0193 | 0.032 |
+| out_past_nearest | 0.0129 | 0.0428 | 0.0987 | 0.0758 | 0.0195 | 0.032 |
+| in_past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
+| past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
+| in_chosen_farthest | 0.0120 | 0.0435 | 0.1117 | 0.0583 | 0.0260 | 0.041 |
+| out_past_farthest | 0.7760 |
+| in_chosen_nearest | 0.7720 |
+| in_past_farthest | 0.7720 |
+| out_chosen_farthest | 0.7790 |
+| chosen_nearest | 0.7710 |
+| past_farthest | 0.7760 |
+| chosen_farthest | 0.7770 |
+| out_chosen_nearest | 0.7730 |
+| out_past_nearest | 0.7840 |
+| in_past_nearest | 0.7830 |
+| past_nearest | 0.7830 |
+| in_chosen_farthest | 0.7790 |
 
 ### Predict Not-In-Ratio
 

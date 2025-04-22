@@ -28,8 +28,10 @@ def load_interactions(json_path, user_offset=0):
     for idx, entry in enumerate(data):
         user_id = idx + user_offset
         titles = re.findall(r'"([^\"]+)"', entry.get('input', ''))
+        titles += re.findall(r'"([^\"]+)"', entry.get('output', ''))
         for title in titles:
             interactions.append((user_id, title.strip()))
+    interactions = list(set(interactions))
     return interactions, len(data)
 
 

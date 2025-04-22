@@ -14,15 +14,22 @@ STRATEGIES = {
     # "low_exposure",
     # "high_exposure",
     # "clusterin_high_clusterout_low",
-    "balanced_popularity",
-    "clusterin_low_clusterout_low",
+    # "balanced_popularity",
+    # "clusterin_low_clusterout_low",
+     "past_farthest", "past_nearest",
+        "chosen_farthest", "chosen_nearest",
+        "in_chosen_farthest", "in_chosen_nearest",
+        "out_chosen_farthest", "out_chosen_nearest",
+        "in_past_farthest", "in_past_nearest",
+        # "out_past_farthest", 
+        "out_past_nearest",
 }
 
 D= "Div"
 num_return_sequences= "10"
 diversity_penalty= "1.0"
-BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/ClusterExposure_model/{D}_{num_return_sequences}_{diversity_penalty}"
-BASE_INPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/{D}_{num_return_sequences}_{diversity_penalty}"
+BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/lightgcn/{D}_{num_return_sequences}_{diversity_penalty}"
+BASE_INPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/{D}_{num_return_sequences}_{diversity_penalty}"
 BASE_CONFIG = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/predict_config.yml"
 
 
@@ -40,7 +47,7 @@ if __name__ == "__main__":
         cfg["output_dir"] = os.path.join(BASE_OUTPUT, folder)
 
         cfg["finetuned_path"] = os.path.join(BASE_INPUT, folder)
-        # cfg["finetuned_path"] = os.path.join(cfg["finetuned_path"], "final_model")
+        cfg["finetuned_path"] = os.path.join(cfg["finetuned_path"], "final_model")
 
         # write a temp config
         tmp_cfg_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/tmp/predict_{folder}_config.yml"

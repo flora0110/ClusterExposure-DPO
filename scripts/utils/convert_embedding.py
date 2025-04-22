@@ -2,8 +2,8 @@ import torch
 import numpy as np
 import os
 
-pth = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data.pth"
-out = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data.npy"
+pth = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data_with_output.pth"
+out = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data_with_output.npy"
 
 state = torch.load(pth, map_location="cpu")
 

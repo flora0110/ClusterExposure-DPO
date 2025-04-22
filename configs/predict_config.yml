@@ -1,13 +1,13 @@
 # Model settings
 base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
-finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/ClusterExposure_model/Div_10_1.0/two_epochs/clusterin_high_clusterout_low"
+finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/Div_10_1.0/out_past_farthest/final_model"
 # finetuned_path: "/scratch/user/chuanhsin0110/test_0321/nlp/models/final/final_model"
 
 # Data settings
 test_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/test.json"
 
 # Output settings
-output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/ClusterExposure_model/Div_10_1.0/two_epochs/clusterin_high_clusterout_low"
+output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/lightgcn/Div_10_1.0/out_past_farthest"
 # output_dir: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions"
 # Inference parameters
 batch_size: 8

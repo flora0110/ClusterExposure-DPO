@@ -22,8 +22,8 @@ exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/me
 topk: 10
 
 # Model name and sampling method (for record purposes)
-model_name: "LightGCN"
-sample_method: "LightGCN"
+model_name: "lightgcn"
+sample_method: "out_past_farthest"
 
 # SentenceTransformer model path for encoding predictions.
 sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"

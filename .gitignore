@@ -45,4 +45,8 @@ huggingface/
 # ========================
 data/raw/
 
+# ========================  
+# Temporary files
+# ========================
+configs/tmp/
 note.txt

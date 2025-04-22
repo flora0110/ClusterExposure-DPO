@@ -9,7 +9,7 @@ train_json: /scratch/user/chuanhsin0110/ClusterExposure-DPO/data/raw/Goodreads/t
 valid_json: /scratch/user/chuanhsin0110/ClusterExposure-DPO/data/raw/Goodreads/valid.json
 
 # Model checkpoint filename (saved under data_dir/models)
-model_filename: lightgcn_model_full_data.pth
+model_filename: lightgcn_model_full_data_with_output.pth
 
 # Model architecture parameters
 embedding_dim: 64   # embedding dimension for users and items
