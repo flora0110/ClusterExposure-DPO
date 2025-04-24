@@ -7,11 +7,11 @@ eval_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval"
 category: "Goodreads"
 
 # Prediction results file (input)
-predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/ClusterExposure_model/raw_results_1000.json"
+predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dc_0.05_2.0/raw_results_1000.json"
 # predictions_file: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions/raw_results_1000.json"
 
 # Output file for evaluation results (JSON)
-output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/ClusterExposure_model/eval_result.json"
+output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/metrics/predictions/DS-DPO/Div_10_1.0/dc_0.05_2.0/eval_result.json"
 # output_file: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/eval_result.json"
 
 # Optional CSV file to update evaluation metrics.
@@ -19,11 +19,11 @@ exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/me
 # exp_csv: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/metrics_summary.csv"
 
 # Evaluation parameter: top-k for ranking metrics.
-topk: 10
+topk: 5
 
 # Model name and sampling method (for record purposes)
-model_name: "lightgcn"
-sample_method: "out_past_farthest"
+model_name: "DS-DPO"
+sample_method: "dc_0.05_2.0"
 
 # SentenceTransformer model path for encoding predictions.
 sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"

@@ -158,7 +158,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | in_past_nearest | 0.0200 | 0.0685 | 0.1324 | 0.1094 | 0.0160 | 0.025 |
 | past_nearest | 0.0200 | 0.0685 | 0.1324 | 0.1094 | 0.0160 | 0.025 |
 | in_chosen_farthest | 0.0171 | 0.0644 | 0.1486 | 0.0834 | 0.0244 | 0.036 |
-
+| dc_0.05_2.0 | <mark>**0.0102**</mark> | 0.0431 | <mark>**0.1868**</mark> | 0.1066 | <mark>**0.0264**</mark> | <mark>**0.041**</mark> |
 
 
 ### Top-10 Metrics
@@ -188,7 +188,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | in_past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
 | past_nearest | 0.0126 | 0.0416 | 0.0986 | 0.0751 | 0.0172 | 0.029 |
 | in_chosen_farthest | 0.0120 | 0.0435 | 0.1117 | 0.0583 | 0.0260 | 0.041 |
-
+| dc_0.05_2.0 | 0.0097 | 0.0364 | <mark>**0.1322**</mark> | 0.0804 | <mark>**0.0287**</mark> | <mark>**0.048**</mark> |
 
 ### Predict Not-In-Ratio
 
@@ -216,6 +216,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | in_past_nearest | 0.7830 |
 | past_nearest | 0.7830 |
 | in_chosen_farthest | 0.7790 |
+| dc_0.05_2.0 | 0.9150 |
 
 ## S-DPO(2 epochs) vs Curriculum Learning
 
