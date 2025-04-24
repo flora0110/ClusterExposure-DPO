@@ -7,11 +7,11 @@ eval_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval"
 category: "Goodreads"
 
 # Prediction results file (input)
-predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dpc_0.1_4.0/raw_results_1000.json"
+predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dpc_0.08_3.0/raw_results_1000.json"
 # predictions_file: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions/raw_results_1000.json"
 
 # Output file for evaluation results (JSON)
-output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/metrics/predictions/DS-DPO/Div_10_1.0/dpc_0.1_4.0/eval_result.json"
+output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/metrics/predictions/DS-DPO/Div_10_1.0/dpc_0.08_3.0/eval_result.json"
 # output_file: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/eval_result.json"
 
 # Optional CSV file to update evaluation metrics.
@@ -23,7 +23,7 @@ topk: 10
 
 # Model name and sampling method (for record purposes)
 model_name: "DS-DPO"
-sample_method: "dpc_0.1_4.0"
+sample_method: "dpc_0.08_3.0"
 
 # SentenceTransformer model path for encoding predictions.
 sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"
