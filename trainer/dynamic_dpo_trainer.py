@@ -223,7 +223,7 @@ class DSDPOTrainer(Trainer):
                         concatenated_batch[concatenated_key],
                         pad_to_length(batch[k], max_length, pad_value=pad_value),
                     ),
-                    dim=1, # 0 to 1
+                    dim=0, # 0 to 1
                 ).to(self.accelerator.device)
         return concatenated_batch
 
