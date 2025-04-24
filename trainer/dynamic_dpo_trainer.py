@@ -35,8 +35,7 @@ def parse_titles(text: str):
     cleaned_titles = []
     for t in raw_titles:
         # 如果最前面有單引號，就去掉它
-        if t.startswith("'"):
-            t = t[1:]
+        t = re.sub(r'^[^0-9A-Za-z#(]+', '', t)
         # 如果最後面有單引號，就去掉它
         if t.endswith("'"):
             t = t[:-1]

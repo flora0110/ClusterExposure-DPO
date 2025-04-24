@@ -21,8 +21,10 @@ num_train_epochs: 2
 learning_rate: 1e-5
 bf16: true
 logging_steps: 1
-max_neg: 10
-distance_type: "dc"
+max_neg: 5
+distance_type: "dpc"
+min_beta: 0.1
+max_beta: 4.0
 
 # Optional settings
 num_proc: 8

@@ -1,7 +1,7 @@
 [
   {
-    "method_name": "DS-DPO",
-    "sample_method": "dc_0.05_2.0",
+    "method_name": "S-DPO",
+    "sample_method": "",
     "topK": 10,
     "Dis_genre": [
       0.004956334188408018,
@@ -22,8 +22,8 @@
     "ORRatio": 0.0804
   },
   {
-    "method_name": "DS-DPO",
-    "sample_method": "dc_0.05_2.0",
+    "method_name": "S-DPO",
+    "sample_method": "",
     "topK": 5,
     "Dis_genre": [
       0.010899931662832929,

@@ -21,6 +21,9 @@ from transformers import (
 from datasets import load_dataset, DatasetDict
 from trainer.softmax_dpo_trainer import DPOTrainer as SoftmaxDPOTrainer
 from src.utils.io_utils import safe_write_json, safe_load_json, prepare_output_dir
+from trainer.data_collator import DPODataCollatorWithPadding
+
+
 
 # —— Callback for updating beta ——
 class BetaUpdateCallback(TrainerCallback):
@@ -59,8 +62,11 @@ def beta_scheduler(old_beta: float, metrics: Dict[str, float]) -> float:
 
 
 def train_bnetsdpo(config: dict):
+
+
+
     # —— 全局预加载资源 ——  
-    eval_dir = config.get("eval_dir", "path/to/eval_dir")      # TODO: 改为你的评估目录
+    eval_dir = config.get("eval_dir")      # TODO: 改为你的评估目录
     category = config.get("category", "Goodreads")             # TODO: 改为你的类别名称
     id2name = safe_load_json(os.path.join(eval_dir, category, "id2name.json"))
     name2genre = safe_load_json(os.path.join(eval_dir, category, "name2genre.json"))
@@ -228,6 +234,8 @@ def train_bnetsdpo(config: dict):
         eval_dataset=ds["validation"],
         beta=config.get("beta", 0.1),
         tokenizer=tokenizer,
+        data_collator=DPODataCollatorWithPadding(tokenizer),
+        use_dpo_data_collator=True,   # 如果 Trainer 支持这个参数
     )
 
     trainer.compute_metrics = compute_metrics

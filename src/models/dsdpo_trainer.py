@@ -163,6 +163,7 @@ def train_dsdpo(config: dict):
         max_neg=config.get("max_neg", 10),
         book2idx=book2idx,
         item_emb=item_emb,
+        beta_range = (config.get("beta_min", 0.1), config.get("beta_max", 2.0)),
     )
     trainer.train()
 

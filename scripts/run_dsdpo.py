@@ -10,7 +10,7 @@ from src.models.dsdpo_trainer import train_dsdpo
 STRATEGIES = {
     # "balanced_popularity",
     # "clusterin_high_clusterout_low",
-    "dp_0.05_2.0",
+    "dpc_0.05_2.0",
 }
 
 D= "Div"
@@ -38,15 +38,10 @@ if __name__ == "__main__":
     with open(BASE_CONFIG) as f:
         base_cfg = yaml.safe_load(f)
 
-    for folder in STRATEGIES:
-        cfg = dict(base_cfg)
-        cfg["output_dir"] = os.path.join(BASE_OUTPUT, folder)
+    cfg = dict(base_cfg)
+    cfg["output_dir"] = os.path.join(BASE_OUTPUT, f'{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
 
-        # write a temp config
-        tmp_cfg_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/tmp/dsdpo_{folder}_config.yml"
-        with open(tmp_cfg_path, "w") as f:
-            yaml.safe_dump(cfg, f)
-        print(f"\n>>> Launching DPO for {folder} → folder `{cfg['output_dir']}`")
+    # write a temp config
 
-        # train_sdpo
-        train_dsdpo(cfg)
+    # train_sdpo
+    train_dsdpo(cfg)
