@@ -107,6 +107,22 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 - SPRec retains best ORRatio but has the weakest diversity/ranking.
 
+
+
+| SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 ↑ | HR@5 ↑ |
+| --- | --- | --- | --- | --- | --- | --- |
+| low_exposure | 0.0201 | 0.0743 | 0.1284 | 0.0986 | 0.0166 | 0.025 |
+| high_exposure | 0.0187 | 0.0655 | 0.1366 | 0.1200 | 0.0150 | 0.023 |
+| clusterin_low | 0.0196 | 0.0730 | 0.1292 | 0.0978 | 0.0170 | 0.027 |
+| clusterin_high | 0.0187 | 0.0656 | 0.1368 | 0.1202 | 0.0150 | 0.023 |
+| clusterout_low | 0.0186 |0.0644 | 0.1366 | 0.0966 | 0.0211 | 0.033|
+| clusterout_high | 0.0185 | 0.0652 | 0.1300 | 0.1154 | 0.0151 | 0.023 |
+| clusterin_low_clusterout_low | 0.0186 | 0.0708 | 0.1256 | 0.0896 | 0.0177 | 0.027 |
+| clusterin_high_clusterout_low | 0.0175 | 0.0650 | 0.1292 | 0.0946 | 0.0200 | 0.030 |
+
+- No matter whether the negative samples come from within-cluster or out-of-cluster, choosing low-exposure items consistently leads to a better (lower) ORRatio. This challenges the common assumption that penalizing high-exposure items—by pushing them farther away from positive items—would help reduce ORRatio. In contrast, while penalizing low-exposure items reduces their likelihood of being recommended given a specific past behavior sequence, it may indirectly bring them closer to other user behavior patterns due to this "push-away" effect. Therefore, the relationship between exposure-based penalization and ORRatio is more nuanced than expected.
+
+
 ### Key Takeaways
 
 - Reducing Bias: clusterin_high_clusterout_low is best at mitigating genre/popularity bias (MGU, DGU, ORRatio), especially at Top‑10.
