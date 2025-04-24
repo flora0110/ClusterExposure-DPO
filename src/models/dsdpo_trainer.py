@@ -34,7 +34,7 @@ def avg_emb(titles, book2idx, item_emb):
         return None
     return item_emb[idxs].mean(axis=0)
 
-def train_sdpo(config: dict):
+def train_dsdpo(config: dict):
     """
     Train using S-DPO (Softmax Direct Preference Optimization) based on given config.
     Args:
@@ -53,25 +53,37 @@ def train_sdpo(config: dict):
     ds = load_dataset("json", data_files=data_files)
     
     def process_data(examples):
-        with open(config["book2idx"], "r") as f:
-            book2idx = json.load(f)
-        item_emb = np.load(config["item_emb"])  # shape (num_items, emb_dim)
-        past_titles = parse_titles(examples["prompt"])
-        chosen_title = parse_titles(examples["chosen"])[0]
+        # print(f"prompt: {examples['prompt']}")
+        # print(f"chosen: {examples['chosen']}")
+        
+        past_titles = [parse_titles(ex) for ex in examples["prompt"]]
+        chosen_titles = [parse_titles(ex)[0] for ex in examples["chosen"]]
 
+        # chosen_title = parse_titles(examples["chosen"])[0]
+        # print(f"chosen_title: {chosen_title}")
 
         # compute centroids
-        emb_past   = avg_emb(past_titles, book2idx, item_emb)
-        emb_chosen = avg_emb([chosen_title],    book2idx, item_emb)
+        # emb_past   = [avg_emb(past_title, book2idx, item_emb) for past_title in past_titles]
+        # emb_chosen = [avg_emb([chosen_title],    book2idx, item_emb) for chosen_title in chosen_titles]
+        # # emb_chosen = avg_emb([chosen_title],    book2idx, item_emb)
+        # emb_pc = [avg_emb(past_title + [chosen_title], book2idx, item_emb) for past_title, chosen_title in zip(past_titles, chosen_titles)]
 
         # Flatten rejected list into multiple columns
-        dic = {"prompt": examples["prompt"], "chosen": examples["chosen"], "emb_chosen": emb_chosen, "emb_past": emb_past}  
+        dic = {"prompt": examples["prompt"], "chosen": examples["chosen"]}  
         max_neg = config.get("max_neg", 10)
         for i in range(1, max_neg + 1):
             dic[f"rejected{i}"] = [(
                 ex[i - 1] if i - 1 < len(ex) else ""
             ) for ex in examples["rejected"]]
-            dic[f"emb_rejected{i}"] = [ item_emb[book2idx.get(n, 0)]  for n in dic[f"rejected{i}"] ]
+            # dic[f"emb_rejected{i}"] = [ item_emb[book2idx.get(n, 0)]  for n in dic[f"rejected{i}"] ]
+            # dic[f"emb_rejected{i}"] = [ item_emb[book2idx.get(n, 0)]  for n in dic[f"rejected{i}"] ]
+
+        # for k, v in dic.items():
+        #     print(f"{k!r} -> {type(v).__name__}")
+        #     if(type(v[0])==str):
+        #         print(f"  {len(v)} {type(v[0]).__name__} {type(v[0])} {v[0]}")
+        #     print("-" * 20)
+        #     print("\n\n")
         return dic
 
     ds = ds.map(
@@ -133,11 +145,13 @@ def train_sdpo(config: dict):
         logging_steps=config.get("logging_steps", 1),
         save_total_limit=1,
         load_best_model_at_end=True,
-        max_neg = config.get("max_neg", 10),
     )
 
     # Trainer
-    trainer = DS-DPOTrainer(
+    with open(config["book2idx"], "r") as f:
+        book2idx = json.load(f)
+    item_emb = np.load(config["item_emb"])  # shape (num_items, emb_dim)
+    trainer = DSDPOTrainer(
         model=base,
         ref_model=ref,
         args=training_args,
@@ -145,7 +159,10 @@ def train_sdpo(config: dict):
         eval_dataset=ds["validation"],
         beta=config.get("beta", 0.1),
         tokenizer=tokenizer,
-        delta=0.5,                 # DS-DPO:
+        distance_type=config.get("distance_type", "dp"),
+        max_neg=config.get("max_neg", 10),
+        book2idx=book2idx,
+        item_emb=item_emb,
     )
     trainer.train()
 

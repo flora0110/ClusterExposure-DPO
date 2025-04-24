@@ -7,11 +7,9 @@ resume_from_checkpoint: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experim
 # Dataset paths
 train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/train.json"
 valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/valid.json"
-book2idx: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/book2idx_full_data_with_output.json"
-item_emb: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/lightgcn/models/lightgcn_model_full_data_with_output.npy"
-# Input and output directories
+
 # Output
-output_dir: ""
+output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/Bnet-DPO/Div_10_1.0"
 
 # Training hyperparameters
 beta: 0.1
@@ -21,9 +19,14 @@ num_train_epochs: 2
 learning_rate: 1e-5
 bf16: true
 logging_steps: 1
-max_neg: 10
-distance_type: "dc"
+max_neg: 5
 
 # Optional settings
 num_proc: 8
 max_valid: 2000
+
+# Evaluation configuration for Goodreads
+eval_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/eval"
+
+# Category (subfolder within eval_dir).
+category: "Goodreads"

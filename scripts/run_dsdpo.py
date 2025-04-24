@@ -4,13 +4,13 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import yaml
-from src.models.sdpo_trainer import train_sdpo
+from src.models.dsdpo_trainer import train_dsdpo
 
 
 STRATEGIES = {
     # "balanced_popularity",
     # "clusterin_high_clusterout_low",
-    "dc_0.05_2.0",
+    "dp_0.05_2.0",
 }
 
 D= "Div"
@@ -49,4 +49,4 @@ if __name__ == "__main__":
         print(f"\n>>> Launching DPO for {folder} → folder `{cfg['output_dir']}`")
 
         # train_sdpo
-        train_sdpo(cfg)
+        train_dsdpo(cfg)

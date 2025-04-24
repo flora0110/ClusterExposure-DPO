@@ -25,8 +25,34 @@ from datasets import Dataset
 from transformers import DataCollator, PreTrainedModel, PreTrainedTokenizerBase, Trainer, TrainingArguments
 from transformers.trainer_callback import TrainerCallback
 import numpy as np
+import re
 
 from .utils import DPODataCollatorWithPadding, pad_to_length
+
+def parse_titles(text: str):
+    """Extract all substrings between double quotes."""
+    raw_titles = re.findall(r'"([^"]+)"', text)
+    cleaned_titles = []
+    for t in raw_titles:
+        # 如果最前面有單引號，就去掉它
+        if t.startswith("'"):
+            t = t[1:]
+        # 如果最後面有單引號，就去掉它
+        if t.endswith("'"):
+            t = t[:-1]
+        cleaned_titles.append(t)
+    return cleaned_titles
+
+def avg_emb(titles, book2idx, item_emb):
+    """Compute the average embedding of a list of titles."""
+    idxs = [book2idx.get(t, None) for t in titles]
+    idxs = [i for i in idxs if i is not None]
+    if not idxs:
+        for t in titles:
+            if(book2idx.get(t, None) == None):
+                print(f"{t} not found in book2idx!! \n")
+        return None
+    return item_emb[idxs].mean(axis=0)
 
 def l2(a, b):
     """Compute Euclidean distance between two vectors."""
@@ -111,6 +137,9 @@ class DSDPOTrainer(Trainer):
         # DS-DPO: 
         beta_range: Tuple[float, float] = (0.01, 2.0), # DS-DPO: β₀ 的范围
         max_neg: int = 10, # DS-DPO: max number of rejected samples
+        distance_type: str = "dp",
+        book2idx: Dict[str, int] = None,
+        item_emb: np.ndarray = None,
     ):
         if not is_peft_available() and peft_config is not None:
             raise ValueError(
@@ -170,6 +199,9 @@ class DSDPOTrainer(Trainer):
         self.ref_model = ref_model
         self.beta_range = beta_range
         self.max_neg = max_neg
+        self.distance_type = distance_type
+        self.book2idx = book2idx
+        self.item_emb = item_emb
         self._stored_metrics = defaultdict(lambda: defaultdict(list))
 
         super().__init__(
@@ -235,6 +267,7 @@ class DSDPOTrainer(Trainer):
         reference_rejected_logps: Dict[str, torch.FloatTensor],
         rejected_dc: Dict[str, np.float64], # DS-DPO: rejected_distances
         rejected_dp: Dict[str, np.float64], # DS-DPO: rejected_distances
+        rejected_dpc: Dict[str, np.float64], # DS-DPO: rejected_distances
         reference_free: bool = False,
         beta0: float = None,                   # DS-DPO: origin β₀
         delta: float = None,                   # DS-DPO: origin δ  
@@ -257,6 +290,7 @@ class DSDPOTrainer(Trainer):
          # pi_logratios = policy_chosen_logps - policy_rejected_logps
         # for key in policy_rejected_logps:
         # ref_logratios = reference_chosen_logps - reference_rejected_logps
+
         chosen_logratios = policy_chosen_logps - reference_chosen_logps
         # print(f"chosen:{chosen_logratios}")
         rejected_logratios = {}
@@ -269,7 +303,14 @@ class DSDPOTrainer(Trainer):
         # beta
         # 假设 rejected_dc: Dict[str, float] 存了各个 rejected{i} 的距离  
         # 首先收集所有距离，做一次批次内的 min-max 归一化  
-        distances = [rejected_dc[key] for key in rejected_dc]  
+        # distances = [rejected_dc[key] for key in rejected_dc]  
+        if self.distance_type == "dc":
+            distances = [rejected_dc[key] for key in rejected_dc]
+        elif self.distance_type == "dp":
+            distances = [rejected_dp[key] for key in rejected_dp]  
+        elif self.distance_type == "dpc":  
+            distances = [rejected_dpc[key] for key in rejected_dpc]
+
         d_min, d_max = min(distances), max(distances)  
         # 为了避免除零，做一个小保护  
         denom = (d_max - d_min) if d_max > d_min else 1.0  
@@ -277,9 +318,18 @@ class DSDPOTrainer(Trainer):
 
         # 归一化后映射到 [0.01, 2.0]  
         adapted_betas: Dict[str, float] = {}  
-        for key, d in rejected_dc.items():
-            norm = (d - d_min) / denom
-            adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+        if self.distance_type == "dc":
+            for key, d in rejected_dc.items():
+                norm = (d - d_min) / denom
+                adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+        elif self.distance_type == "dp":
+            for key, d in rejected_dp.items():
+                norm = (d - d_min) / denom
+                adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+        elif self.distance_type == "dpc":
+            for key, d in rejected_dpc.items():
+                norm = (d - d_min) / denom
+                adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
 
         # 然后在计算 temp 的时候，用对应的 adapted_beta  
         temp = 0  
@@ -394,12 +444,47 @@ class DSDPOTrainer(Trainer):
                 _,
             ) = self.concatenated_forward(self.ref_model, batch)
         
+        # print("\n\n")
+        # for k, v in batch.items():
+        #     print(f"{k!r} -> {type(v).__name__}")
+        #     if type(v).__name__ == "Tensor":
+        #         print(f"  {v.shape} {v.dtype} {v.device}")
+        #     else:
+        #         print(f"  {len(v)} {type(v[0]).__name__} {type(v[0])} {v[0]}")
+        #     print("-" * 20)
+        #     print("\n\n")
+        
         rejected_dc = {}
         rejected_dp = {}
-        for i in range(1, selg.max_neg + 1):
-            rejected_dc[f"rejected{i}"] = l2(batch[f"emb_rejected{i}"], batch["emb_chosen"])
-            rejected_dp[f"rejected{i}"] = l2(batch[f"emb_rejected{i}"], batch["emb_past"])
-]
+        rejected_dpc = {}
+
+        past_title = parse_titles(batch["prompt"][0])
+        chosen_title =parse_titles(batch["chosen_response_only"][0])[0]
+        # print(f"past_title: {past_title}")
+        # print(f"chosen_title: {chosen_title}")
+
+        emb_past   = avg_emb(past_title, self.book2idx, self.item_emb)
+        emb_chosen = avg_emb([chosen_title], self.book2idx, self.item_emb)
+        emb_pc     = avg_emb(past_title + [chosen_title], self.book2idx, self.item_emb)
+
+        for i in range(1, self.max_neg + 1):
+            # emb_rejected = self.item_emb[self.book2idx.get(batch[f"rejected{i}_response_only"][0], 0)]
+            if len(batch[f"rejected{i}_response_only"][0]) == 0:
+                rejected_dc[f"rejected{i}"] = 0
+                rejected_dp[f"rejected{i}"] = 0
+                rejected_dpc[f"rejected{i}"] = 0
+            else:
+                rejected_title = parse_titles(batch[f"rejected{i}_response_only"][0])[0]
+                emb_rejected = avg_emb([rejected_title], self.book2idx, self.item_emb)
+                rejected_dc[f"rejected{i}"] = l2(emb_rejected, emb_chosen)
+                rejected_dp[f"rejected{i}"] = l2(emb_rejected, emb_past)
+                rejected_dpc[f"rejected{i}"] = l2(emb_rejected, emb_pc)
+        
+        # for i in range(1, self.max_neg + 1):
+        #     rejected_dc[f"rejected{i}"] = l2(batch[f"emb_rejected{i}"], batch["emb_chosen"])
+        #     rejected_dp[f"rejected{i}"] = l2(batch[f"emb_rejected{i}"], batch["emb_past"])
+        #     rejected_dpc[f"rejected{i}"] = l2(batch[f"emb_rejected{i}"], batch["emb_pc"])
+
         losses, chosen_rewards, rejected_rewards = self.dpo_loss(
             policy_chosen_logps,
             policy_rejected_logps,
@@ -407,6 +492,7 @@ class DSDPOTrainer(Trainer):
             reference_rejected_logps,
             rejected_dc,
             rejected_dp,
+            rejected_dpc
         )
         
         # reward_accuracies 记录 chosen 比所有 rejected 的收益都大的比例是多少
