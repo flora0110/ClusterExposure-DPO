@@ -228,9 +228,10 @@ def train_bnetsdpo(config: dict):
         eval_dataset=ds["validation"],
         beta=config.get("beta", 0.1),
         tokenizer=tokenizer,
-        compute_metrics=compute_metrics,
-        callbacks=[callback]
     )
+
+    trainer.compute_metrics = compute_metrics
+    trainer.callback_handler.add_callback(callback)
     trainer.train()
 
     # Save final model
