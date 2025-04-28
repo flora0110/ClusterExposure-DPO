@@ -199,6 +199,8 @@ class DSDPOTrainer(Trainer):
         self.beta = beta
         self.ref_model = ref_model
         self.beta_range = beta_range
+        beta_low, beta_high = self.beta_range
+        print(f'beta_low: {beta_low}, beta_high: {beta_high}')
         self.max_neg = max_neg
         self.distance_type = distance_type
         self.book2idx = book2idx
