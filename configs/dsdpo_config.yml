@@ -17,14 +17,14 @@ output_dir: ""
 beta: 0.1
 batch_size: 1
 gradient_accumulation_steps: 8
-num_train_epochs: 2
+num_train_epochs: 1
 learning_rate: 1e-5
 bf16: true
 logging_steps: 1
 max_neg: 5
 distance_type: "dpc"
-min_beta: 0.1
-max_beta: 4.0
+min_beta: 0.08
+max_beta: 1.02
 
 # Optional settings
 num_proc: 8

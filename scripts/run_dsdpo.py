@@ -39,7 +39,7 @@ if __name__ == "__main__":
         base_cfg = yaml.safe_load(f)
 
     cfg = dict(base_cfg)
-    cfg["output_dir"] = os.path.join(BASE_OUTPUT, f'{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
+    cfg["output_dir"] = os.path.join(BASE_OUTPUT, f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
 
     # write a temp config
 

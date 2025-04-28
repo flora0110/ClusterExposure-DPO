@@ -57,9 +57,10 @@ def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
                 df[col] = df[col].apply(format_hr)
             else:
                 df[col] = df[col].apply(format_default)
+
     # Highlight best
     for col in df.columns:
-        if col == "SampleMethod":
+        if col in ("SampleMethod", "Model"):
             continue
         arrow_up = col.endswith("↑")
         arrow_down = col.endswith("↓")
@@ -73,47 +74,56 @@ def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
                 nums.append(float(v))
             except:
                 nums.append(None)
-        # find best index
-        valid = [(i, n) for i,n in enumerate(nums) if n is not None]
+        valid = [(i, n) for i, n in enumerate(nums) if n is not None]
         if not valid:
             continue
-        if arrow_up:
-            best_idx = max(valid, key=lambda x:x[1])[0]
-        else:
-            best_idx = min(valid, key=lambda x:x[1])[0]
-        # bold the cell
-        # df.iat[best_idx, df.columns.get_loc(col)] = f"**{df.iat[best_idx, df.columns.get_loc(col)]}**"
-        # highlight with yellow background
+        best_idx = (
+            max(valid, key=lambda x: x[1])[0] if arrow_up else min(valid, key=lambda x: x[1])[0]
+        )
         cell = df.iat[best_idx, df.columns.get_loc(col)]
         df.iat[best_idx, df.columns.get_loc(col)] = f"<mark>**{cell}**</mark>"
     return df
 
 def main():
     # Accept CSV path or default
-    csv_path = sys.argv[1] if len(sys.argv)>1 else "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
+    csv_path = sys.argv[1] if len(sys.argv) > 1 else "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/metrics_summary.csv"
     if not os.path.exists(csv_path):
         print(f"ERROR: CSV not found at {csv_path}", file=sys.stderr)
         sys.exit(1)
 
     df = pd.read_csv(csv_path)
+
     # Ensure headers have arrows
     def add_arrow(c):
-        if "NDCG@" in c and "↑" not in c: return c+" ↑"
-        if "HR@" in c and "↑" not in c: return c+" ↑"
-        if "Diversity" in c and "↑" not in c: return c+" ↑"
-        if "DivRatio" in c and "↑" not in c: return c+" ↑"
-        if "DGU" in c and "↓" not in c: return c+" ↓"
-        if "MGU" in c and "↓" not in c: return c+" ↓"
-        if "ORRatio" in c and "↓" not in c: return c+" ↓"
-        if "Predict_NotIn_Ratio" in c and "↓" not in c: return c+" ↓"
+        if "Model" == c:
+            return c
+        if "NDCG@" in c and "↑" not in c:
+            return c + " ↑"
+        if "HR@" in c and "↑" not in c:
+            return c + " ↑"
+        if "Diversity" in c and "↑" not in c:
+            return c + " ↑"
+        if "DivRatio" in c and "↑" not in c:
+            return c + " ↑"
+        if "DGU" in c and "↓" not in c:
+            return c + " ↓"
+        if "MGU" in c and "↓" not in c:
+            return c + " ↓"
+        if "ORRatio" in c and "↓" not in c:
+            return c + " ↓"
+        if "Predict_NotIn_Ratio" in c and "↓" not in c:
+            return c + " ↓"
         return c
+
     df.columns = [add_arrow(c) for c in df.columns]
+
+    # Columns to always include
+    always = ["Model", "SampleMethod"]
 
     # Top-5 Metrics
     cols5 = [
         c for c in df.columns
-        if (("@5" in c and "PredictNotInRatio" not in c))
-           or c=="SampleMethod"
+        if ("@5" in c and "PredictNotInRatio" not in c) or c in always
     ]
     df5 = df[cols5].copy()
     df5 = prepare_df(df5)
@@ -124,8 +134,7 @@ def main():
     # Top-10 Metrics
     cols10 = [
         c for c in df.columns
-        if (("@10" in c and "PredictNotInRatio" not in c))
-           or c=="SampleMethod"
+        if ("@10" in c and "PredictNotInRatio" not in c) or c in always
     ]
     df10 = df[cols10].copy()
     df10 = prepare_df(df10)
@@ -136,7 +145,7 @@ def main():
     # Predict Not-In-Ratio
     col_pred = "Predict_NotIn_Ratio ↓"
     if col_pred in df.columns:
-        dfp = df[["SampleMethod", col_pred]].copy()
+        dfp = df[[*always, col_pred]].copy()
         dfp = prepare_df(dfp)
         print("### Predict Not-In-Ratio\n")
         print(to_markdown(dfp))

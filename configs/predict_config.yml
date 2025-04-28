@@ -10,7 +10,11 @@ test_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Go
 
 # Output settings
 tuned_model: "S-DPO"
-method: "Div_5_1.0"
+# method: "Div_5_1.0"
+method: "Div_5_1.0_epoch_1_beta_2.0"
+distance_type: "dpc"
+min_beta: 0.08
+max_beta: 1.02
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/"
 output_dir: ""
 
