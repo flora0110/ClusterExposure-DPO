@@ -26,6 +26,8 @@ from transformers import DataCollator, PreTrainedModel, PreTrainedTokenizerBase,
 from transformers.trainer_callback import TrainerCallback
 import numpy as np
 import re
+import json
+
 
 from .utils import DPODataCollatorWithPadding, pad_to_length
 
@@ -201,6 +203,7 @@ class DSDPOTrainer(Trainer):
         self.distance_type = distance_type
         self.book2idx = book2idx
         self.item_emb = item_emb
+        self.beta_log_path =  "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/dpc_0.05_1.05/adapted_betas.jsonl"
         self._stored_metrics = defaultdict(lambda: defaultdict(list))
 
         super().__init__(
@@ -329,6 +332,11 @@ class DSDPOTrainer(Trainer):
             for key, d in rejected_dpc.items():
                 norm = (d - d_min) / denom
                 adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+
+        serializable_betas = {k: float(v) for k, v in adapted_betas.items()}
+        with open(self.beta_log_path, "a") as f:
+            json.dump(serializable_betas, f)
+            f.write("\n")
 
         # 然后在计算 temp 的时候，用对应的 adapted_beta  
         temp = 0  

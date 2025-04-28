@@ -14,7 +14,7 @@ STRATEGIES = {
 }
 
 D= "Div"
-num_return_sequences= "10"
+num_return_sequences= "5"
 diversity_penalty= "1.0"
 BASE_OUTPUT = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/DS-DPO/{D}_{num_return_sequences}_{diversity_penalty}"
 BASE_CONFIG = "/scratch/user/chuanhsin0110/ClusterExposure-DPO/configs/dsdpo_config.yml"

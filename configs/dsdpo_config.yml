@@ -23,8 +23,8 @@ bf16: true
 logging_steps: 1
 max_neg: 5
 distance_type: "dpc"
-min_beta: 0.08
-max_beta: 1.02
+min_beta: 0.05
+max_beta: 1.05
 
 # Optional settings
 num_proc: 8

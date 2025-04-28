@@ -16,13 +16,15 @@ predictions_file: ""
 # predictions_file: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions/raw_results_1000.json"
 
 # Output file for evaluation results (JSON)
-tuned_model: "S-DPO"
-method: "Div_5_1.0_epoch_1_beta_0.1"
+tuned_model: "DS-DPO"
+method: "Div_5_1.0"
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/"
 output_filename: "eval_result.json"
 distance_type: "dpc"
 min_beta: 0.08
 max_beta: 1.02
+beta: 0.1
+num_train_epochs: 1
 output_file: ""
 
 
@@ -34,7 +36,7 @@ exp_csv: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/metrics/me
 # exp_csv: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/metrics_summary.csv"
 
 # Evaluation parameter: top-k for ranking metrics.
-topk: 5
+topk: 10
 
 # Model name and sampling method (for record purposes)
 model_name: ""
