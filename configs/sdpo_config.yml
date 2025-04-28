@@ -11,12 +11,12 @@ valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/da
 
 # Output
 tuned_model: "S-DPO"
-method: "Div_5_1.0_epoch_1_beta_1.0"
+method: "Div_5_1.0_epoch_1_beta_0.11"
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/"
 output_dir: ""
 
 # Training hyperparameters
-beta: 1.0
+beta: 0.11
 batch_size: 1
 gradient_accumulation_steps: 8
 num_train_epochs: 1

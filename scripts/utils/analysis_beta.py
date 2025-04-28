@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 import os
 
-beta_min = 0.05
+beta_min = 0.01
 beta_max = 0.15
 t = "1.0"
 

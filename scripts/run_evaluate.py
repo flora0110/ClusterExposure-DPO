@@ -39,8 +39,8 @@ def main():
         cfg["sample_method"] = f'{cfg["method"]}_epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}'
     
     elif cfg["tuned_model"] == "S-DPO":
-        cfg["output_file"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_beta{cfg["beta"]}',  cfg["output_filename"])
-        cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_beta{cfg["beta"]}', cfg["predictions_filename"])
+        cfg["output_file"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_beta_{cfg["beta"]}',  cfg["output_filename"])
+        cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_beta_{cfg["beta"]}', cfg["predictions_filename"])
         cfg["model_name"] = cfg["tuned_model"]
         cfg["sample_method"] = f'{cfg["method"]}_epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_beta{cfg["beta"]}'
     evaluate_metrics(cfg)
