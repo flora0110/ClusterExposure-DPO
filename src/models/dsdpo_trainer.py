@@ -164,7 +164,8 @@ def train_dsdpo(config: dict):
         book2idx=book2idx,
         item_emb=item_emb,
         beta_range = (config.get("min_beta"), config.get("max_beta")),
-        beta_log_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/epoch_{config.get('num_train_epochs')}_{config.get('distance_type')}_{config.get('min_beta')}_{config.get('max_beta')}/adapted_betas.jsonl"
+        temperature=config.get("temperature"),
+        beta_log_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/sigmoid/t_{config.get('temperature')}_epoch_{config.get('num_train_epochs')}_{config.get('distance_type')}_{config.get('min_beta')}_{config.get('max_beta')}/adapted_betas.jsonl"
     )
     trainer.train()
 

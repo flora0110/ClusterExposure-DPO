@@ -9,12 +9,12 @@ finetuned_path: ""
 test_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/test.json"
 
 # Output settings
-tuned_model: "DS-DPO"
+tuned_model: "sigmoid_DS-DPO"
 # method: "Div_5_1.0"
 method: "Div_5_1.0"
 distance_type: "dpc"
-min_beta: 0.05
-max_beta: 0.15
+min_beta: 0.075
+max_beta: 1.025
 num_train_epochs: 1
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/"
 output_dir: ""

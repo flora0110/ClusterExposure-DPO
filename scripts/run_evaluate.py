@@ -26,7 +26,7 @@ def main():
     with open(config_path) as f:
         base_cfg = yaml.safe_load(f)
     cfg = dict(base_cfg)
-    if cfg["tuned_model"] == "DS-DPO":
+    if cfg["tuned_model"] == "DS-DPO" or cfg["tuned_model"] == "sigmoid_DS-DPO":
         cfg["output_file"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}', cfg["output_filename"])
         cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}', cfg["predictions_filename"])
         cfg["model_name"] = cfg["tuned_model"]

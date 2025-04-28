@@ -124,7 +124,7 @@ def plot_and_save(betas, save_dir):
 
 def main():
     # 默认路径，可改成你自己的
-    default_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/epoch_1_dpc_{beta_min}_{beta_max}/adapted_betas.jsonl"
+    default_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/sigmoid/epoch_1_dpc_{beta_min}_{beta_max}/adapted_betas.jsonl"
     path = sys.argv[1] if len(sys.argv) > 1 else default_path
 
     if not Path(path).exists():
@@ -138,7 +138,7 @@ def main():
     
 
     summarize(betas)
-    plot_and_save(betas, "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/")
+    plot_and_save(betas, "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/sigmoid/")
 
 if __name__ == "__main__":
     main()

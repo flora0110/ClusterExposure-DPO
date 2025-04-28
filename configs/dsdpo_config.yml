@@ -23,8 +23,9 @@ bf16: true
 logging_steps: 1
 max_neg: 5
 distance_type: "dpc"
-min_beta: 0.05
-max_beta: 0.15
+min_beta: 0.025
+max_beta: 1.075
+temperature: 1.0
 
 # Optional settings
 num_proc: 8

@@ -142,6 +142,7 @@ class DSDPOTrainer(Trainer):
         book2idx: Dict[str, int] = None,
         item_emb: np.ndarray = None,
         beta_log_path: str = None,
+        temperature: float = 0.5,
     ):
         if not is_peft_available() and peft_config is not None:
             raise ValueError(
@@ -208,6 +209,7 @@ class DSDPOTrainer(Trainer):
         self.item_emb = item_emb
         self.beta_log_path =  beta_log_path
         self._stored_metrics = defaultdict(lambda: defaultdict(list))
+        self.temperature = temperature
 
         super().__init__(
             model,
@@ -332,9 +334,16 @@ class DSDPOTrainer(Trainer):
                 norm = (d - d_min) / denom
                 adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
         elif self.distance_type == "dpc":
-            for key, d in rejected_dpc.items():
-                norm = (d - d_min) / denom
-                adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+            # for key, d in rejected_dpc.items():
+            #     norm = (d - d_min) / denom
+            #     adapted_betas[key] = beta_low + norm * (beta_high - beta_low)
+            # 對每個距離套 Sigmoid
+            for key, d in rejected_dc.items():
+                # 標準化到 mean=0 再進 sigmoid（防止全跑到一邊）
+                x = (d - d_min) / denom  # 先做最基本的 normalize 0~1
+                x = (x - 0.5) / self.temperature  # shift到0中心，控制斜率
+                sig = 1 / (1 + np.exp(-x))  # Sigmoid 壓縮
+                adapted_betas[key] = beta_low + sig * (beta_high - beta_low)
 
         serializable_betas = {k: float(v) for k, v in adapted_betas.items()}
         with open(self.beta_log_path, "a") as f:

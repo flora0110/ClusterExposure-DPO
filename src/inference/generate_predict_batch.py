@@ -80,7 +80,7 @@ def generate_predictions(config):
     batch_size = config.get("batch_size", 8)
     max_new_tokens = config.get("max_new_tokens", 50)
     test_sample_size = config.get("test_sample_size", 1000)
-
+    print(f"output_dir: {output_dir}")
     predict_dir = prepare_output_dir(output_dir, "predictions")
     
     # Load Tokenizer
