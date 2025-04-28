@@ -141,6 +141,7 @@ class DSDPOTrainer(Trainer):
         distance_type: str = "dp",
         book2idx: Dict[str, int] = None,
         item_emb: np.ndarray = None,
+        beta_log_path: str = None,
     ):
         if not is_peft_available() and peft_config is not None:
             raise ValueError(
@@ -205,7 +206,7 @@ class DSDPOTrainer(Trainer):
         self.distance_type = distance_type
         self.book2idx = book2idx
         self.item_emb = item_emb
-        self.beta_log_path =  "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/dpc_0.05_1.05/adapted_betas.jsonl"
+        self.beta_log_path =  beta_log_path
         self._stored_metrics = defaultdict(lambda: defaultdict(list))
 
         super().__init__(
