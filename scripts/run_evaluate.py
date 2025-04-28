@@ -22,8 +22,19 @@ def load_config(config_path):
 
 def main():
     config_path = os.path.join(os.path.dirname(__file__), "../configs/eval_config.yml")
-    config = load_config(config_path)
-    evaluate_metrics(config)
+
+    with open(config_path) as f:
+        base_cfg = yaml.safe_load(f)
+    cfg = dict(base_cfg)
+    cfg["output_file"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"], cfg["output_filename"])
+    cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["method"], cfg["predictions_filename"])
+    cfg["model_name"] = cfg["tuned_model"]
+    cfg["sample_method"] = cfg["method"]
+    evaluate_metrics(cfg)
+    
+    # config_path = os.path.join(os.path.dirname(__file__), "../configs/eval_config.yml")
+    # config = load_config(config_path)
+    # evaluate_metrics(config)
 
 if __name__ == "__main__":
     main()

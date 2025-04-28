@@ -13,5 +13,15 @@ def load_config(config_path):
 
 if __name__ == "__main__":
     config_path = os.path.join(os.path.dirname(__file__), "../configs/predict_config.yml")
-    config = load_config(config_path)
-    generate_predictions(config)
+
+    with open(config_path) as f:
+        base_cfg = yaml.safe_load(f)
+    cfg = dict(base_cfg)
+    cfg["output_dir"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"])
+    cfg["finetuned_path"] = os.path.join(cfg["base_finetuned_path"], cfg["tuned_model"], cfg["method"])
+    generate_predictions(cfg)
+
+
+    # config_path = os.path.join(os.path.dirname(__file__), "../configs/predict_config.yml")
+    # config = load_config(config_path)
+    # generate_predictions(config)

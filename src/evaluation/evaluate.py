@@ -299,7 +299,9 @@ def evaluate_metrics(config):
     print(f"ORRatio: {eval_dic['ORRatio']}")
     
     output_file = config["output_file"]
+    print(f"Output file: {output_file}")
     output_dir = os.path.dirname(output_file)
+    print(f"Output directory: {output_dir}")
     prepare_output_dir(output_dir, None, allow_existing=True)
     if os.path.exists(output_file) and os.path.getsize(output_file) > 0:
         with open(output_file, 'r', encoding='utf-8') as file:
