@@ -18,6 +18,7 @@ max_beta: 1.025
 num_train_epochs: 1
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/"
 output_dir: ""
+temperature: 1.0
 
 
 # output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dpc_0.1_4.0"

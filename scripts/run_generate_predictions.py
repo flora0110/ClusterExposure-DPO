@@ -19,8 +19,8 @@ if __name__ == "__main__":
     cfg = dict(base_cfg)
 
     if cfg["tuned_model"] == "DS-DPO" or cfg["tuned_model"] == "sigmoid_DS-DPO":
-        cfg["output_dir"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
-        cfg["finetuned_path"] = os.path.join(cfg["base_finetuned_path"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
+        cfg["output_dir"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], f't_{cfg["temperature"]}_{cfg["method"]}', f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
+        cfg["finetuned_path"] = os.path.join(cfg["base_finetuned_path"], cfg["tuned_model"], f't_{cfg["temperature"]}_{cfg["method"]}', f'epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_{cfg["min_beta"]}_{cfg["max_beta"]}')
     
     elif cfg["tuned_model"] == "S-DPO":
         cfg["output_dir"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"], cfg["method"],  f'epoch_{cfg["num_train_epochs"]}_beta_{cfg["beta"]}')

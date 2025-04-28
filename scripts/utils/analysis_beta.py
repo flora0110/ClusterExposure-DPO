@@ -6,8 +6,9 @@ import sys
 from pathlib import Path
 import os
 
-beta_min = 0.025
-beta_max = 1.075
+beta_min = 0.05
+beta_max = 0.15
+t = "1.0"
 
 def load_betas(jsonl_path):
     """
@@ -96,9 +97,9 @@ def plot_and_save(betas, save_dir):
     plt.tight_layout()
 
     # 存檔
-    histogram_path = os.path.join(save_dir, f"beta_histogram_epoch_1_dpc_{beta_min}_{beta_max}.png")
-    boxplot_path = os.path.join(save_dir, f"beta_boxplot_epoch_1_dpc_{beta_min}_{beta_max}.png")
-    combined_path = os.path.join(save_dir, f"beta_histogram_boxplot_epoch_1_dpc_{beta_min}_{beta_max}.png")
+    histogram_path = os.path.join(save_dir, f"beta_histogramt_{t}__epoch_1_dpc_{beta_min}_{beta_max}.png")
+    boxplot_path = os.path.join(save_dir, f"beta_boxplott_{t}__epoch_1_dpc_{beta_min}_{beta_max}.png")
+    combined_path = os.path.join(save_dir, f"beta_histogram_boxplott_{t}__epoch_1_dpc_{beta_min}_{beta_max}.png")
 
     # 分開存
     fig.savefig(combined_path)
@@ -124,7 +125,7 @@ def plot_and_save(betas, save_dir):
 
 def main():
     # 默认路径，可改成你自己的
-    default_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/sigmoid/epoch_1_dpc_{beta_min}_{beta_max}/adapted_betas.jsonl"
+    default_path = f"/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/log/sigmoid/t_{t}_epoch_1_dpc_{beta_min}_{beta_max}/adapted_betas.jsonl"
     path = sys.argv[1] if len(sys.argv) > 1 else default_path
 
     if not Path(path).exists():
