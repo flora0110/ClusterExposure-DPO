@@ -4,7 +4,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import yaml
-from src.models.sft_trainer import train_sft
+from src.models.sft_follow_SPRec_set_trainer import train_sft
+# from src.models.sft_trainer import train_sft
+
 
 def load_config(config_path):
     with open(config_path, "r") as f:

@@ -118,7 +118,7 @@ def train_dpo(config):
         bf16 = config["dpo"]["bf16"],
         logging_steps = config["dpo"]["logging_steps"],
         optim = config["dpo"]["optim"],
-        evaluation_strategy = config["dpo"]["evaluation_strategy"],
+        eval_strategy = config["dpo"]["evaluation_strategy"],
         save_strategy = config["dpo"]["save_strategy"],
         output_dir = output_dir,
         save_total_limit = config["dpo"].get("save_total_limit", 1),

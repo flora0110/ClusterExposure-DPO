@@ -25,7 +25,7 @@ max_neg: 5
 distance_type: "dpc"
 min_beta: 0.01
 max_beta: 0.2
-temperature: 1.0
+temperature: 0.8
 
 # Optional settings
 num_proc: 8

@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import yaml
-from src.dataset.selfplay_generate_negatives import generate_selfplay_negatives
+from src.dataset.selfplay_generate_negatives_SPRecSet import generate_selfplay_negatives
 
 def load_config(config_path):
     """

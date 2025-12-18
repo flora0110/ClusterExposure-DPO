@@ -7,8 +7,8 @@ from pathlib import Path
 import os
 
 beta_min = 0.01
-beta_max = 0.15
-t = "1.0"
+beta_max = 0.2
+t = "0.8"
 
 def load_betas(jsonl_path):
     """

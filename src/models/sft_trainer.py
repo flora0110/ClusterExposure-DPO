@@ -73,7 +73,7 @@ def train_model(model, collator, train_data, val_data, training_params, output_d
         per_device_train_batch_size=training_params.get("per_device_train_batch_size", 2),
         per_device_eval_batch_size=training_params.get("per_device_eval_batch_size", 2),
         gradient_accumulation_steps=training_params.get("gradient_accumulation_steps", 2),
-        warmup_steps=training_params.get("gradient_accumulation_steps", 20), # new
+        warmup_steps=training_params.get("warmup_steps", 20), # new
         learning_rate=float(training_params.get("learning_rate", 2e-5)),
         num_train_epochs=training_params.get("num_train_epochs", 5), # 3 to 5
         logging_steps=training_params.get("logging_steps", 1),

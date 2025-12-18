@@ -6,17 +6,19 @@ resume_from_checkpoint: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experim
 
 
 # Dataset paths
-train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/train.json"
-valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/valid.json"
+# train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/train.json"
+# valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates/Div_10_1.0/valid.json"
+train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/RN/train.json"
+valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/RN/valid.json"
 
 # Output
 tuned_model: "S-DPO"
-method: "Div_5_1.0_epoch_1_beta_0.11"
+method: "RN_epoch_1_beta_0.11"
 base_output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/"
 output_dir: ""
 
 # Training hyperparameters
-beta: 0.11
+beta: 0.12
 batch_size: 1
 gradient_accumulation_steps: 8
 num_train_epochs: 1

@@ -150,6 +150,7 @@ def generate_selfplay_negatives(config):
     lora_weights = config.get("lora_weights", None)
     batch_size = config.get("batch_size", 4)
     train_sample_size = config.get("train_sample_size", 1024)
+    valid_sample_size = config.get("valid_sample_size", 128)
     
     output_dir = prepare_output_dir(config["output_path"], None)
     

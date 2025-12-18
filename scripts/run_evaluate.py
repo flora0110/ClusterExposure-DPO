@@ -43,6 +43,11 @@ def main():
         cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["method"], f'epoch_{cfg["num_train_epochs"]}_beta_{cfg["beta"]}', cfg["predictions_filename"])
         cfg["model_name"] = cfg["tuned_model"]
         cfg["sample_method"] = f'{cfg["method"]}_epoch_{cfg["num_train_epochs"]}_{cfg["distance_type"]}_beta{cfg["beta"]}'
+    else:
+        cfg["output_file"] = os.path.join(cfg["base_output_dir"], cfg["tuned_model"],  cfg["output_filename"])
+        cfg["predictions_file"] = os.path.join(cfg["base_predictions_dir"], cfg["tuned_model"], cfg["predictions_filename"])
+        cfg["model_name"] = cfg["tuned_model"]
+        cfg["sample_method"] = ""
     evaluate_metrics(cfg)
     
     # config_path = os.path.join(os.path.dirname(__file__), "../configs/eval_config.yml")

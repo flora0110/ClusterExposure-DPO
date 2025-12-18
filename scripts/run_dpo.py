@@ -4,7 +4,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import yaml
-from src.models.dpo_trainer import train_dpo
+# from src.models.dpo_trainer import train_dpo
+from src.models.dpo_follow_SPRec_set_trainer import train_dpo
+
 
 def load_config(config_path):
     """

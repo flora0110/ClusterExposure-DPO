@@ -1,15 +1,16 @@
 # Model and data settings
-base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
-lora_weights: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model/final_model"  # Set to path if using LoRA, otherwise leave empty
+base_model: "/scratch/user/chuanhsin0110/models/Llama-3.2-1B-Instruct"
+lora_weights: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model_Llama321B_SPRecSet_4096/final_model"  # Set to path if using LoRA, otherwise leave empty
 # Input data files
-train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/train.json"
-valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/sampled/Goodreads/valid.json"
+train_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/raw/Goodreads/train.json"
+valid_data_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/raw/Goodreads/valid.json"
 # Output files for DPO formatted data (line-separated JSON)
-output_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/data/negatives/selfplay"
+output_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/selfplay_Llama321B_SPRecSet_4096"
 # sample_method: "selfplay"
 # Sampling and batch parameters
 batch_size: 4
-train_sample_size: 1024
+train_sample_size: 2048
+valid_sample_size: 256
 
 # Additional parameters (not used in this version, but can be extended)
 load_8bit: false
