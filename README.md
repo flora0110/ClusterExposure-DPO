@@ -109,6 +109,7 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 
 
 
+
 | SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 ↑ | HR@5 ↑ |
 | --- | --- | --- | --- | --- | --- | --- |
 | low_exposure | 0.0201 | 0.0743 | 0.1284 | 0.0986 | 0.0166 | 0.025 |
@@ -289,6 +290,51 @@ SampleMethod | MGU@5 ↓ | DGU@5 ↓ | DivRatio@5 ↑ | ORRatio@5 ↓ | NDCG@5 �
 | two_stages clusterin_high_clusterout_low | 0.9140 |
 | two_epochs clusterin_low_clusterout_low | 0.8870 |
 | two_epochs clusterin_high_clusterout_low | 0.9060 |
+
+## On other base mode
+
+### SmolLM2-360M-Instruct
+| SampleMethod                         | MGU@5 ↓                  | DGU@5 ↓                  | DivRatio@5 ↑            | ORRatio@5 ↓             | NDCG@5 ↑                 | HR@5 ↑                  |
+| ------------------------------------ | ------------------------ | ------------------------ | ----------------------- | ----------------------- | ------------------------ | ----------------------- |
+| ClusterExposure-DPO (clusterout_low) | <mark>**0.01582**</mark> | <mark>**0.07562**</mark> | <mark>**0.1004**</mark> | <mark>**0.1708**</mark> | <mark>**0.01329**</mark> | <mark>**0.0200**</mark> |
+| SPRec (Baseline)                     | 0.01767                  | 0.08180                  | 0.0852                  | 0.1782                  | 0.01003                  | 0.0160                  |
+
+### Using origin setup (same as **Results Summery**)
+#### Quick Start
+##### set args
+model_name: SmolLM2-360M-Instruct, SmolLM2-360M-Instruct
+gpu: 0
+##### SFT fine-tuning
+1. CUDA_VISIBLE_DEVICES=$gpu python re_run_args_scripts/run_sft_args.py --config_path "../configs/${model_name}_origin_setup/sft_config.yml"
+##### Clusterout_low (CLEAN)
+2. set `base_config_path="../configs/${model_name}_origin_setup/Cluster_out_low"` in shell/Cluster_Exposure.sh
+3. bash shell/Cluster_Exposure.sh $gpu
+
+##### SPRec
+2. set `base_config_path="../configs/${model_name}_origin_setup/SPRec"` in shell/SPRec.sh
+3. bash shell/SPRec.sh $gpu
+
+#### Directory Structure
+
+```
+ClusterExposure-DPO/
+├── configs/                                # Config files (YAML)
+│   ├── ${model_name}_origin_setup/
+│       ├── Cluster_out_low/
+│       ├── SPRec/
+│       └── sft_config.yml
+├── re_run_args_scripts/                    # Entry points for each stage
+├── re_run_src/
+│   ├── dataset/                            # Beam search, annotation, and sampling
+│   ├── evaluation/                         # Metric evaluation logic
+│   └── models/                             # DPO/SFT/SDPO training logic
+├── origin_setup_experiments/
+│   ├── data/                               # Generated training/valid data
+│   ├── model/                              # Trained model checkpoints
+│   ├── predictions/                        # Inference outputs
+│   └── metrics/                            # Evaluation results
+```
+
 
 ## Quick Start
 ### ClusterExposure

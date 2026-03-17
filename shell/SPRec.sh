@@ -1,7 +1,7 @@
 # echo "Starting SPRec pipeline for Cluster Exposure DPO..."
 # CUDA_VISIBLE_DEVICES=1 python "scripts/run_sft.py"
 gpu1=$1; 
-base_config_path="../configs/SmolLM2-360M-Instruct_origin_setup/SPRec"
+base_config_path="../configs/SmolLM2-135M-Instruct_origin_setup/SPRec"
 code_dir="re_run_args_scripts"
 # base_config_path="../configs/Llama-3.2-1B-Instruct/SPRec"
 echo "Finished SFT. Starting self-play generation..."

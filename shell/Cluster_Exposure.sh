@@ -1,5 +1,5 @@
 # base_config_path="../configs/Llama-3.2-1B-Instruct/Cluster_out_low"
-base_config_path="../configs/SmolLM2-360M-Instruct_origin_setup/Cluster_out_low"
+base_config_path="../configs/SmolLM2-135M-Instruct_origin_setup/Cluster_out_low"
 code_dir="re_run_args_scripts"
 gpu1=$1;
 gpu2=$2; 
