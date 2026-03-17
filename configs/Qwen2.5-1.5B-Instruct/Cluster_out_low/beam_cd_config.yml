@@ -1,0 +1,27 @@
+# Beam CD Candidate Generation Configuration
+
+# Model settings
+# base_model: "/scratch/user/chuanhsin0110/hf_models/allenai-OLMo-1B-hf"
+base_model: "Qwen/Qwen2.5-1.5B-Instruct"
+
+use_lora: true
+# finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/sft_model_OLMo1B/final_model"
+finetuned_path: "./experiments/model/sft_model_Qwen2.5-1.5B-Instruct/final_model"
+# Data paths
+train_data_path: "./data/sampled/Goodreads/train.json"
+valid_data_path: "./data/sampled/Goodreads/valid.json"
+name2genre_path: "./data/eval/Goodreads/name2genre.json"
+
+# Generation settings
+diverse_beam_search: true
+num_return_sequences: 50
+diversity_penalty: 1.0
+
+# Batch and sampling sizes
+batch_size: 1
+train_size: 1024
+valid_size: 256
+
+# Save output path (results will be saved here)
+# save_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/data/beam_cd_candidates_OLMo1B"
+save_dir: "./experiments/data/beam_cd_candidates_Qwen2.5-1.5B-Instruct"

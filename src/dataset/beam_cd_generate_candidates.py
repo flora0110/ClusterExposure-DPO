@@ -149,6 +149,14 @@ def generate_candidates_beam_batch(model, tokenizer, prompts, config, trie=None)
             output = outputs[i * config.get("num_return_sequences", 3) + j]
             decoded = tokenizer.decode(output, skip_special_tokens=True)
             response = decoded[len(prompt):].strip()
+
+            print("-" * 60)
+            print(f"[batch {i}, seq {j}]")
+            print("FULL DECODED:")
+            print(repr(decoded))
+            print("RESPONSE ONLY:")
+            print(repr(response))
+            
             match = re.search(r'"([^"\n]*)', response)
             if match:
                 candidate = f'"{match.group(1)}"\n'
@@ -285,6 +293,17 @@ def process_data(train_path, valid_path, model, tokenizer, config):
         prompts = [format_prompt(d["instruction"], d["input"]) for d in batch]
         # You can also get user interest clusters if needed (currently not used further)
         beam_candidates = generate_candidates_beam_batch(model, tokenizer, prompts, config, trie=trie)
+
+        for idx, (d, prompt) in enumerate(zip(batch, prompts)):
+            print("=" * 80)
+            print(f"Sample global index: {i + idx}")
+            print("PROMPT:")
+            print(prompt)
+            print("\nCHOSEN:")
+            print(d["output"].strip())
+            print("\nGENERATED CANDIDATES:")
+            for k, cand in enumerate(beam_candidates[idx]):
+                print(f"  [{k}] {repr(cand)}")
 
         for idx, (d, prompt) in enumerate(zip(batch, prompts)):
             if any(cand.strip() == d["output"].strip() for cand in beam_candidates[idx]):

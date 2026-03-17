@@ -1,0 +1,29 @@
+# Model and checkpoint settings
+base_model: "HuggingFaceTB/SmolLM2-360M-Instruct"
+resume_from_checkpoint: "./origin_setup_experiments/model/sft_model_SmolLM2-360M_Instruct/final_model"
+output_dir: "./origin_setup_experiments/model/clusterout_low_SmolLM2-360M_Instruct"
+
+# Data files (JSON lines format)
+train_data_path: "./origin_setup_experiments/data/beam_cd_candidates_SmolLM2-360M_Instruct/clusterout_low/train.json"
+valid_data_path: "./origin_setup_experiments/data/beam_cd_candidates_SmolLM2-360M_Instruct/clusterout_low/valid.json"
+
+# DPO training parameters
+dpo:
+  beta: 0.1
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4
+  warmup_steps: 20
+  num_train_epochs: 1
+  learning_rate: 1e-5
+  bf16: true
+  logging_steps: 1
+  optim: "adamw_torch"
+  evaluation_strategy: "epoch"
+  save_strategy: "epoch"
+  save_total_limit: 1
+  load_best_model_at_end: true
+  max_prompt_length: 512
+  max_length: 512
+  early_stopping_patience: 2
+  loss_threshold: 0.05

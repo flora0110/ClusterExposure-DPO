@@ -9,7 +9,10 @@ from datasets import Dataset
 from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
 from src.utils.io_utils import safe_write_json, safe_load_json, prepare_output_dir
 
-def load_model(base_model_name):
+def load_model(base_model_name, config):
+
+    device_map_config = config.get("device_map", 0)
+
     print("\nLoading model:", base_model_name)
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -20,12 +23,12 @@ def load_model(base_model_name):
     model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
         quantization_config=bnb_config,
-        device_map="auto",
-        local_files_only=True
+        device_map=device_map_config,
+        # local_files_only=True
     )
     tokenizer = AutoTokenizer.from_pretrained(
         base_model_name,
-        local_files_only=True
+        # local_files_only=True
     )
     if tokenizer.pad_token is None:
         # tokenizer.pad_token = tokenizer.unk_token
@@ -107,7 +110,7 @@ def train_sft(config):
 
     print("Torch CUDA version: ", torch.version.cuda)
     print("Loading base model...")
-    model, tokenizer, collator = load_model(base_model_name)
+    model, tokenizer, collator = load_model(base_model_name, config)
     
     print("Loading training dataset...")
     train_data = safe_load_json(train_data_path)

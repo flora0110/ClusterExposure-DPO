@@ -9,7 +9,14 @@ from datasets import Dataset
 from trl import DPOTrainer, DPOConfig
 from accelerate import Accelerator
 import json
-from src.utils.io_utils import safe_load_json, prepare_output_dir
+# from src.utils.io_utils import safe_load_json, prepare_output_dir
+from src.utils.io_utils import (
+    safe_load_json,
+    prepare_output_dir,
+    backup_config_file,
+    save_runtime_config,
+    capture_terminal_output,
+)
 
 def load_model(base_model_name, resume_from_checkpoint):
     """
@@ -95,53 +102,68 @@ def train_dpo(config):
 
     output_dir = prepare_output_dir(output_dir)
 
-    # Load models and tokenizer
-    policy_model, reference_model, tokenizer = load_model(base_model_name, resume_from_checkpoint)
+    # backup config
+    backup_config_file(config.get("config_path"), output_dir)
 
-    # Load DPO training dataset (JSON lines format: one JSON per line)
-    train_data = safe_load_json(config["train_data_path"])
-    valid_data = safe_load_json(config["valid_data_path"])
+    # save runtime config
+    save_runtime_config(config, output_dir)
 
-    # Convert lists to HuggingFace Dataset objects
-    train_dataset = Dataset.from_list(train_data)
-    eval_dataset = Dataset.from_list(valid_data)
+    with capture_terminal_output(output_dir, filename="training_terminal.log"):
+        print("[Info] Starting DPO training...")
+        print(f"[Info] base_model: {base_model_name}")
+        print(f"[Info] resume_from_checkpoint: {resume_from_checkpoint}")
+        print(f"[Info] output_dir: {output_dir}")
 
-    # Prepare training arguments from the dpo section of config
-    training_args = DPOConfig(
-        beta = config["dpo"]["beta"],
-        per_device_train_batch_size = config["dpo"]["per_device_train_batch_size"],
-        per_device_eval_batch_size = config["dpo"]["per_device_eval_batch_size"],
-        gradient_accumulation_steps = config["dpo"]["gradient_accumulation_steps"],
-        warmup_steps = config["dpo"]["warmup_steps"],
-        num_train_epochs = config["dpo"]["num_train_epochs"],
-        learning_rate = float(config["dpo"]["learning_rate"]),
-        bf16 = config["dpo"]["bf16"],
-        logging_steps = config["dpo"]["logging_steps"],
-        optim = config["dpo"]["optim"],
-        eval_strategy = config["dpo"]["evaluation_strategy"],
-        save_strategy = config["dpo"]["save_strategy"],
-        output_dir = output_dir,
-        save_total_limit = config["dpo"].get("save_total_limit", 1),
-        load_best_model_at_end = config["dpo"].get("load_best_model_at_end", True),
-        max_prompt_length = config["dpo"].get("max_prompt_length", 512),
-        max_length = config["dpo"].get("max_length", 512),
-    )
 
-    # Initialize the DPOTrainer with callbacks for early stopping and loss threshold
-    trainer = DPOTrainer(
-        model = policy_model,
-        ref_model = reference_model,
-        args = training_args,
-        train_dataset = train_dataset,
-        eval_dataset = eval_dataset,
-        processing_class = tokenizer,
-    )
+        # Load models and tokenizer
+        policy_model, reference_model, tokenizer = load_model(base_model_name, resume_from_checkpoint)
 
-    # Start the training process
-    trainer.train()
+        # Load DPO training dataset (JSON lines format: one JSON per line)
+        train_data = safe_load_json(config["train_data_path"])
+        valid_data = safe_load_json(config["valid_data_path"])
 
-    # Save the trained model and tokenizer in the output directory
-    final_output_dir = os.path.join(output_dir, "final_model")
-    trainer.model.save_pretrained(final_output_dir, safe_serialization=False)
-    tokenizer.save_pretrained(final_output_dir)
-    print("\nTraining completed. Best model saved to:", final_output_dir)
+        # Convert lists to HuggingFace Dataset objects
+        train_dataset = Dataset.from_list(train_data)
+        eval_dataset = Dataset.from_list(valid_data)
+
+        # Prepare training arguments from the dpo section of config
+        training_args = DPOConfig(
+            beta = config["dpo"]["beta"],
+            per_device_train_batch_size = config["dpo"]["per_device_train_batch_size"],
+            per_device_eval_batch_size = config["dpo"]["per_device_eval_batch_size"],
+            gradient_accumulation_steps = config["dpo"]["gradient_accumulation_steps"],
+            warmup_steps = config["dpo"]["warmup_steps"],
+            num_train_epochs = config["dpo"]["num_train_epochs"],
+            learning_rate = float(config["dpo"]["learning_rate"]),
+            bf16 = config["dpo"]["bf16"],
+            logging_steps = config["dpo"]["logging_steps"],
+            optim = config["dpo"]["optim"],
+            eval_strategy = config["dpo"]["evaluation_strategy"],
+            save_strategy = config["dpo"]["save_strategy"],
+            output_dir = output_dir,
+            save_total_limit = config["dpo"].get("save_total_limit", 1),
+            load_best_model_at_end = config["dpo"].get("load_best_model_at_end", True),
+            max_prompt_length = config["dpo"].get("max_prompt_length", 512),
+            max_length = config["dpo"].get("max_length", 512),
+            metric_for_best_model="loss", # CHES: add
+            greater_is_better=False, # CHES: add
+        )
+
+        # Initialize the DPOTrainer with callbacks for early stopping and loss threshold
+        trainer = DPOTrainer(
+            model = policy_model,
+            ref_model = reference_model,
+            args = training_args,
+            train_dataset = train_dataset,
+            eval_dataset = eval_dataset,
+            processing_class = tokenizer,
+        )
+
+        # Start the training process
+        trainer.train()
+
+        # Save the trained model and tokenizer in the output directory
+        final_output_dir = os.path.join(output_dir, "final_model")
+        trainer.model.save_pretrained(final_output_dir, safe_serialization=False)
+        tokenizer.save_pretrained(final_output_dir)
+        print("\nTraining completed. Best model saved to:", final_output_dir)

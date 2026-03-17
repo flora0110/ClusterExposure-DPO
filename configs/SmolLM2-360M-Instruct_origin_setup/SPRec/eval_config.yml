@@ -1,0 +1,26 @@
+# Evaluation configuration for Goodreads
+
+# Evaluation directory where auxiliary eval files are stored.
+eval_dir: "./data/eval"
+
+# Category (subfolder within eval_dir).
+category: "Goodreads"
+
+# Prediction results file (input)
+predictions_file: "./origin_setup_experiments/predictions/SPRec_SmolLM2-360M_Instruct/raw_results_1000.json"
+
+# Output file for evaluation results (JSON)
+output_file: "./origin_setup_experiments/metrics/SPRec_SmolLM2-360M_Instruct/eval_result.json"
+
+# Optional CSV file to update evaluation metrics.
+exp_csv: "./origin_setup_experiments/metrics/metrics_summary.csv"
+
+# Evaluation parameter: top-k for ranking metrics.
+topk: 5
+
+# Model name and sampling method (for record purposes)
+model_name: "SPRec"
+sample_method: "SelfPlay"
+
+# SentenceTransformer model path for encoding predictions.
+sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"

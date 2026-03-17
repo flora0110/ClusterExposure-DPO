@@ -22,7 +22,7 @@ def load_config(config_path: str) -> dict:
     return config
 
 def main():
-    config_path = os.path.join(os.path.dirname(__file__), "../configs/cluster_exposure_neg_sampling_config.yml")
+    config_path = os.path.join(os.path.dirname(__file__), "../configs/Cluster_Exposure_DPO/cluster_exposure_neg_sampling_config.yml")
     config = load_config(config_path)
     cluster_exposure_neg_sampling(config)
 

@@ -21,7 +21,7 @@ def load_config(config_path: str) -> dict:
     return config
 
 def main():
-    config_path = os.path.join(os.path.dirname(__file__), "../configs/annotate_candidates_config.yml")
+    config_path = os.path.join(os.path.dirname(__file__), "../configs/Cluster_Exposure_DPO/annotate_candidates_config.yml")
     config = load_config(config_path)
     annotate_candidates_with_metadata(config)
 

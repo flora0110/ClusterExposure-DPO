@@ -1,0 +1,14 @@
+# Model settings
+base_model: "HuggingFaceTB/SmolLM2-135M-Instruct"
+finetuned_path: "./origin_setup_experiments/model/clusterout_low_SmolLM2-135M_Instruct/final_model"
+
+# Data settings
+test_data_path: "./data/sampled/Goodreads/test.json"
+
+# Output settings
+output_dir: "./origin_setup_experiments/predictions/clusterout_low_SmolLM2-135M_Instruct"
+
+# Inference parameters
+batch_size: 8
+max_new_tokens: 50
+test_sample_size: 1000

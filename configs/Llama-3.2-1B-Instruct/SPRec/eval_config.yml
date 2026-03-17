@@ -1,0 +1,56 @@
+# Evaluation configuration for Goodreads
+
+# Evaluation directory where auxiliary eval files are stored.
+eval_dir: "./data/eval"
+
+# Category (subfolder within eval_dir).
+category: "Goodreads"
+
+# Prediction results file (input)
+base_predictions_dir: "./experiments/predictions/"
+predictions_filename: "raw_results_1000.json"
+predictions_file: ""
+
+
+# predictions_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dpc_0.08_3.0/raw_results_1000.json"
+# predictions_file: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions/raw_results_1000.json"
+
+# Output file for evaluation results (JSON)
+# tuned_model: "SPRec_Llama321B_new"
+tuned_model: "SPRec_Llama-3.2-1B-Instruct_on_new_sft_model"
+
+
+
+# tuned_model: "S-DPO"
+# method: "Div_5_1.0"
+# method: "RN"
+base_output_dir: "./experiments/metrics/"
+output_filename: "eval_result.json"
+# distance_type: "dpc"
+# min_beta: 0.01
+# max_beta: 0.2
+# beta: 0.2
+num_train_epochs: 1
+output_file: ""
+
+
+# output_file: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/metrics/predictions/DS-DPO/Div_10_1.0/dpc_0.08_3.0/eval_result.json"
+# output_file: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/eval_result.json"
+
+# Optional CSV file to update evaluation metrics.
+exp_csv: "./experiments/metrics/metrics_summary_Llama-3.2-1B-Instruct_on_new_sft_model.csv"
+# exp_csv: "/scratch/user/chuanhsin0110/test_0321/nlp/metrics/metrics_summary.csv"
+
+# Evaluation parameter: top-k for ranking metrics.
+topk: 5
+
+# Model name and sampling method (for record purposes)
+model_name: ""
+sample_method: ""
+temperature: 0.8
+
+# model_name: "DS-DPO"
+# sample_method: "dpc_0.08_3.0"
+
+# SentenceTransformer model path for encoding predictions.
+sbert_model_path: "./models/paraphrase-MiniLM-L3-v2"

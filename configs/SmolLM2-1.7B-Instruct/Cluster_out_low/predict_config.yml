@@ -1,0 +1,14 @@
+# Model settings
+base_model: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+finetuned_path: "./re_run_experiments/model/clusterout_low/final_model"
+
+# Data settings
+test_data_path: "./data/sampled/Goodreads/test.json"
+
+# Output settings
+output_dir: "./re_run_experiments/predictions/clusterout_low"
+
+# Inference parameters
+batch_size: 8
+max_new_tokens: 50
+test_sample_size: 1000

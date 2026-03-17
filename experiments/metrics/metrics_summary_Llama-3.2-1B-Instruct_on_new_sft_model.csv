@@ -1,0 +1,2 @@
+Dataset,Model,SampleMethod,MGU@5,DGU@5,DivRatio@5,ORRatio@5,PredictNotInRatio@5,NDCG@5,HR@5,Predict_NotIn_Ratio
+Goodreads,SPRec_Llama-3.2-1B-Instruct_on_new_sft_model,,0.007620785583035022,0.03278650409512693,0.2814,0.0962,0.422,0.001430676558073393,0.003,0.422

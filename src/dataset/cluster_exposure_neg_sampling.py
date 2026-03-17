@@ -256,8 +256,8 @@ def process_negative_sampling(config: dict, data_type: str) -> dict:
         dict: A mapping where keys are strategy identifiers and values are lists of records.
     """
     input_dir = config["input_dir"]  # 請在 config 中指定，例如：/scratch/…/experiments/data/beam_cd_candidates
-    param_tag = f"{config['D']}_{config['num_return_sequences']}_{config['diversity_penalty']}"
-    input_dir = prepare_output_dir(input_dir, param_tag, allow_existing=True)
+    # param_tag = f"{config['D']}_{config['num_return_sequences']}_{config['diversity_penalty']}"
+    # input_dir = prepare_output_dir(input_dir, param_tag, allow_existing=True)
     input_path = os.path.join(input_dir, config[f"input_{data_type}_filename"])
     # valid_input_path = os.path.join(input_dir, config["input_valid_filename"])
 
@@ -362,9 +362,9 @@ def cluster_exposure_neg_sampling(config):
     # Prepare output directory based on configuration
     # 例如：先用 prepare_output_dir 建立一個層級，然後依據策略名稱再建立子資料夾
     base_output_dir = config["output_dir_base"]  # 請在 config 中指定，例如：/scratch/…/experiments/data/beam_cd_candidates
-    param_tag = f"{config['D']}_{config['num_return_sequences']}_{config['diversity_penalty']}"
-    final_output_dir = os.path.join(base_output_dir, param_tag)
-    final_output_dir = prepare_output_dir(final_output_dir, None, allow_existing=True)
+    # param_tag = f"{config['D']}_{config['num_return_sequences']}_{config['diversity_penalty']}"
+    # final_output_dir = os.path.join(base_output_dir, param_tag)
+    # final_output_dir = prepare_output_dir(final_output_dir, None, allow_existing=True)
     
     # Load annotated candidate file from configuration
     # config["input_file"] = config["input_file"]  # 例如：annotated_candidates.json
@@ -378,7 +378,7 @@ def cluster_exposure_neg_sampling(config):
 
     # For each strategy, compute output file path and save the results
     for strat, records in results.items():
-        strat_dir = os.path.join(final_output_dir, strat)
+        strat_dir = os.path.join(base_output_dir, strat)
         if not os.path.exists(strat_dir):
             os.makedirs(strat_dir, exist_ok=True)
         out_file = os.path.join(strat_dir, f"{data_type}.json")
@@ -393,7 +393,7 @@ def cluster_exposure_neg_sampling(config):
 
     # For each strategy, compute output file path and save the results
     for strat, records in results.items():
-        strat_dir = os.path.join(final_output_dir, strat)
+        strat_dir = os.path.join(base_output_dir, strat)
         if not os.path.exists(strat_dir):
             os.makedirs(strat_dir, exist_ok=True)
         out_file = os.path.join(strat_dir, f"{data_type}.json")

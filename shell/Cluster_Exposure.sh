@@ -1,0 +1,18 @@
+# base_config_path="../configs/Llama-3.2-1B-Instruct/Cluster_out_low"
+base_config_path="../configs/SmolLM2-360M-Instruct_origin_setup/Cluster_out_low"
+code_dir="re_run_args_scripts"
+gpu1=$1;
+gpu2=$2; 
+echo "Starting beam search candidate generation using ${base_config_path}/beam_cd_config.yml..."
+echo "GPU for candidate generation: $gpu1, $gpu2"
+CUDA_VISIBLE_DEVICES=$gpu1,$gpu2 CUDA_LAUNCH_BLOCKING=1 python "${code_dir}/run_beam_cd_candidates_args.py" --config_path "${base_config_path}/beam_cd_config.yml"
+echo "Finished candidate generation. Starting annotation..."
+CUDA_VISIBLE_DEVICES=$gpu1 python "${code_dir}/run_annotate_candidates_args.py" --config_path "${base_config_path}/annotate_candidates_config.yml"
+echo "Finished candidate generation and annotation. Starting cluster exposure negative sampling..."
+CUDA_VISIBLE_DEVICES=$gpu1 python "${code_dir}/run_cluster_exposure_neg_sampling_args.py" --config_path "${base_config_path}/cluster_exposure_neg_sampling_config.yml"
+echo "Finished candidate generation and annotation. Starting DPO training..."
+CUDA_VISIBLE_DEVICES=$gpu1 python "${code_dir}/run_dpo_args.py" --config_path "${base_config_path}/dpo_config.yml"
+echo "Finished DPO training. Starting prediction generation..."
+CUDA_VISIBLE_DEVICES=$gpu1 python "${code_dir}/run_generate_predictions_args.py" --config_path "${base_config_path}/predict_config.yml"
+echo "Finished prediction generation. Starting evaluation..."
+CUDA_VISIBLE_DEVICES=$gpu1 python "${code_dir}/run_evaluate_args.py" --config_path "${base_config_path}/eval_config.yml"

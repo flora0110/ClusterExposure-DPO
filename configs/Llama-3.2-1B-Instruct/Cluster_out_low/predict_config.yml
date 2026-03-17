@@ -1,0 +1,39 @@
+# Model settings
+# base_model: "/scratch/user/chuanhsin0110/models/Llama-3.2-1B-Instruct"
+base_model: "meta-llama/Llama-3.2-1B-Instruct"
+# base_model: "HuggingFaceTB/SmolLM2-135M-Instruct"
+
+
+
+base_finetuned_path: "./experiments/model/"
+finetuned_path: ""
+# finetuned_path: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/model/DS-DPO/Div_10_1.0/dpc_0.1_4.0"
+# finetuned_path: "/scratch/user/chuanhsin0110/test_0321/nlp/models/final/final_model"
+
+# Data settings
+test_data_path: "./data/sampled/Goodreads/test.json"
+
+# Output settings
+# tuned_model: "SPRec_Llama321B_SPRecSet_on_4096"
+# tuned_model: "SPRec_Llama321B_new"
+tuned_model: "clusterout_low_Llama-3.2-1B-Instruct_on_new_sft_model"
+
+# tuned_model: "S-DPO"
+# method: "Div_5_1.0"
+# method: "RN"
+# distance_type: "dpc"
+# min_beta: 0.01
+# max_beta: 0.2
+num_train_epochs: 1
+base_output_dir: "./experiments/predictions/"
+output_dir: ""
+# temperature: 0.8
+# beta: 0.11 # should be 0.1 to match training
+
+
+# output_dir: "/scratch/user/chuanhsin0110/ClusterExposure-DPO/experiments/predictions/DS-DPO/Div_10_1.0/dpc_0.1_4.0"
+# output_dir: "/scratch/user/chuanhsin0110/test_0321/nlp/predictions"
+# Inference parameters
+batch_size: 8
+max_new_tokens: 50
+test_sample_size: 1000

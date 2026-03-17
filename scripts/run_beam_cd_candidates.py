@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import yaml
-from src.dataset.beam_cd_generate_candidates import beam_cd_generate_candidtate
+from src.dataset.beam_cd_generate_candidates_chunk import beam_cd_generate_candidtate
 
 def load_config(config_path):
     """
@@ -21,7 +21,7 @@ def load_config(config_path):
     return config
 
 def main():
-    config_path = os.path.join(os.path.dirname(__file__), "../configs/beam_cd_config.yml")
+    config_path = os.path.join(os.path.dirname(__file__), "../configs/Cluster_Exposure_DPO/beam_cd_config.yml")
     config = load_config(config_path)
 
     beam_cd_generate_candidtate(config)

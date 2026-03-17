@@ -1,0 +1,1337 @@
+[
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Hollow City (Miss Peregrine’s Peculiar Children, #2)\", \"The Martian\", \"My Brilliant Friend (The Neapolitan Novels #1)\", \"Bitch Planet, Vol. 1: Extraordinary Machine\", \"Yes Please\", \"Nimona\", \"Bird Box\", \"Troublemaker: Surviving Hollywood and Scientology\", \"Soppy\", \"All American Boys\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"One Crazy Summer (Gaither Sisters, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"The Night Circus\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Dragonfly in Amber (Outlander, #2)\"",
+      "\"Hidden Huntress (The Malediction Trilogy, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Fables, Vol. 1: Legends in Exile\", \"Fables, Volume 2: Animal Farm (Fables, #2)\", \"The Hundred-Year-Old Man Who Climbed Out of the Window and Disappeared\", \"Fables, Vol. 8: Wolves\", \"Fables, Vol. 6: Homelands\", \"Fables, Vol. 10: The Good Prince\", \"Cinder (The Lunar Chronicles, #1)\", \"Gone Girl\", \"The Silver Linings Playbook\", \"Ready Player One\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Where'd You Go, Bernadette\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Fables, Vol. 3: Storybook Love\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Coraline\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\", \"Saga, Vol. 2 (Saga, #2)\", \"The Way of Kings (The Stormlight Archive, #1)\", \"Words of Radiance (The Stormlight Archive, #2)\", \"Leviathan Wakes (The Expanse, #1)\", \"Abaddon's Gate (The Expanse, #3)\", \"The Martian\", \"Uprooted\", \"The Providence of Fire (Chronicle of the Unhewn Throne, #2)\", \"The Fifth Season (The Broken Earth, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Long Way to a Small, Angry Planet (Wayfarers, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"In the Heart of the Sea: The Tragedy of the Whaleship Essex\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Saga, Vol. 3 (Saga, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Leo's Chance\", \"Stinger\", \"Black Lies\", \"The Law of Moses (The Law of Moses, #1)\", \"Kyland\", \"Hero (Hero, #1)\", \"Paper Hearts (Hearts, #2)\", \"Leo\", \"Dirty English (English, #1)\", \"Twilight / Life and Death (Twilight, #1, 1.75)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Oblivion (Lux, #1.5)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"Hidden Huntress (The Malediction Trilogy, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Harry Potter and the Sorcerer's Stone (Harry Potter, #1)\", \"Cinder (The Lunar Chronicles, #1)\", \"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\", \"Scarlet (The Lunar Chronicles, #2)\", \"Winter (The Lunar Chronicles, #4)\", \"Dark Places\", \"Red Queen (Red Queen, #1)\", \"Days of Blood & Starlight (Daughter of Smoke & Bone, #2)\", \"Siege and Storm (The Grisha, #2)\", \"A Court of Thorns and Roses (A Court of Thorns and Roses, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"A Court of Mist and Fury (A Court of Thorns and Roses, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Wolf Hall (Thomas Cromwell, #1)\"",
+      "\"The Night Circus\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"The Last Unicorn (The Last Unicorn, #1)\"",
+      "\"Shadow's Claim (Immortals After Dark, #13; The Dacians, #1)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"East of Eden\", \"The Stand\", \"Lonesome Dove\", \"Tess of the D'Urbervilles\", \"Rebecca\", \"Anne of Green Gables (Anne of Green Gables, #1)\", \"City of Thieves\", \"Cutting for Stone\", \"Unbroken: A World War II Story of Survival, Resilience, and Redemption\", \"Of Mice and Men\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Hobbit\"",
+    "rejected": [
+      "\"To Kill a Mockingbird\"",
+      "\"The Nightingale\"",
+      "\"Catch-22 (Catch-22, #1)\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"The Long Way to a Small, Angry Planet (Wayfarers, #1)\"",
+      "\"A Beautiful Lie (Playing with Fire, #1)\"",
+      "\"To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)\"",
+      "\"It's Not Summer Without You (Summer, #2)\"",
+      "\"Gone Girl\"",
+      "\"Moby-Dick or, The Whale\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Breaking Dawn (Twilight, #4)\", \"The Serpent's Shadow (Kane Chronicles, #3)\", \"Scarlet (The Lunar Chronicles, #2)\", \"Cress (The Lunar Chronicles, #3)\", \"Insurgent (Divergent, #2)\", \"Free Four: Tobias Tells the Divergent Knife-Throwing Scene (Divergent, #1.5)\", \"The Blood of Olympus (The Heroes of Olympus, #5)\", \"Falling Kingdoms (Falling Kingdoms, #1)\", \"City of Glass (The Mortal Instruments, #3)\", \"City of Lost Souls (The Mortal Instruments, #5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"City of Heavenly Fire (The Mortal Instruments, #6)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Cinder (The Lunar Chronicles, #1)\"",
+      "\"Frostbite (Vampire Academy, #2)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Fangirl\", \"Into the Hollow (Experiment in Terror, #6)\", \"Come Alive (Experiment in Terror, #7)\", \"Faefever (Fever, #3)\", \"Dreamfever (Fever, #4)\", \"Sweet Dreams (Colorado Mountain, #2)\", \"Thief (Love Me with Lies, #3)\", \"Play (Stage Dive, #2)\", \"Omens (Cainsville, #1)\", \"Visions (Cainsville, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Before Jamaica Lane (On Dublin Street, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Hunger: A Memoir of (My) Body\"",
+      "\"Hunger (Gone, #2)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Dreamfever (Fever #4)\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Fifty Shades of Grey (Fifty Shades, #1)\", \"On Dublin Street (On Dublin Street, #1)\", \"Backstage Pass (Sinners on Tour, #1)\", \"Hot Ticket (Sinners on Tour, #3)\", \"All In (The Blackstone Affair, #2)\", \"Beautiful Disaster (Beautiful, #1)\", \"Eyes Wide Open (The Blackstone Affair, #3)\", \"The Edge of Never (The Edge of Never, #1)\", \"The Proposition (The Proposition, #1)\", \"Willing Victim (Flynn and Laurel, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Proposal (The Proposition, #2)\"",
+    "rejected": [
+      "\"Falling for the Ghost of You\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"Eternal Kiss of Darkness (Night Huntress World, #2)\"",
+      "\"The Black Wolf (In the Company of Killers, #5)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Falling into Place\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Black Witch (The Black Witch Chronicles, #1)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"I Am the Messenger\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Into the Still Blue (Under the Never Sky, #3)\", \"The Assassin and the Pirate Lord (Throne of Glass, #0.1)\", \"Heir of Fire (Throne of Glass, #3)\", \"Splintered (Splintered, #1)\", \"Onyx (Lux, #2)\", \"World After (Penryn & the End of Days, #2)\", \"Stolen Songbird (The Malediction Trilogy, #1)\", \"Her Dark Curiosity (The Madman's Daughter, #2)\", \"The Madman’s Daughter (The Madman’s Daughter, #1)\", \"The Assassin's Blade (Throne of Glass, #0.1-0.5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Dark Triumph (His Fair Assassin, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Storm (Elemental, #1)\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Beneath the Burn\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Love in the Afternoon (The Hathaways, #5)\", \"The Hunger Games (The Hunger Games, #1)\", \"Bayou Moon (The Edge, #2)\", \"Nine Rules to Break When Romancing a Rake (Love By Numbers, #1)\", \"Sin Undone (Demonica #5)\", \"The Curse of the Wendigo (The Monstrumologist, #2)\", \"The Iron Duke (Iron Seas, #1)\", \"Christmas Eve at Friday Harbor (Friday Harbor, #1)\", \"Kushiel's Dart (Phèdre's Trilogy, #1)\", \"The Hundred Thousand Kingdoms (Inheritance Trilogy, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"MacRieve (Immortals After Dark, #14)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Kushiel's Chosen (Phèdre's Trilogy, #2)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Bridget Jones's Diary (Bridget Jones, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Forbidden\", \"Spirit Bound (Vampire Academy, #5)\", \"It's Not Summer Without You (Summer, #2)\", \"Divergent (Divergent, #1)\", \"Flowers for Algernon\", \"Darkfever (Fever, #1)\", \"Born at Midnight (Shadow Falls, #1)\", \"Bloodfever (Fever, #2)\", \"Beautiful Disaster (Beautiful, #1)\", \"Last Sacrifice (Vampire Academy, #6)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Before I Die\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Eternal Kiss of Darkness (Night Huntress World, #2)\"",
+      "\"Darkness Before Dawn (Darkness, #2)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Unbecoming of Mara Dyer (Mara Dyer, #1)\", \"Siege and Storm (The Grisha, #2)\", \"Ruin and Rising (The Grisha, #3)\", \"The Star Dwellers (The Dwellers, #2)\", \"The Sun Dwellers (The Dwellers, #3)\", \"A Monster Calls\", \"Sweet Peril (Sweet, #2)\", \"After the Bridge (The Infernal Devices #3.1)\", \"The Winner's Crime (The Winner's Trilogy, #2)\", \"Six of Crows (Six of Crows, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Angels Twice Descending (Tales from the Shadowhunter Academy, #10)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Night Circus\"",
+      "\"Ruin (Ruin, #1)\"",
+      "\"A Memory of Light (Wheel of Time, #14)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Black Lies\", \"Worth the Fall (The McKinney Brothers, #1)\", \"Maybe Not (Maybe, #1.5)\", \"The Law of Moses (The Law of Moses, #1)\", \"Tight\", \"Crushed (Redemption, #2)\", \"Never Never: Part Two (Never Never, #2)\", \"The Hooker and the Hermit (Rugby, #1)\", \"Attraction (Elements of Chemistry #1; Hypothesis, #1.1)\", \"Heat (Elements of Chemistry #2; Hypothesis, #1.2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Capture (Elements of Chemistry #3; Hypothesis, #1.3)\"",
+    "rejected": [
+      "\"Hell & High Water (THIRDS, #1)\"",
+      "\"Never Never: Part Three (Never Never, #3)\"",
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"Breathe (Colorado Mountain, #4)\"",
+      "\"The Wicked + The Divine, Vol. 1: The Faust Act\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Never Never (Never Never, #1)\"",
+      "\"Breath of Fire (Kingmaker Chronicles #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Blameless (Parasol Protectorate, #3)\", \"Bet Me\", \"Blood Bound (Mercy Thompson, #2)\", \"Plain Kate\", \"Blackout (All Clear, #1)\", \"A Game of Thrones (A Song of Ice and Fire, #1)\", \"Miss Peregrine’s Home for Peculiar Children (Miss Peregrine’s Peculiar Children, #1)\", \"Gaudy Night (Lord Peter Wimsey, #12)\", \"Heartless (Parasol Protectorate, #4)\", \"Ready Player One\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Iron Duke (Iron Seas, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"Bitter Sweet Love (The Dark Elements, #0.5)\"",
+      "\"A Memory of Light (Wheel of Time, #14)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Beneath the Burn\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Princess Bride\", \"Unravel Me (Shatter Me, #2)\", \"Daughter of Smoke & Bone (Daughter of Smoke & Bone, #1)\", \"Ignite Me (Shatter Me, #3)\", \"Destroy Me (Shatter Me, #1.5)\", \"Days of Blood & Starlight (Daughter of Smoke & Bone, #2)\", \"Crown of Midnight (Throne of Glass, #2)\", \"Queen of Shadows (Throne of Glass, #4)\", \"Clockwork Princess (The Infernal Devices, #3)\", \"Cloud Atlas\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"A Court of Mist and Fury (A Court of Thorns and Roses, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"Daughter of Smoke and Bone (Daughter of Smoke & Bone, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Shatter Me (Shatter Me, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Winger (Winger, #1)\", \"Cress (The Lunar Chronicles, #3)\", \"Noggin\", \"The Infinite Sea (The 5th Wave, #2)\", \"100 Sideways Miles\", \"Golden Son (Red Rising, #2)\", \"I'll Meet You There\", \"What We Saw\", \"Six of Crows (Six of Crows, #1)\", \"Crooked Kingdom (Six of Crows, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Winter (The Lunar Chronicles, #4)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Last One\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Archangel's Legion (Guild Hunter, #6)\", \"Dirty Deeds (Dirty Deeds, #1)\", \"Bone Rider\", \"Shifting Shadows: Stories from the World of Mercy Thompson (Mercy Thompson #0.1, #0.6, #0.8, #1.5, #4.5, #5.5, #7.4)\", \"Four Seconds to Lose (Ten Tiny Breaths, #3)\", \"Opposition (Lux, #5)\", \"Breakable (Contours of the Heart, #2)\", \"Reaper's Stand (Reapers MC, #4)\", \"In Her Wake (Ten Tiny Breaths, #0.5)\", \"Crash & Burn (Cut & Run, #9)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Alex (Cold Fury Hockey, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Crewel (Crewel World, #1)\", \"Vampire Academy (Vampire Academy, #1)\", \"The Selection (The Selection, #1)\", \"The Book Thief\", \"The Lightning Thief (Percy Jackson and the Olympians, #1)\", \"The Maze Runner (Maze Runner, #1)\", \"Champion (Legend, #3)\", \"The Dead Girls' Dance (The Morganville Vampires, #2)\", \"Shadow and Bone\", \"Legend (Legend, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"This Girl (Slammed, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Night Circus\"",
+      "\"Shadow and Bone (The Grisha, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Dragonfly in Amber (Outlander, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Hothouse Flower (Calloway Sisters, #2; Addicted, #2.2)\", \"Addicted After All (Addicted, #3)\", \"Sweet Temptation (Sweet, #4)\", \"Raw (RAW Family, #1)\", \"Fall with Me (Wait for You, #4)\", \"Long Way Down (Calloway Sisters, #4; Addicted, #3.2)\", \"Prodigy (Legend, #2)\", \"Be My Hero (Forbidden Men, #3)\", \"A Perfect Ten (Forbidden Men, #5)\", \"Own the Wind (Chaos, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Some Kind of Perfect (Calloway Sisters, #4.5; Addicted, #3.5)\"",
+    "rejected": [
+      "\"Gone (Gone, #1)\"",
+      "\"Happily Ever After (The Selection, #0.4, 0.5, 2.5, 2.6)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Breath of Fire (Kingmaker Chronicles #2)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Tiger's Curse (The Tiger Saga, #1)\"",
+      "\"Sweep in Peace (Innkeeper Chronicles, #2)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The King of Attolia (The Queen's Thief, #3)\", \"Paper Towns\", \"Marcelo in the Real World\", \"Graceling (Graceling Realm, #1)\", \"The Beekeeper's Apprentice (Mary Russell, #1)\", \"Mockingjay (The Hunger Games, #3)\", \"White Cat (Curse Workers, #1)\", \"The Fault in Our Stars\", \"Eleanor & Park\", \"Beautiful Ruins\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Being Mortal: Medicine and What Matters in the End\"",
+    "rejected": [
+      "\"Cinder (The Lunar Chronicles, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Eleanor and Park\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Crimson Bound\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Geography of You and Me\", \"A Mad, Wicked Folly\", \"To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)\", \"Rebel Belle (Rebel Belle, #1)\", \"Me Before You (Me Before You, #1)\", \"Fangirl\", \"Attachments\", \"Open Road Summer\", \"My Life Next Door\", \"Just One Night (Just One Day, #2.5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Anna and the French Kiss (Anna and the French Kiss, #1)\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"The Girl with the Dragon Tattoo (Millennium, #1)\"",
+      "\"Just One Day (Just One Day, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Vampire Academy (Vampire Academy, #1)\", \"Archer's Voice\", \"Reasonable Doubt: Volume 1 (Reasonable Doubt, #1)\", \"Mystery Man (Dream Man, #1)\", \"Frenched (Frenched, #1)\", \"Reaper's Legacy (Reapers MC, #2)\", \"Devil's Game (Reapers MC, #3)\", \"Rock Chick Redemption (Rock Chick, #3)\", \"Six of Hearts (Hearts, #1)\", \"Shadow of Night (All Souls Trilogy, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Making Faces\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Frostbite (Vampire Academy, #2)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Reaper's Fall (Reapers MC, #5)\"",
+      "\"Dragonfly in Amber (Outlander, #2)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Dead to the World (Sookie Stackhouse, #4)\", \"Spirit Bound (Vampire Academy, #5)\", \"Halfway to the Grave (Night Huntress, #1)\", \"Unholy Ghosts (Downside Ghosts, #1)\", \"The Iron King (The Iron Fey, #1)\", \"Nightshade (Nightshade #1; Nightshade World #4)\", \"Unholy Magic (Downside Ghosts, #2)\", \"City of Ghosts (Downside Ghosts, #3)\", \"Dark Lover (Black Dagger Brotherhood, #1)\", \"Last Sacrifice (Vampire Academy, #6)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Iron Duke (Iron Seas, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Last Stand of the New York Institute (The Bane Chronicles, #9)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"Soulless (Parasol Protectorate, #1)\"",
+      "\"Soulless (King, #4)\"",
+      "\"The Last Unicorn (The Last Unicorn, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Thirteenth Tale\", \"If I Stay (If I Stay, #1)\", \"Sloppy Firsts (Jessica Darling, #1)\", \"Fire (Graceling Realm, #2)\", \"Will Grayson, Will Grayson\", \"Feed (Newsflesh Trilogy, #1)\", \"Beauty Queens\", \"Blood Red Road (Dust Lands, #1)\", \"Touch of Power (Healer, #1)\", \"Fracture (Fracture, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"This is Not a Test (This is Not a Test #1)\"",
+    "rejected": [
+      "\"Dreaming of You (The Gamblers, #2)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Fracture (Blood & Roses, #2)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Perks of Being a Wallflower\", \"Impulse (Impulse, #1)\", \"Will Grayson, Will Grayson\", \"I Am Legend and Other Stories\", \"Identical\", \"Maus II: A Survivor's Tale: And Here My Troubles Began (Maus, #2)\", \"The Wishing Spell (The Land of Stories, #1)\", \"The Lover's Dictionary\", \"The Realm of Possibility\", \"Fangirl\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Me and Earl and the Dying Girl\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Longbourn\", \"Joyland\", \"The Martian\", \"All the Light We Cannot See\", \"Wonder\", \"The Magician's Land (The Magicians, #3)\", \"The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics\", \"Just Mercy: A Story of Justice and Redemption\", \"The Color Purple\", \"Bel Canto\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Glass Castle\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"The Hunger Games (The Hunger Games, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"The Hunger Games Trilogy Boxset (The Hunger Games, #1-3)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Bridget Jones's Diary (Bridget Jones, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Red Dirt Heart 4 (Red Dirt, #4)\", \"Worth the Fall (The McKinney Brothers, #1)\", \"Zack (Cold Fury Hockey, #3)\", \"The Strongest Steel (Second Circle Tattoos, #1)\", \"Spencer Cohen, Book One (Spencer Cohen, #1)\", \"Broken\", \"Worth It All (The McKinney Brothers, #3)\", \"The Spiral Down (The Fall Up, #2)\", \"Neighbor Dearest\", \"Royally Screwed (Royally, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Hard Truth About Sunshine\"",
+    "rejected": [
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Lucky in Love (Lucky Harbor, #4)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"What Happened to Goodbye\", \"Crash into You (Pushing the Limits, #3)\", \"Losing It (Losing It, #1)\", \"Vampire Academy (Vampire Academy, #1)\", \"Frostbite (Vampire Academy, #2)\", \"Blood Promise (Vampire Academy, #4)\", \"Spirit Bound (Vampire Academy, #5)\", \"Bloodlines (Bloodlines, #1)\", \"Hopeless (Hopeless, #1)\", \"Rowdy (Marked Men, #5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Siege and Storm (The Grisha, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Me Before You (Me Before You, #1)\", \"Beautiful Ruins\", \"Defending Jacob\", \"Sharp Objects\", \"The Cuckoo's Calling (Cormoran Strike, #1)\", \"Before I Go to Sleep\", \"Life After Life\", \"Burial Rites\", \"One Plus One\", \"The Dinner\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Good Girl\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Shadow and Bone (The Grisha, #1)\"",
+      "\"Shadow and Bone\"",
+      "\"I Am the Messenger\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Heaven and Hell (Heaven and Hell, #1)\", \"Forever Too Far (Rosemary Beach, #3; Too Far, #3)\", \"Fighting for Flight (Fighting, #1)\", \"Light in the Shadows (Find You in the Dark, #2)\", \"Flat-Out Matt (Flat-Out Love, #1.5)\", \"Real (Real, #1)\", \"Tangled (Tangled, #1)\", \"The Sea of Tranquility\", \"Origin (Lux, #4)\", \"Bully (Fall Away, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Stinger\"",
+    "rejected": [
+      "\"The Lost Girl\"",
+      "\"Dreaming of You (The Gamblers, #2)\"",
+      "\"The Nightingale\"",
+      "\"Falling for the Ghost of You\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Captain Marvel, Volume 1: Higher, Further, Faster, More\", \"Go the Fuck to Sleep\", \"The Wicked + The Divine, Vol. 2: Fandemonium\", \"Rat Queens, Vol. 1: Sass & Sorcery\", \"Furiously Happy: A Funny Book About Horrible Things\", \"Rat Queens, Vol. 2: The Far Reaching Tentacles of N'rygoth\", \"Ms. Marvel, Vol. 4: Last Days\", \"Ms. Marvel, Vol. 3: Crushed\", \"The Vegetarian\", \"Saga, Vol. 6 (Saga, #6)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Batman: The Killing Joke\"",
+    "rejected": [
+      "\"Saga, Vol. 7 (Saga, #7)\"",
+      "\"Saga, Vol. 5 (Saga, #5)\"",
+      "\"Batman: The Dark Knight Returns (The Dark Knight Saga, #1)\"",
+      "\"Fantastic Beasts and Where to Find Them\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Batman, Volume 1: The Court of Owls\"",
+      "\"Fantastic Beasts and Where to Find Them: The Original Screenplay\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Shadow Kiss (Vampire Academy, #3)\", \"Where She Went (If I Stay, #2)\", \"Clockwork Prince (The Infernal Devices, #2)\", \"Nevermore (Nevermore, #1)\", \"Blood Promise (Vampire Academy, #4)\", \"Anna and the French Kiss (Anna and the French Kiss, #1)\", \"Spellbound (Spellbound, #1)\", \"Hourglass (Hourglass, #1)\", \"Silence (Hush, Hush, #3)\", \"Delirium (Delirium, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Unbecoming of Mara Dyer (Mara Dyer, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shadow and Bone (The Grisha, #1)\"",
+      "\"Hush, Hush (Hush, Hush, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Eleanor & Park\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Destined for an Early Grave (Night Huntress, #4)\", \"Cry Wolf (Alpha & Omega, #1)\", \"Angels' Blood (Guild Hunter, #1)\", \"Magic Bites (Kate Daniels, #1)\", \"The Name of the Wind (The Kingkiller Chronicle, #1)\", \"Graceling (Graceling Realm, #1)\", \"The Secret (Highlands' Lairds #1)\", \"Shiver (The Wolves of Mercy Falls, #1)\", \"Daughter of the Forest  (Sevenwaters, #1)\", \"Caressed by Ice (Psy-Changeling #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"On the Edge (The Edge, #1)\"",
+    "rejected": [
+      "\"The Shadow Queen (Ravenspire, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Beneath This Man (This Man, #2)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Darkfever (Fever, #1)\", \"Nevermore (Nevermore, #1)\", \"Halfway to the Grave (Night Huntress, #1)\", \"Insurgent (Divergent, #2)\", \"Magic Burns (Kate Daniels, #2)\", \"Magic Strikes (Kate Daniels, #3)\", \"Delirium (Delirium, #1)\", \"Angels' Blood (Guild Hunter, #1)\", \"Obsidian (Lux, #1)\", \"Kiss of Frost (Mythos Academy, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Simply Irresistible (Lucky Harbor, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Frostbite (Vampire Academy, #2)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Lies (Gone, #3)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Seducing Cinderella (Fighting for Love, #1)\", \"How to Kill a Rock Star\", \"Avoiding Commitment (Avoiding, #1)\", \"The Perfect Game (The Perfect Game, #1)\", \"About Last Night\", \"Backstage Pass (Sinners on Tour, #1)\", \"Rock Hard (Sinners on Tour, #2)\", \"Double Time (Sinners on Tour, #5)\", \"Dirty Red (Love Me with Lies, #2)\", \"Avoiding Responsibility (Avoiding, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Hot Ticket (Sinners on Tour, #3)\"",
+    "rejected": [
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Fighting for Flight (Fighting, #1)\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\"",
+      "\"The Secret Life of Bees\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Kushiel's Dart (Phèdre's Trilogy, #1)\", \"Bear, Otter, and the Kid (Bear, Otter, and the Kid, #1)\", \"Will Grayson, Will Grayson\", \"Captain Vorpatril's Alliance (Vorkosigan Saga, #15)\", \"Leviathan Wakes (The Expanse, #1)\", \"A Memory of Light (Wheel of Time, #14)\", \"A Tree Grows in Brooklyn\", \"The Dispossessed\", \"The Golem and the Jinni (The Golem and the Jinni, #1)\", \"Nemesis Games (The Expanse #5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Half Lost (The Half Bad Trilogy, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Ender's Game (Ender's Saga, #1)\"",
+      "\"Nimona\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Champion (Legend, #3)\", \"Steve Jobs\", \"Wolf Hall (Thomas Cromwell, #1)\", \"The Final Empire (Mistborn, #1)\", \"The Well of Ascension (Mistborn, #2)\", \"The Hero of Ages (Mistborn, #3)\", \"Shadows of Self (Mistborn, #5)\", \"The Girl with the Dragon Tattoo (Millennium, #1)\", \"The Girl Who Played with Fire (Millennium, #2)\", \"The Girl Who Kicked the Hornet's Nest (Millennium, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Outliers: The Story of Success\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Eragon (The Inheritance Cycle, #1)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Losing Hope (Hopeless, #2)\", \"Beyond Shame (Beyond, #1)\", \"Bold Tricks (The Artists Trilogy, #3)\", \"Beyond Control (Beyond, #2)\", \"Complete Me (Stark Trilogy, #3)\", \"Bad Things (Tristan & Danika, #1)\", \"Fallen Crest Public (Fallen Crest High, #3)\", \"Escaping Reality (The Secret Life of Amy Bensen, #1)\", \"Tears of Tess (Monsters in the Dark, #1)\", \"Real (Real, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Carter Reed (Carter Reed, #1)\"",
+    "rejected": [
+      "\"Beyond the Shadows (Night Angel, #3)\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\"",
+      "\"Awaken (Spiral of Bliss, #3)\"",
+      "\"Escape from Paradise (Paradise, #1)\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Eona: The Last Dragoneye (Eon, #2)\", \"The Pirate's Wish (The Assassin's Curse, #2)\", \"Etiquette & Espionage (Finishing School, #1)\", \"Curtsies & Conspiracies (Finishing School, #2)\", \"Code Name Verity (Code Name Verity, #1)\", \"The Mad Scientist's Daughter\", \"Parasite (Parasitology, #1)\", \"Waistcoats & Weaponry (Finishing School, #3)\", \"School Spirits\", \"Rebel Belle (Rebel Belle, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Life in Outer Space\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Star (The 5th Wave, #3)\"",
+      "\"The Last Unicorn (The Last Unicorn, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Rebel Heart (Dust Lands, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The False Prince (The Ascendance Trilogy #1)\", \"The Raven Boys (The Raven Cycle, #1)\", \"Etiquette & Espionage (Finishing School, #1)\", \"Blue Lily, Lily Blue (The Raven Cycle, #3)\", \"The Wednesday Wars\", \"Ready Player One\", \"Burned (Burned, #1)\", \"Popular: Vintage Wisdom for a Modern Geek\", \"Maus II: A Survivor's Tale: And Here My Troubles Began (Maus, #2)\", \"Curtsies & Conspiracies (Finishing School, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Waistcoats & Weaponry (Finishing School, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Turbulence (Turbulence, #1)\", \"Blurred Lines\", \"Never Never: Part Three (Never Never, #3)\", \"Some Kind of Perfect (Calloway Sisters, #4.5; Addicted, #3.5)\", \"Right (Wrong, #2)\", \"Ladies Man (Manwhore, #3)\", \"Womanizer (Manwhore, #4)\", \"Paper Princess (The Royals, #1)\", \"Moonshot\", \"Royally Screwed (Royally, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Phantom of the Opera\"",
+    "rejected": [
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"Rogue (Talon, #2)\"",
+      "\"Lady of Light and Shadows (Tairen Soul, #2)\"",
+      "\"Dirty (Dive Bar, #1)\"",
+      "\"Bitch Planet, Vol. 1: Extraordinary Machine\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Unteachable\", \"Holy Frigging Matrimony: A Tangled Series Short Story (Tangled, #1.5)\", \"Finding Cinderella (Hopeless, #2.5)\", \"Night Owl (Night Owl, #1)\", \"Kiss the Sky (Calloway Sisters, #1; Addicted, #2.1)\", \"Archer's Voice\", \"Flat-Out Celeste (Flat-Out Love, #2)\", \"More Than This (More Than, #1)\", \"Confess\", \"Aflame (Fall Away, #4)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"It Ends with Us\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Awaken (Spiral of Bliss, #3)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"Crimson Bound\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Opal (Lux, #3)\", \"Reckless (Thoughtless, #3)\", \"Lothaire (Immortals After Dark #12)\", \"Find You in the Dark (Find You in the Dark, #1)\", \"Hopeless (Hopeless, #1)\", \"Wethering the Storm (The Storm, #2)\", \"Apollyon (Covenant, #4)\", \"Light in the Shadows (Find You in the Dark, #2)\", \"Heart on a Chain\", \"The Coincidence of Callie & Kayden (The Coincidence, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Education of Caroline (The Education of..., #2)\"",
+    "rejected": [
+      "\"Dreaming of You (The Gamblers, #2)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Simon vs. the Homo Sapiens Agenda\", \"Magic Strikes (Kate Daniels, #3)\", \"Magic Bleeds (Kate Daniels, #4)\", \"Magic Slays (Kate Daniels, #5)\", \"Gunmetal Magic (Kate Daniels, #5.5)\", \"Captive Prince (Captive Prince, #1)\", \"Six of Crows (Six of Crows, #1)\", \"The Fixer (The Fixer, #1)\", \"Siege and Storm (The Grisha, #2)\", \"Ruin and Rising (The Grisha, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Gods of Gotham (Timothy Wilde, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"Ruin & Rule (Pure Corruption MC, #1)\"",
+      "\"Kiss the Sky (Calloway Sisters, #1; Addicted, #2.1)\"",
+      "\"Ghostly Echoes (Jackaby, #3)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Adventures of Huckleberry Finn\", \"Frankenstein\", \"The Girl with the Dragon Tattoo (Millennium, #1)\", \"Romeo and Juliet\", \"Charlotte's Web\", \"Giovanni's Room\", \"Altered Carbon (Takeshi Kovacs, #1)\", \"Night (The Night Trilogy #1)\", \"Mort (Death, #1; Discworld, #4)\", \"The Immortal Life of Henrietta Lacks\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Room\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Girl with All the Gifts\"",
+      "\"The Night Circus\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Under a Painted Sky\", \"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\", \"The Long Game (The Fixer, #2)\", \"Strange the Dreamer (Strange the Dreamer, #1)\", \"The Queen of the Tearling (The Queen of the Tearling, #1)\", \"The Passion of Dolssa\", \"Harry Potter and the Cursed Child - Parts One and Two (Harry Potter, #8)\", \"Me Before You (Me Before You, #1)\", \"After You (Me Before You, #2)\", \"Royally Screwed (Royally, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Invasion of the Tearling (The Queen of the Tearling, #2)\"",
+    "rejected": [
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Royally Endowed (Royally, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Archangel's Shadows (Guild Hunter, #7)\", \"Marked (Dark Protectors, #7)\", \"Burn for Me (Hidden Legacy, #1)\", \"Blind Faith (Sin Brothers, #3)\", \"White Hot (Hidden Legacy, #2)\", \"Asking for It (Asking for It, #1)\", \"Archangel's Enigma (Guild Hunter, #8)\", \"Us (Him #2)\", \"Him (Him #1)\", \"Sustained (The Legal Briefs, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Rookie Move (Brooklyn Bruisers, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Last One\"",
+      "\"Him (Him, #1)\"",
+      "\"Burned (Burned, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breath of Fire (Kingmaker Chronicles #2)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Bitter Sweet Love (The Dark Elements, #0.5)\", \"Stay with Me (Wait for You, #3)\", \"Easy (Contours of the Heart, #1)\", \"Officer off Limits (Line of Duty, #3)\", \"Sentinel (Covenant, #5)\", \"Apollyon (Covenant, #4)\", \"Pure (Covenant, #2)\", \"One More Chance (Rosemary Beach, #8; Chance, #2)\", \"Simple Perfection (Rosemary Beach, #6; Perfection, #2)\", \"Alienated (Alienated, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Bully (Fall Away, #1)\"",
+    "rejected": [
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Crimson Bound\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Edible (Exquisite, #3)\", \"Beneath the Burn\", \"Me Before You (Me Before You, #1)\", \"Dirty Red (Love Me with Lies, #2)\", \"Thief (Love Me with Lies, #3)\", \"Unteachable\", \"Control (Songs of Submission, #4)\", \"Dirty Angels (Dirty Angels, #1)\", \"Twist Me (Twist Me, #1)\", \"Mud Vein\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"On Every Street (The Artists Trilogy, #0.5)\"",
+    "rejected": [
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Frozen Tides (Falling Kingdoms, #4)\"",
+      "\"Mirror Dance (Vorkosigan Saga, #8)\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\"",
+      "\"Mine (Real, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Isla and the Happily Ever After (Anna and the French Kiss, #3)\", \"The Hunger Games (The Hunger Games, #1)\", \"Divergent (Divergent, #1)\", \"Spell Bound (Hex Hall, #3)\", \"Insurgent (Divergent, #2)\", \"The Night Circus\", \"City of Lost Souls (The Mortal Instruments, #5)\", \"Delirium (Delirium, #1)\", \"The Golden Lily (Bloodlines, #2)\", \"The Indigo Spell (Bloodlines, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Miseducation of Cameron Post\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"Dragonfly in Amber (Outlander, #2)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Unwind (Unwind, #1)\", \"The Selection (The Selection, #1)\", \"The Elite (The Selection, #2)\", \"Looking for Alaska\", \"Anna and the French Kiss (Anna and the French Kiss, #1)\", \"Lola and the Boy Next Door (Anna and the French Kiss, #2)\", \"Cinder (The Lunar Chronicles, #1)\", \"Onyx (Lux, #2)\", \"Shadow and Bone (The Grisha, #1)\", \"The Book Thief\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Poison Study (Study, #1)\"",
+    "rejected": [
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"Bridge to Terabithia\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Existence (Existence Trilogy, #1)\", \"Predestined (Existence Trilogy, #2)\", \"Ceaseless (Existence Trilogy, #3)\", \"Hush, Hush (Hush, Hush, #1)\", \"Beautiful Disaster (Beautiful, #1)\", \"North of Beautiful\", \"Down London Road (On Dublin Street, #2)\", \"Wait for You (Wait for You, #1)\", \"Beautiful Oblivion (The Maddox Brothers, #1)\", \"This Is What Happy Looks Like (This is What Happy Looks Like, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Until Fountain Bridge (On Dublin Street, #1.5)\"",
+    "rejected": [
+      "\"Happily Ever Ninja (Knitting in the City, #5)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Happily Ever After (The Selection, #0.4, 0.5, 2.5, 2.6)\"",
+      "\"This Is How You Lose Her\"",
+      "\"I'll Be Your Drill, Soldier\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"World After (Penryn & the End of Days, #2)\", \"The House of Hades (The Heroes of Olympus, #4)\", \"The Infinite Sea (The 5th Wave, #2)\", \"The Last Star (The 5th Wave, #3)\", \"The Darkest Minds (The Darkest Minds, #1)\", \"Legend (Legend, #1)\", \"Never Fade (The Darkest Minds, #2)\", \"The Blood of Olympus (The Heroes of Olympus, #5)\", \"Vicious (Villains, #1)\", \"Cinder (The Lunar Chronicles, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"In The Afterlight (The Darkest Minds, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Darkest Hour (The Mediator, #4)\"",
+      "\"The Night Circus\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Darkness Before Dawn (Darkness, #2)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"City of Lost Souls (The Mortal Instruments, #5)\", \"The Perks of Being a Wallflower\", \"The Fault in Our Stars\", \"Clockwork Prince (The Infernal Devices, #2)\", \"Paper Towns\", \"The Unbecoming of Mara Dyer (Mara Dyer, #1)\", \"The Sea of Monsters (Percy Jackson and the Olympians, #2)\", \"Prodigy (Legend, #2)\", \"The Titan's Curse (Percy Jackson and the Olympians, #3)\", \"An Abundance of Katherines\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Evolution of Mara Dyer (Mara Dyer, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Mortal Heart (His Fair Assassin, #3)\"",
+      "\"Percy Jackson's Greek Heroes\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Blood of Olympus (The Heroes of Olympus, #5)\", \"Clockwork Princess (The Infernal Devices, #3)\", \"Legend (Legend, #1)\", \"Eleanor & Park\", \"Wonder (Wonder #1)\", \"Slammed (Slammed, #1)\", \"UnWholly (Unwind, #2)\", \"UnSouled (Unwind, #3)\", \"UnDivided (Unwind, #4)\", \"Scarlet (The Lunar Chronicles, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Cress (The Lunar Chronicles, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"Eleanor and Park\"",
+      "\"The Last Unicorn (The Last Unicorn, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"Dragonfly in Amber (Outlander, #2)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America\", \"Black Swan Green\", \"NOS4A2\", \"A Walk in the Woods\", \"The Dog Stars\", \"11/22/63\", \"Life After Life\", \"The Interestings\", \"And the Mountains Echoed\", \"The Remains of the Day\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"A Little Life\"",
+    "rejected": [
+      "\"Harry Potter and the Philosopher's Stone (Harry Potter, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"Life of Pi\"",
+      "\"I, Robot (Robot #0.1)\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Golden Compass (His Dark Materials, #1)\", \"Everything Is Illuminated\", \"Invisible Man\", \"The Amber Spyglass (His Dark Materials, #3)\", \"Half of a Yellow Sun\", \"Eating Animals\", \"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\", \"Hamlet\", \"A Tale for the Time Being\", \"Homegoing\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Vegetarian\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Red Tent\"",
+      "\"The Book Thief\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Charade (Games, #1)\", \"Façade (Games, #2)\", \"Faking It (Losing It, #2)\", \"Eleanor and Park\", \"Second Chance Boyfriend (One Week Girlfriend, #2)\", \"Hopeless (Hopeless, #1)\", \"Losing Hope (Hopeless, #2)\", \"Slammed (Slammed, #1)\", \"Point of Retreat (Slammed, #2)\", \"This Girl (Slammed, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Vincent Brothers (The Vincent Boys, #2)\"",
+    "rejected": [
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"House Rules\", \"The Little Prince\", \"The Fault in Our Stars\", \"Dark Lover (Black Dagger Brotherhood, #1)\", \"Life of Pi\", \"The Storyteller\", \"Divergent (Divergent, #1)\", \"The Perks of Being a Wallflower\", \"In Bed with a Highlander (McCabe Trilogy, #1)\", \"Never Love a Highlander (McCabe Trilogy, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Simply Irresistible (Lucky Harbor, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"House Rules (Chicagoland Vampires, #7)\"",
+      "\"Bridget Jones's Diary (Bridget Jones, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Hunger Games (The Hunger Games, #1)\", \"Batman: Year One\", \"Batman, Volume 1: The Court of Owls\", \"Batman: The Long Halloween\", \"Y: The Last Man, Vol. 1: Unmanned\", \"Y: The Last Man, Vol. 2: Cycles (Y: The Last Man, #2)\", \"Hawkeye, Volume 1: My Life as a Weapon\", \"Habibi\", \"Chew, Vol. 1: Taster's Choice\", \"Chew, Vol. 3: Just Desserts\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Saga #1\"",
+    "rejected": [
+      "\"The Last Stand of the New York Institute (The Bane Chronicles, #9)\"",
+      "\"Batman: The Dark Knight Returns (The Dark Knight Saga, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Horde (Razorland, #3)\", \"The Sea of Tranquility\", \"Into the Hollow (Experiment in Terror, #6)\", \"This Song Will Save Your Life\", \"Never Fade (The Darkest Minds, #2)\", \"Wallbanger (Cocktail, #1)\", \"The Distance Between Us\", \"Attachments\", \"Flat-Out Matt (Flat-Out Love, #1.5)\", \"The Bitter Kingdom (Fire and Thorns, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Ultraviolet (Ultraviolet, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Hunger: A Memoir of (My) Body\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Hunger (Gone, #2)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"On the Edge (The Edge, #1)\", \"The Student Prince (The Student Prince, #1)\", \"Claimings, Tails, and Other Alien Artifacts (Claimings, #1)\", \"Fifteen Shades of Gay\", \"Scrap Metal\", \"Brute\", \"Love Lessons (Love Lessons, #1)\", \"When You Were Pixels (Syntax #0.1)\", \"The Magpie Lord (A Charm of Magpies, #1)\", \"Glitterland (Glitterland, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Bone Rider\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Night Circus\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Breathe (Sea Breeze, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Opportunist (Love Me with Lies, #1)\", \"Beautiful Disaster (Beautiful, #1)\", \"Thief (Love Me with Lies, #3)\", \"Wait for You (Wait for You, #1)\", \"Pulse (Collide, #2)\", \"Sins & Needles (The Artists Trilogy, #1)\", \"Tangled (Tangled, #1)\", \"Me Before You (Me Before You, #1)\", \"Angels & Demons  (Robert Langdon, #1)\", \"Divergent (Divergent, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Insurgent (Divergent, #2)\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"The Wicked + The Divine, Vol. 1: The Faust Act\"",
+      "\"The Wicked + The Divine, Vol. 2: Fandemonium\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Life of Pi\", \"The Joy Luck Club\", \"The Road\", \"The Dog Stars\", \"The Orphan Master's Son\", \"Extremely Loud and Incredibly Close\", \"To Kill a Mockingbird\", \"The Martian\", \"Coraline\", \"The Strange Case of Dr. Jekyll and Mr. Hyde\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Euphoria\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"1984\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"The Secret History\"",
+      "\"To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)\"",
+      "\"I, Robot (Robot #0.1)\"",
+      "\"In the Heart of the Sea: The Tragedy of the Whaleship Essex\"",
+      "\"The Great Gatsby\"",
+      "\"I Am the Messenger\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"This Shattered World (Starbound, #2)\", \"Spirit (Elemental, #3)\", \"Burn (The Rephaim, #4)\", \"The Last Time We Say Goodbye\", \"Flat-Out Celeste (Flat-Out Love, #2)\", \"The Art of Lainey (The Art of Lainey, #1)\", \"The Body Electric\", \"An Ember in the Ashes (An Ember in the Ashes, #1)\", \"A Darker Shade of Magic (Shades of Magic, #1)\", \"UnDivided (Unwind, #4)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"When\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Dreaming of You (The Gamblers, #2)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Unbound (The Archived, #2)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Coldest Girl in Coldtown\", \"Days of Blood & Starlight (Daughter of Smoke & Bone, #2)\", \"All the Truth That's in Me\", \"Burial Rites\", \"The Diviners (The Diviners, #1)\", \"Dust & Decay (Rot & Ruin, #2)\", \"The Impossible Knife of Memory\", \"The Winter People\", \"Reboot (Reboot, #1)\", \"Skinwalker (Jane Yellowrock, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Program (The Program, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"Daughter of Smoke and Bone (Daughter of Smoke & Bone, #1)\"",
+      "\"The Night Circus\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Fragments (Partials Sequence, #2)\"",
+      "\"Daughter of Smoke & Bone (Daughter of Smoke & Bone, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Iron King (The Iron Fey, #1)\", \"Angelfall (Penryn & the End of Days, #1)\", \"Cinder (The Lunar Chronicles, #1)\", \"Scarlet (The Lunar Chronicles, #2)\", \"The Sky Is Everywhere\", \"Obsidian (Lux, #1)\", \"Origin (Lux, #4)\", \"Altered (Altered, #1)\", \"Wait for You (Wait for You, #1)\", \"Lost & Found (Lost & Found, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Immortal Rules (Blood of Eden, #1)\"",
+    "rejected": [
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Crimson Bound\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Dirty English (English, #1)\", \"A Lover's Lament\", \"Until June (Until Her, #2)\", \"Transcendence\", \"Making Faces\", \"The Vixen and the Vet\", \"Idol (VIP, #1)\", \"Rock Chick Reawakening (Rock Chick, #0.5)\", \"Managed (VIP, #2)\", \"Perfect Rage (Unyielding, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Raw (RAW Family, #1)\"",
+    "rejected": [
+      "\"Falling for the Ghost of You\"",
+      "\"The Wrath & the Dawn (The Wrath and the Dawn, #1)\"",
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Wrath and the Dawn (The Wrath and the Dawn, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Marvels\", \"The Little Android (The Lunar Chronicles, #0.6)\", \"The Uncommon Reader\", \"Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch\", \"Silence Fallen (Mercy Thompson, #10)\", \"Our Souls at Night\", \"The Aeronaut's Windlass (The Cinder Spires, #1)\", \"Alex + Ada, Vol. 1\", \"Alex + Ada, Vol. 2\", \"Uprooted\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"You're Never Weird on the Internet\"",
+    "rejected": [
+      "\"Untold (The Lynburn Legacy, #2)\"",
+      "\"A Clockwork Orange\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Winner's Kiss (The Winner's Trilogy, #3)\", \"Walk the Edge (Thunder Road, #2)\", \"Through the Ever Night (Under the Never Sky, #2)\", \"Into the Still Blue (Under the Never Sky, #3)\", \"Harry Potter and the Chamber of Secrets (Harry Potter, #2)\", \"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\", \"Harry Potter and the Goblet of Fire (Harry Potter, #4)\", \"Some Kind of Perfect (Calloway Sisters, #4.5; Addicted, #3.5)\", \"Killing Sarai (In the Company of Killers, #1)\", \"Seeds of Iniquity (In the Company of Killers, #4)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Dreamfever (Fever #4)\"",
+    "rejected": [
+      "\"Harry Potter and the Philosopher's Stone (Harry Potter, #1)\"",
+      "\"In the Night Garden (The Orphan's Tales, #1)\"",
+      "\"Harry Potter and the Order of the Phoenix (Harry Potter, #5)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"Splintered (Splintered, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Hero and the Crown (Damar, #2)\", \"Jonathan Strange & Mr Norrell\", \"The Goldfinch\", \"The Book of Lost Things\", \"Neverwhere\", \"The Graveyard Book\", \"Thirteenth Child (Frontier Magic, #1)\", \"We Are All Completely Beside Ourselves\", \"Lock In (Lock In, #1)\", \"Deerskin\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Saint Anything\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Night Circus\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Bridge to Terabithia\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Book Thief\", \"The Secret Diary of Lizzie Bennet\", \"The Girl with All the Gifts\", \"Cress (The Lunar Chronicles, #3)\", \"Heartless\", \"Fairest (The Lunar Chronicles, #3.5)\", \"Winter (The Lunar Chronicles, #4)\", \"Sleeping Giants (Themis Files, #1)\", \"A Dog's Purpose (A Dog's Purpose, #1)\", \"Troublemaker: Surviving Hollywood and Scientology\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Waking Gods (Themis Files, #2)\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"The Book of Lost Things\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"The Girl with the Dragon Tattoo (Millennium, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Jackaby (Jackaby, #1)\", \"The Girl at Midnight (The Girl at Midnight, #1)\", \"Seraphina (Seraphina, #1)\", \"The Immortal Heights (The Elemental Trilogy, #3)\", \"Stars Above (The Lunar Chronicles, #4.5)\", \"Mortal Heart (His Fair Assassin, #3)\", \"Frost Like Night (Snow Like Ashes, #3)\", \"A Court of Mist and Fury (A Court of Thorns and Roses, #2)\", \"The Fixer (The Fixer, #1)\", \"Strange the Dreamer (Strange the Dreamer, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Wires and Nerve, Volume 1 (Wires and Nerves, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Mistborn: The Final Empire (Mistborn, #1)\"",
+      "\"Fragile Things: Short Fictions and Wonders\"",
+      "\"Beneath the Burn\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Unearthly (Unearthly, #1)\", \"The Iron King (The Iron Fey, #1)\", \"Harry Potter and the Deathly Hallows (Harry Potter, #7)\", \"Harry Potter and the Half-Blood Prince (Harry Potter, #6)\", \"The Hunger Games (The Hunger Games, #1)\", \"Catching Fire (The Hunger Games, #2)\", \"Divergent (Divergent, #1)\", \"The Golden Lily (Bloodlines, #2)\", \"The Selection (The Selection, #1)\", \"Hallowed (Unearthly, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Clockwork Prince (The Infernal Devices, #2)\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"Darkest Hour (The Mediator, #4)\"",
+      "\"Hunger: A Memoir of (My) Body\"",
+      "\"Hunger (Gone, #2)\"",
+      "\"The Last Unicorn (The Last Unicorn, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Harry Potter and the Cursed Child (Harry Potter, #8)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Pivot Point (Pivot Point, #1)\", \"Lola and the Boy Next Door (Anna and the French Kiss, #2)\", \"A Million Suns (Across the Universe, #2)\", \"Ignite Me (Shatter Me, #3)\", \"Onyx (Lux, #2)\", \"The Dead-Tossed Waves (The Forest of Hands and Teeth, #2)\", \"The Retribution of Mara Dyer (Mara Dyer, #3)\", \"The Sea of Tranquility\", \"If You Find Me\", \"What Happens Next\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Coincidence of Callie & Kayden (The Coincidence, #1)\"",
+    "rejected": [
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"In the Shadow of Blackbirds\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Shatter Me (Shatter Me, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Pandemonium (Delirium, #2)\", \"Elsewhere\", \"The Book Thief\", \"The Lightning Thief (Percy Jackson and the Olympians, #1)\", \"The Curious Incident of the Dog in the Night-Time\", \"Clockwork Angel (The Infernal Devices, #1)\", \"The Catcher in the Rye\", \"Eleanor & Park\", \"Will Grayson, Will Grayson\", \"Heist Society (Heist Society, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Speak\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"The Hunger Games (The Hunger Games, #1)\"",
+      "\"Eleanor and Park\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"The Girl with the Dragon Tattoo (Millennium, #1)\"",
+      "\"Gone Girl\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Mockingjay (The Hunger Games, #3)\", \"If I Stay (If I Stay, #1)\", \"A Certain Slant of Light (Light, #1)\", \"Jellicoe Road\", \"Finnikin of the Rock (Lumatere Chronicles, #1)\", \"Let It Snow: Three Holiday Romances\", \"Where She Went (If I Stay, #2)\", \"Shade (Shade, #1)\", \"Firelight (Firelight, #1)\", \"The King of Attolia (The Queen's Thief, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Amy & Roger's Epic Detour\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Night Circus\"",
+      "\"Journey (Journey Trilogy, #1)\"",
+      "\"Jurassic Park (Jurassic Park, #1)\"",
+      "\"Frostbite (Vampire Academy, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"What Happened to Goodbye\", \"Water for Elephants\", \"City of Bones (The Mortal Instruments, #1)\", \"Clockwork Prince (The Infernal Devices, #2)\", \"Clockwork Angel (The Infernal Devices, #1)\", \"The Unbecoming of Mara Dyer (Mara Dyer, #1)\", \"Stay\", \"Such a Rush\", \"The Selection (The Selection, #1)\", \"Sweet Evil (Sweet, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Catching Jordan\"",
+    "rejected": [
+      "\"The Night Circus\"",
+      "\"The Wicked + The Divine, Vol. 1: The Faust Act\"",
+      "\"The Wicked + The Divine, Vol. 2: Fandemonium\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Book Thief\", \"The Glass Castle\", \"Crank (Crank, #1)\", \"Perfect (Impulse, #2)\", \"Tricks (Tricks, #1)\", \"Impulse (Impulse, #1)\", \"Burned (Burned, #1)\", \"Identical\", \"Fallout (Crank, #3)\", \"East of Eden\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Storied Life of A.J. Fikry\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"The Long Walk\"",
+      "\"The Long Way to a Small, Angry Planet (Wayfarers, #1)\"",
+      "\"Breathe (Sea Breeze, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Mark of Athena (The Heroes of Olympus, #3)\", \"The House of Hades (The Heroes of Olympus, #4)\", \"The Blood of Olympus (The Heroes of Olympus, #5)\", \"The Fill-In Boyfriend\", \"Legend (Legend, #1)\", \"Champion (Legend, #3)\", \"Prodigy (Legend, #2)\", \"Altered (Altered, #1)\", \"End of Days (Penryn & the End of Days, #3)\", \"Lovely Vicious (Lovely Vicious, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Winner's Curse (The Winner's Trilogy, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Chosen (House of Night, #3)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"Eternal Rider (Lords of Deliverance, #1, Demonica, #6)\"",
+      "\"The Last Battle (Chronicles of Narnia, #7)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Leo\", \"Leo's Chance\", \"Forever Too Far (Rosemary Beach, #3; Too Far, #3)\", \"Real (Real, #1)\", \"If You Leave (Beautifully Broken, #2)\", \"Very Bad Things (Briarcrest Academy, #1)\", \"Stinger\", \"Into the Deep (Into the Deep, #1)\", \"Mine (Real, #2)\", \"Finding Cinderella (Hopeless, #2.5)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Archer's Voice\"",
+    "rejected": [
+      "\"Dreaming of You (The Gamblers, #2)\"",
+      "\"Cruel Beauty (Cruel Beauty Universe, #1)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"If I Stay (If I Stay, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost & Found (Lost & Found, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Everything, Everything\", \"P.S. I Still Love You (To All the Boys I've Loved Before, #2)\", \"Overruled (The Legal Briefs, #1)\", \"To All the Boys I've Loved Before (To All the Boys I've Loved Before, #1)\", \"Love and Other Unknown Variables\", \"The Anatomical Shape of a Heart\", \"Glass Sword (Red Queen, #2)\", \"King's Cage (Red Queen, #3)\", \"Me Before You (Me Before You, #1)\", \"Impulse (Impulse, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Forbidden\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\"",
+      "\"Breathe (Sea Breeze, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Blood Bound (Mercy Thompson, #2)\", \"Iron Kissed (Mercy Thompson, #3)\", \"Bone Crossed (Mercy Thompson, #4)\", \"The Host (The Host, #1)\", \"Silver Borne (Mercy Thompson, #5)\", \"The Lost Symbol (Robert Langdon, #3)\", \"Hunting Ground (Alpha & Omega, #2)\", \"The Shack\", \"Fantasy Lover (Dark-Hunterverse #1)\", \"Shiver (The Wolves of Mercy Falls, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Lover Mine (Black Dagger Brotherhood, #8)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Last One\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Beneath the Burn\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Rithmatist (Rithmatist, #1)\", \"Mitosis (The Reckoners, #1.5)\", \"Firefight (The Reckoners, #2)\", \"Seraphina (Seraphina, #1)\", \"The Audition (Seraphina, #0.5)\", \"The Wise Man's Fear (The Kingkiller Chronicle, #2)\", \"Armada\", \"P.S. I Like You\", \"Stars Above (The Lunar Chronicles, #4.5)\", \"The Crown's Game (The Crown's Game, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Dream Thieves (The Raven Cycle, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Bright Side (Bright Side, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"The Redemption of Callie & Kayden (The Coincidence, #2)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Gray Wolf Throne (Seven Realms, #3)\", \"Horde (Razorland, #3)\", \"Out of the Easy\", \"Gone Girl\", \"Nothing to Envy: Ordinary Lives in North Korea\", \"Champion (Legend, #3)\", \"Salt to the Sea\", \"The Giver (The Giver, #1)\", \"Orphan Train\", \"The Glass Castle\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Son (The Giver, #4)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Hunger: A Memoir of (My) Body\"",
+      "\"The Long Way to a Small, Angry Planet (Wayfarers, #1)\"",
+      "\"Hunger (Gone, #2)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Bridge to Terabithia\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Reckoning (Darkest Powers, #3)\", \"The Summoning (Darkest Powers, #1)\", \"Forever (The Wolves of Mercy Falls, #3)\", \"The Awakening (Darkest Powers, #2)\", \"Mockingjay (The Hunger Games, #3)\", \"Bloodrose (Nightshade #3; Nightshade World #6)\", \"The Son of Neptune (The Heroes of Olympus, #2)\", \"The Blood of Olympus (The Heroes of Olympus, #5)\", \"Cinder (The Lunar Chronicles, #1)\", \"The False Prince (The Ascendance Trilogy #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Paranormalcy (Paranormalcy, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Lost Prince (The Iron Fey: Call of the Forgotten, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Crimson Frost (Mythos Academy, #4)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Miss Peregrine’s Home for Peculiar Children (Miss Peregrine’s Peculiar Children, #1)\", \"The Eternity Cure (Blood of Eden, #2)\", \"Shadow and Bone\", \"The Archived (The Archived, #1)\", \"The Iron Traitor (The Iron Fey: Call of the Forgotten, #2)\", \"The Darkest Minds (The Darkest Minds, #1)\", \"The Unbound (The Archived, #2)\", \"Vicious (Villains, #1)\", \"The Coldest Girl in Coldtown\", \"These Broken Stars (Starbound, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Never Fade (The Darkest Minds, #2)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Night Circus\"",
+      "\"The Darkest Hour (KGI, #1)\"",
+      "\"Shadow and Bone (The Grisha, #1)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Dream Thieves (The Raven Cycle, #2)\", \"The Penultimate Peril (A Series of Unfortunate Events, #12)\", \"The Well of Ascension (Mistborn, #2)\", \"Uprooted\", \"Six of Crows (Six of Crows, #1)\", \"The First Fifteen Lives of Harry August\", \"Half the World (Shattered Sea, #2)\", \"Skin Game (The Dresden Files, #15)\", \"The Bands of Mourning (Mistborn, #6)\", \"The Rose Society (The Young Elites, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Illuminae (The Illuminae Files, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Shadow Queen (Ravenspire, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"The Night Circus\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Raven (Delirium, #2.5)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\"",
+      "\"Untold (The Lynburn Legacy, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Perfection (Neighbor from Hell, #2)\", \"Truce (Neighbor from Hell, #4)\", \"The Game Plan (Neighbor from Hell, #5)\", \"The Sweet Gum Tree\", \"The Vincent Boys (The Vincent Boys, #1)\", \"Fangirl\", \"The DUFF: Designated Ugly Fat Friend\", \"The Redemption of Callie & Kayden (The Coincidence, #2)\", \"Keeping Her (Losing It, #1.5)\", \"Finding It (Losing It, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Clash (Crash, #2)\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"Falling for the Ghost of You\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Prey (Shifters, #4)\", \"I Am Legend and Other Stories\", \"Immortal in Death (In Death, #3)\", \"The Giver (The Giver, #1)\", \"Dead Until Dark (Sookie Stackhouse, #1)\", \"The Lightning Thief (Percy Jackson and the Olympians, #1)\", \"The Hunger Games (The Hunger Games, #1)\", \"Living Dead in Dallas (Sookie Stackhouse, #2)\", \"Club Dead (Sookie Stackhouse, #3)\", \"Dead to the World (Sookie Stackhouse, #4)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Lost Hero (The Heroes of Olympus, #1)\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Beneath This Man (This Man, #2)\"",
+      "\"A Walk in the Woods\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"A Walk to Remember\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Truth About Him (Everything I Left Unsaid, #2)\", \"The Hating Game\", \"Kings Rising (Captive Prince, #3)\", \"Act Like It (London Celebrities, #1)\", \"Duke of Sin (Maiden Lane, #10)\", \"You (You, #1)\", \"Bird Box\", \"Royally Screwed (Royally, #1)\", \"Royally Endowed (Royally, #3)\", \"Magic Binds (Kate Daniels, #9)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"White Hot (Hidden Legacy, #2)\"",
+    "rejected": [
+      "\"Kings of the Wyld (The Band, #1)\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"I Am the Messenger\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Outliers: The Story of Success\", \"The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America\", \"Okay for Now\", \"Knuffle Bunny Free: An Unexpected Diversion (Knuffle Bunny, #3)\", \"From the Mixed-Up Files of Mrs. Basil E. Frankweiler\", \"The Invention of Hugo Cabret\", \"The Fault in Our Stars\", \"Wonder (Wonder #1)\", \"Journey (Journey Trilogy, #1)\", \"We Were Liars\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Giver (The Giver, #1)\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Wonder Woman: Warbringer (DC Icons, #1)\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"Diary of a Wimpy Kid (Diary of a Wimpy Kid, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"The Rise of Nine (Lorien Legacies, #3)\", \"Burned (House of Night, #7)\", \"The Pledge (The Pledge, #1)\", \"The Indigo Spell (Bloodlines, #3)\", \"The Eternity Cure (Blood of Eden, #2)\", \"The Immortal Rules (Blood of Eden, #1)\", \"Days of Blood & Starlight (Daughter of Smoke & Bone, #2)\", \"The Scorch Trials (Maze Runner, #2)\", \"The Revenge of Seven (Lorien Legacies, #5)\", \"Champion (Legend, #3)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Sweet Peril (Sweet, #2)\"",
+    "rejected": [
+      "\"The Shadow Queen (Ravenspire, #1)\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Nightingale\"",
+      "\"The Night Circus\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Echoes of Scotland Street (On Dublin Street, #5)\"",
+      "\"Shattered by You (Tear Asunder, #3)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Chosen at Nightfall (Shadow Falls, #5)\", \"Rule (Marked Men, #1)\", \"What I Thought Was True\", \"The Book of Life (All Souls Trilogy, #3)\", \"Be with Me (Wait for You, #2)\", \"United We Spy (Gallagher Girls, #6)\", \"If I Should Die (Revenants, #3)\", \"Written in Red (The Others, #1)\", \"Rome (Marked Men, #3)\", \"Murder of Crows (The Others, #2)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"The Book of Broken Hearts\"",
+    "rejected": [
+      "\"The Nightingale\"",
+      "\"Daughter of Smoke and Bone (Daughter of Smoke & Bone, #1)\"",
+      "\"Daughter of Smoke and Bone (Daughter of Smoke and Bone, #1)\"",
+      "\"Breathless (Elemental, #2.5)\"",
+      "\"The Last One\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Shadows of Self (Mistborn, #5)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Raven (Delirium, #2.5)\", \"Obsidian (Lux, #1)\", \"Onyx (Lux, #2)\", \"The Prince (The Selection, #0.5)\", \"Dare You To (Pushing the Limits, #2)\", \"Pushing the Limits (Pushing the Limits, #1)\", \"Golden\", \"Sanctum (Guards of the Shadowlands, #1)\", \"Keeping Her (Losing It, #1.5)\", \"Dangerous Girls\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Throne of Glass (Throne of Glass, #1)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"Shattered by You (Tear Asunder, #3)\"",
+      "\"Shattered Glass (Shattered Glass, #1)\"",
+      "\"In the Woods (Dublin Murder Squad, #1)\"",
+      "\"Dragon's Lair (Wind Dragons MC, #1)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books,  #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Through the Ever Night (Under the Never Sky, #2)\", \"The Fault in Our Stars\", \"Prodigy (Legend, #2)\", \"Grave Mercy (His Fair Assassin, #1)\", \"The Darkest Minds (The Darkest Minds, #1)\", \"Shadow and Bone (The Grisha, #1)\", \"Pushing the Limits (Pushing the Limits, #1)\", \"Champion (Legend, #3)\", \"Never Fade (The Darkest Minds, #2)\", \"The Winner's Curse (The Winner's Trilogy, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"In The Afterlight (The Darkest Minds, #3)\"",
+    "rejected": [
+      "\"The Shadow of the Wind (The Cemetery of Forgotten Books, #1)\"",
+      "\"The Night Circus\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Shadow of Night (All Souls Trilogy, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"Breathe (Sea Breeze, #1)\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Fables, Vol. 1: Legends in Exile\", \"Fables, Volume 2: Animal Farm (Fables, #2)\", \"Fables, Vol. 4: March of the Wooden Soldiers\", \"Fables, Vol. 6: Homelands\", \"The Magician's Nephew (Chronicles of Narnia, #6)\", \"Animal Farm\", \"The Egg\", \"The Martian\", \"The Graveyard Book\", \"The Gift of the Magi\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Of Mice and Men\"",
+    "rejected": [
+      "\"Harry Potter and the Philosopher's Stone (Harry Potter, #1)\"",
+      "\"Gone with the Wind\"",
+      "\"A Wrinkle in Time (A Wrinkle in Time Quintet, #1)\"",
+      "\"Fables, Vol. 3: Storybook Love\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Fables, Vol. 8: Wolves\"",
+      "\"Harry Potter and the Sorcerer's Stone (Harry Potter, #1)\"",
+      "\"Gone Girl\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"Mockingjay (The Hunger Games, #3)\", \"The Passage (The Passage, #1)\", \"Before I Fall\", \"Bossypants\", \"A Game of Thrones (A Song of Ice and Fire, #1)\", \"Crooked Letter, Crooked Letter\", \"Is Everyone Hanging Out Without Me?\", \"Tell the Wolves I'm Home\", \"The Knife of Never Letting Go (Chaos Walking, #1)\", \"Motorcycle Man (Dream Man, #4)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Rock Chick (Rock Chick, #1)\"",
+    "rejected": [
+      "\"Catching Fire (The Hunger Games, #2)\"",
+      "\"The Night Circus\"",
+      "\"The Longest Ride\"",
+      "\"Catch-22 (Catch-22, #1)\"",
+      "\"Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)\"",
+      "\"The Long Way to a Small, Angry Planet (Wayfarers, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"I Am Number Four (Lorien Legacies, #1)\"",
+      "\"Harry Potter and the Deathly Hallows (Harry Potter, #7)\"",
+      "\"Girl, Interrupted\""
+    ]
+  },
+  {
+    "prompt": "### Instruction:\nGiven a list of books the user recently enjoys, please recommend a new books that the user may like\n### Input:\nThe user has played the following books before: \"On Every Street (The Artists Trilogy, #0.5)\", \"Bold Tricks (The Artists Trilogy, #3)\", \"Bad Things (Tristan & Danika, #1)\", \"Ugly Love\", \"Play It Safe\", \"Unteachable\", \"Mud Vein\", \"Making Faces\", \"Night Owl (Night Owl, #1)\", \"The 5th Wave (The 5th Wave, #1)\", please write a new books that the user may bought\n### Response:",
+    "chosen": "\"Rock Bottom (Tristan & Danika, #2)\"",
+    "rejected": [
+      "\"Mistborn: The Final Empire (Mistborn, #1)\"",
+      "\"Mistborn (Mistborn, #1)\"",
+      "\"The Last Thing He Needs (The Last Thing He Needs, #1)\"",
+      "\"Lost in a Good Book (Thursday Next, #2)\"",
+      "\"The Lost City of Z: A Tale of Deadly Obsession in the Amazon\"",
+      "\"A Long Way Gone: Memoirs of a Boy Soldier\"",
+      "\"Lost & Found (Lost & Found, #1)\"",
+      "\"A Night to Surrender (Spindle Cove, #1)\""
+    ]
+  }
+]
