@@ -1,5 +1,5 @@
 # ClusterExposure-DPO: LLM-based Recommendation via Cluster-Aware Exposure-Aware Negative Sampling
-
+![plot](./plot/Cluster.jpg)
 ## Inspiration & Methodology
 
 This project is primarily inspired by two papers:
